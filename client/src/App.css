@@ -4,11 +4,38 @@
 }
 
 .App {
-  text-align: center;
+  text-align: left;
+  color:white;
+}
+
+a {
+  color: white;
+  font-weight: initial;
+  letter-spacing: .025em;
+  font-size: 1.75em;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+  text-underline-offset: 1em;
+  text-decoration-thickness: .35em;
+}
+
+.navLink.active {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 1em;
+  text-decoration-thickness: .35em;
+}
+
+#home.active{
+  text-decoration: underline;
+  text-underline-offset: .44em;
+  text-decoration-thickness: .15em;
 }
 
 h1 {
-  color:white;
   text-align: left;
   margin-left: 200px;
   margin-top: 50px;
@@ -16,19 +43,40 @@ h1 {
 }
 
 h2 {
-  color:white;
   text-align: left;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 120px;
+  margin-top: 120px;
   font-size: 3em;
 }
 
 h3 {
-  color:white;
   text-align: left;
   margin-left: 10px;
   margin-top: 10px;
   font-size: 2em;
+}
+
+#nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -40px;
+  margin-right: 70px;
+  
+}
+
+.navLink {
+  font-weight: bold;
+  margin-right: 90px;
+  background-color: transparent;
+}
+
+#home {
+  font-weight:bold;
+  font-size: 4em;
+  display: flex;
+  align-self: flex-start;
+  margin-top: 50px;
+  margin-left: 120px;
 }
 
 
