@@ -7,9 +7,9 @@ function Navbar({}){
     return (
         <>
         <div id='nav'>
-        <NavLink className='navLink' activeclassname="active" to="/about">about</NavLink>
-        <NavLink className='navLink'  to="/login">login</NavLink>
-        <NavLink className='navLink' to="/signup">signup</NavLink>
+        <NavLink className='navLink' to="/about">about</NavLink>
+        <NavLink className='inupLinks' to="/login">login</NavLink>
+        <NavLink className='inupLinks' to="/signup">signup</NavLink>
         </div>
         </>
     )
