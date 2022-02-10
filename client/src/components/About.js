@@ -1,5 +1,15 @@
 import React from 'react';
 
+const artStyle = {
+    width: 220,
+    height: 220,
+    marginTop:-90,
+    border: 5,
+    borderStyle: 'solid',
+    padding: 15
+}
+
+
 const About = () => {
     return (
         <>
@@ -7,14 +17,15 @@ const About = () => {
             <br></br>
             <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', marginTop:100, marginRight:280, marginLeft:280}}>
             <div>
-            <p style={{textAlign:'left', fontWeight: 800, fontSize: 40}}>post art</p>
-            <p style={{textAlign:'left', fontWeight: 800, fontSize: 40}}>offer trades</p>
+            <img style = {artStyle} src="../../flower-1.svg" alt="my art"></img>
+            <p style={{fontWeight: 800, fontSize: 40}}>post art</p>
+            <p style={{fontWeight: 800, fontSize: 40}}>offer trades</p>
             </div>
-            <div style={{width:10,height:450,backgroundColor:'white', marginTop:-100}}></div>
+            <div style={{width:0,height:450, borderLeftStyle: 'dotted', borderWidth:8, marginTop:-100}}></div>
             <div>
-            <br></br>
-            <p style={{textAlign:'left', fontWeight: 800, fontSize: 40}}>say yes</p>
-            <p style={{textAlign:'left', fontWeight: 800, fontSize: 40}}>mail art</p>
+            <img style = {artStyle} src="../../flower-2.svg" alt="my art"></img>
+            <p style={{fontWeight: 800, fontSize: 40}}>say yes</p>
+            <p style={{fontWeight: 800, fontSize: 40}}>mail art</p>
             </div>
             </div>
         </>

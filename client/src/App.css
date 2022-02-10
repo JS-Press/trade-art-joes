@@ -91,7 +91,7 @@ h3 {
 
 .inupLinks:hover {
   font-weight: 800;
-  letter-spacing: 0px;
+  letter-spacing: 0.1px;
 }
 
 .inupLinks.active {
