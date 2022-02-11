@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  get '/artworks', to: 'artworks#index'
+  get '/artworks/:id', to: 'artworks#show'
+
   get 'artworks/show'
   get 'artworks/create'
   get 'artworks/destroy'

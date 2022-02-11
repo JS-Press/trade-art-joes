@@ -23,7 +23,7 @@ const About = () => {
             </div>
             <div style={{width:0,height:450, borderLeftStyle: 'dotted', borderWidth:8, marginTop:-100}}></div>
             <div>
-            <img style = {artStyle} src="../../flower-2.svg" alt="my art"></img>
+            <img style = {artStyle} src="../../flower-2.svg" alt="your art"></img>
             <p style={{fontWeight: 800, fontSize: 40}}>say yes</p>
             <p style={{fontWeight: 800, fontSize: 40}}>mail art</p>
             </div>
