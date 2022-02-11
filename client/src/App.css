@@ -109,6 +109,12 @@ h3 {
   margin-left: 20px;
 }
 
+#logout:hover {
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  text-decoration: none;
+}
+
 #home {
   font-weight:bold;
   font-size: 4em;
@@ -116,12 +122,6 @@ h3 {
   align-self: flex-start;
   margin-top: 50px;
   margin-left: 120px;
-}
-
-#home.hover {
-  text-decoration: underline;
-  text-underline-offset: .44em;
-  text-decoration-thickness: .15em;
 }
 
 #home.active{

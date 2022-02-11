@@ -9,6 +9,7 @@ class CreateArtworks < ActiveRecord::Migration[6.1]
       t.string :tags
       t.boolean :available
       t.integer :user_id
+      t.string :url
 
       t.timestamps
     end

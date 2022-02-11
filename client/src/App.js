@@ -1,4 +1,5 @@
 import './App.css';
+import React, { useState } from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import {NavLink } from "react-router-dom"
 import Navbar from './components/Navbar'
@@ -8,16 +9,28 @@ import Signup from './components/Signup'
 import About from './components/About'
 
 function App() {
+
+  
+  const [loggedIn, setLoggedIn] = useState(true)
+
+  function handleLogin(){
+    setLoggedIn(true)
+}
+
+function handleLogout(){
+    setLoggedIn(false)
+}
+
   return (
     <>
     <Router>
     <div className="App">
     <NavLink to='/' id='home'>Trade Art Joe's</NavLink>
-    <Navbar />
+    <Navbar loggedIn={loggedIn} handleLogout={handleLogout} />
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
-      <Route path='/login' element={<Login />} />
+      <Route path='/login' element={<Login handleLogin={handleLogin} />} />
       <Route path='/signup' element={<Signup />} />
     </Routes>
     </div>
