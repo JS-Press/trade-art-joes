@@ -32,16 +32,12 @@ h1 {
 
 h2 {
   text-align: left;
-  margin-left: 120px;
-  margin-top: 120px;
-  font-size: 3em;
+  font-size: 1.5em;
 }
 
 h3 {
   text-align: left;
-  margin-left: 10px;
-  margin-top: 10px;
-  font-size: 2em;
+  font-size: .75em;
 }
 
 #nav {
@@ -117,17 +113,49 @@ h3 {
 
 #home {
   font-weight:bold;
-  font-size: 4em;
+  font-size: 3em;
   display: flex;
   align-self: flex-start;
   margin-top: 50px;
   margin-left: 120px;
 }
 
-#home.active{
+#home.active {
   text-decoration: underline;
   text-underline-offset: .44em;
   text-decoration-thickness: .15em;
+}
+
+.ArtCards {
+display: flex;
+flex-flow: row wrap;
+justify-content: flex-start;
+margin: 100px;
+position: relative;
+top: -65px;
+}
+
+.ArtCard {
+  width:400px;
+  height:400px;
+  display: flex;
+  flex-flow: row;
+  margin: 10px;
+  outline-style: solid;
+  outline-width: 100;
+}
+
+.CardImgs {
+object-fit: cover;
+width:250px;
+height:250px;
+background-size:contain;
+background-position:center;
+}
+
+.ArtDeets {
+width:200px;
+height:300px;
 }
 
 

@@ -32,10 +32,11 @@ fetch(`/artworks`).then((r) => {
 
 
     return (
-        <div>
-            <h2>Home!</h2>
+        <>
+            <div className='ArtCards' >
             {art_cards}
-        </div>
+            </div>
+        </>
     );
 }
 

@@ -1,4 +1,5 @@
 class ArtworksController < ApplicationController
+  rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
 
   def show
     art = Artwork.find( params[:id] )
@@ -43,6 +44,10 @@ class ArtworksController < ApplicationController
 
   def art_params 
     params.permit( :title, :artist, :year, :description, :size, :tags, :available, :url, :user_id )
+  end
+
+  def render_not_found_response 
+    render json: { errors: 'not_found' }, status: :unauthorized
   end
 
 end
