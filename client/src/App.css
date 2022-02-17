@@ -31,45 +31,76 @@ h1 {
 }
 
 h2 {
+  background-color: transparent;
   text-align: left;
+  margin-bottom: 5px;
+  margin-top: 22px;
+  margin-left: -8px;
+  letter-spacing: .7px;
   font-size: 1.5em;
+  font-weight: 800;
 }
 
 h3 {
   text-align: left;
-  font-size: .75em;
+  /* letter-spacing: .7px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 1.5em;
+  font-weight: 800; */
+}
+
+h4 {
+  text-align: left;
+  margin-left: -8px;
+  letter-spacing: .7px;
+  font-size: .8em;
+  font-weight: 400;
+}
+
+#header {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
 }
 
 #nav {
+  position: fixed;
+  top: 8%;
+  left: 50%;
   display: flex;
+  flex-flow: row;
   justify-content: flex-end;
-  margin-top: -40px;
+  margin-top: 0px;
   margin-right: 70px;
   
 }
 
 .navLink {
+  /* position: fixed; */
+  margin-right: 10px;
+  margin-left: 10px;
+  top:0px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 200;
-  margin-right: 50px;
   border-radius: 50px;
   padding: 2px;
-  /* background-color: transparent; */
 }
 
 .navLink:hover {
   text-decoration: underline;
-  text-underline-offset: 1em;
-  text-decoration-thickness: .35em;
+  text-underline-offset: .9em;
+  text-decoration-thickness: .3em;
 }
 
 .navLink.active {
   font-weight: bold;
   letter-spacing: 0px;
   text-decoration: underline;
-  text-underline-offset: 1em;
-  text-decoration-thickness: .35em;
+  text-underline-offset: .9em;
+  text-decoration-thickness: .3em;
 }
 
 .inupLinks {
@@ -107,17 +138,25 @@ h3 {
 
 #logout:hover {
   font-weight: bold;
-  letter-spacing: 1.1px;
+  letter-spacing: .42px;
+  text-decoration: none;
+}
+
+#logout {
+  font-size: 20px;
+  margin-top: 5px;
+  letter-spacing: 1.4px;
   text-decoration: none;
 }
 
 #home {
+  position: fixed;
   font-weight:bold;
   font-size: 3em;
   display: flex;
   align-self: flex-start;
   margin-top: 50px;
-  margin-left: 120px;
+  margin-left: 100px;
 }
 
 #home.active {
@@ -127,35 +166,38 @@ h3 {
 }
 
 .ArtCards {
-display: flex;
-flex-flow: row wrap;
-justify-content: flex-start;
-margin: 100px;
 position: relative;
-top: -65px;
+display: flex;
+flex-flow: row;
+justify-content: flex-start;
+margin: 98px;
+top: 62px;
 }
 
 .ArtCard {
-  width:400px;
+  min-width:400px;
   height:400px;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   margin: 10px;
-  outline-style: solid;
-  outline-width: 100;
+  margin-right: 35px;
+  
 }
 
 .CardImgs {
+outline-style: solid;
+outline-width: 7.5px;
 object-fit: cover;
-width:250px;
-height:250px;
+min-width:100%;
+min-height:100%;
 background-size:contain;
 background-position:center;
 }
 
 .ArtDeets {
-width:200px;
-height:300px;
+width:100%;
+margin-top: 2px;
+background-color: transparent;
 }
 
 

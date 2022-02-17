@@ -45,7 +45,7 @@ Artwork.create(title: 'Lintite Stool', artist: 'Daniel Coleman', year: 2016, des
     size:'12 x 12 x 14', tags:'furniture Design, material innovation', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1527990001252-NGHX2I5ROE5EFJSDE5RD/Small+Stool.JPG?format=2500w')
 Artwork.create(title: 'J-bae in Tenerifaaaeee', artist: 'Daniel Coleman', year: 2016, description: 'colorful computer drawing of bae.', 
     size:'10 x 10', tags:'digital illustration, glycee', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1535711460810-XP0KNFZEVLQL9UHZEM50/image-asset.jpeg?format=1500w')
-Artwork.create(title: `Brunch at Jamie's`, artist: 'Daniel Coleman', year: 2016, description: 'framed digital print. I made this drawing with a computer mousepad.', 
+Artwork.create(title: "Brunch at Jamie's", artist: 'Daniel Coleman', year: 2016, description: 'framed digital print. I made this drawing with a computer mousepad.', 
     size:'16 x 16', tags:'digital illustration, glycee', available: true, user_id: 4, url: 'hthttps://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1535711458724-SO7Z8HVYBUH19A9B8ETT/image-asset.jpeg?format=1500w')
     
 Artwork.create(title: 'hand', artist: 'James Dawson', year: 2021, description: 'pen drawing of my hand.', 

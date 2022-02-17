@@ -24,8 +24,10 @@ function handleLogout(){
     <>
     <Router>
     <div className="App">
-    <NavLink to='/' id='home'>Trade Art Joe's</NavLink>
-    <Navbar loggedIn={loggedIn} handleLogout={handleLogout} />
+      <div id="header">
+        <NavLink to='/' id='home'>Trade Art Joe's</NavLink>
+        <Navbar loggedIn={loggedIn} handleLogout={handleLogout} />
+      </div>
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/about' element={<About />} />
