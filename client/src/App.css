@@ -37,7 +37,7 @@ h2 {
   margin-top: 22px;
   margin-left: -8px;
   letter-spacing: .7px;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 800;
 }
 
@@ -53,9 +53,12 @@ h3 {
 h4 {
   text-align: left;
   margin-left: -8px;
+  margin-bottom: -15px;
+  font-style: italic;
   letter-spacing: .7px;
-  font-size: .8em;
-  font-weight: 400;
+  font-size: 1em;
+  font-weight: 500;
+  
 }
 
 #header {
@@ -159,6 +162,12 @@ h4 {
   margin-left: 100px;
 }
 
+#home:hover {
+  text-decoration: underline;
+  text-underline-offset: .44em;
+  text-decoration-thickness: .15em;
+}
+
 #home.active {
   text-decoration: underline;
   text-underline-offset: .44em;
@@ -175,13 +184,13 @@ top: 62px;
 }
 
 .ArtCard {
-  min-width:400px;
-  height:400px;
+  min-width:28%;
+  height:100%;
   display: flex;
   flex-flow: column;
   margin: 10px;
   margin-right: 35px;
-  
+  background-color: transparent;
 }
 
 .CardImgs {
@@ -198,6 +207,15 @@ background-position:center;
 width:100%;
 margin-top: 2px;
 background-color: transparent;
+}
+
+.ArtPageImg {
+  display: relative;
+  margin-left: 100px;
+  margin-top: 180px;
+  align-self: center;
+  max-width:40%;
+  height:100%;
 }
 
 

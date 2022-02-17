@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ArtCard from './ArtCard'
 
 
-const Home = () => {
+const Home = ({ handleSelectArt }) => {
 
 const [artworks, setArtworks] = useState([])
     
@@ -28,7 +28,7 @@ fetch(`/artworks`).then((r) => {
     }, [])
 
     const shuff_art = shuffle(artworks)
-    const art_cards = shuff_art.map( c => <ArtCard key={c.id} title={c.title} artist={c.artist} description={c.description} size={c.size} tags={c.tags} year={c.year} available={c.available} url={c.url} id={c.id} user_id={c.user_id} /> )
+    const art_cards = shuff_art.map( c => <ArtCard key={c.id} title={c.title} artist={c.artist} description={c.description} size={c.size} tags={c.tags} year={c.year} available={c.available} url={c.url} id={c.id} user={c.user} handleSelectArt={handleSelectArt} /> )
 
 
     return (

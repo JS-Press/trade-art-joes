@@ -7,10 +7,12 @@ import Home from './components/Home'
 import Login from './components/Login'
 import Signup from './components/Signup'
 import About from './components/About'
+import ArtPage from './components/ArtPage'
 
 function App() {
   
   const [loggedIn, setLoggedIn] = useState(true)
+  const [selectedArt, setselectedArt] = useState({})
 
   function handleLogin(){
     setLoggedIn(true)
@@ -19,6 +21,12 @@ function App() {
 function handleLogout(){
     setLoggedIn(false)
 }
+
+function handleSelectArt(a){
+  setselectedArt(a)
+}
+
+console.log(selectedArt)
 
   return (
     <>
@@ -29,10 +37,11 @@ function handleLogout(){
         <Navbar loggedIn={loggedIn} handleLogout={handleLogout} />
       </div>
     <Routes>
-      <Route path='/' element={<Home />} />
+      <Route path='/' element={<Home handleSelectArt={handleSelectArt} />} />
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login handleLogin={handleLogin} />} />
       <Route path='/signup' element={<Signup />} />
+      <Route path='/artworks/:id' element={<ArtPage artwork={selectedArt} />} />
     </Routes>
     </div>
     </Router>

@@ -1,18 +1,31 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import {Link } from "react-router-dom"
 
-const Artcard = ({title, artist, year, size, description, url, tags, user_id, id, available}) => {
+const ArtCard = ({ title, artist, year, size, description, url, tags, user, id, available, handleSelectArt }) => {
+
+    const navigate = useNavigate()
+
+    function handleClick(e){
+    handleSelectArt(id)
+    navigate(`/artworks/${id}`)
+    }
 
 
     return (
-        <div className='ArtCard' >
-            <img className='CardImgs' src={url} />
+        <div className='ArtCard' onClick={handleClick} >
+            <img className='CardImgs' src={url} value={id}/>
             <div className='ArtDeets'>
             <h2>{title}</h2>
+            <h4>{tags}</h4>
+            <h4>{size}</h4>
+            <h4>{year}</h4>
+            <br></br>
             <h4>by {artist}</h4>
+            <h4>{user.city}, {user.state}</h4>
             </div>
         </div>
     );
 }
 
-export default Artcard;
+export default ArtCard;

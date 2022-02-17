@@ -2,16 +2,17 @@ class ArtworksController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
 
   def show
+    # byebug
     art = Artwork.find( params[:id] )
     if art 
-      render json: art, status: :ok
+      render json: art, include: :user, status: :ok
     else 
       render json: {errors: "artwork does not exist."}, status: :unprocessable_entity
     end
   end
 
   def index 
-    render json: Artwork.all, status: :ok
+    render json: Artwork.all, include: :user, status: :ok
   end
 
   def create
