@@ -21,17 +21,28 @@ const ArtPage = ({artwork}) => {
             { art? <> 
             <img className='ArtPageImg' src={art.url} />
             <div className='ArtPageDeets'>
-            <h2>{art.artist}</h2>
-            <h4>{art.user.city}, {art.user.state}</h4>
-            <h2>{art.title}</h2>
-            <h4>{art.tags}</h4>
-            <h4>{art.size}</h4>
-            <h4>{art.year}</h4>
-            <h4>{art.description}</h4>
+                <div className='nameIcons'>
+                    <img src='https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/salvador-dali-carina-povarchik.jpg' alt='icon' className='icon'/>
+                    <div className='nameInfo'>
+                        <h2 style={{ fontSize:20 }}>{art.artist}</h2>
+                        <h4 style={{ marginTop:5 }}>{art.user.city}, {art.user.state}</h4>
+                    </div>
+                </div>
+                <br></br>
+                <br></br>
+                <h2>{art.title}</h2>
+                <h4 style={{ marginRight:-200 }}>{art.tags}</h4>
+                <h4>{art.size} "</h4>
+                <h4>{art.year}</h4>
+                <br></br>
+                <br></br>
+                <h4>{art.description}</h4>
+                <br></br>
+                <button className='TradeButton' >Offer a Trade</button>
             </div>
             </> 
             :<>
-            <p>loading</p>
+            <p style={{ fontSize:30, position:'relative', display:'flex', top:300, left:250 }}>loading...</p>
             </>}
         </div>
     );
