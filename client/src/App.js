@@ -12,7 +12,7 @@ import ArtPage from './components/ArtPage'
 function App() {
   
   const [loggedIn, setLoggedIn] = useState(true)
-  const [selectedArt, setselectedArt] = useState({})
+  const [selectedArt, setselectedArt] = useState(null)
 
   function handleLogin(){
     setLoggedIn(true)

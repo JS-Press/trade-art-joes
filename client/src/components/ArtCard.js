@@ -14,7 +14,7 @@ const ArtCard = ({ title, artist, year, size, description, url, tags, user, id, 
 
     return (
         <div className='ArtCard' onClick={handleClick} >
-            <img className='CardImgs' src={url} value={id}/>
+            <img className='CardImgs' src={url} value={id} alt='art image not found'/>
             <div className='ArtDeets'>
             <h2>{title}</h2>
             <h4>{tags}</h4>
