@@ -2,12 +2,11 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import {Link } from "react-router-dom"
 
-const ArtCard = ({ title, artist, year, size, description, url, tags, user, id, available, handleSelectArt }) => {
+const ArtCard = ({ title, artist, year, size, description, url, tags, user, id, available}) => {
 
     const navigate = useNavigate()
 
     function handleClick(e){
-    handleSelectArt(id)
     navigate(`/artworks/${id}`)
     }
 

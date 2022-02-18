@@ -12,6 +12,7 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.string :state
       t.string :zip
       t.string :website
+      t.string :profile_pic
 
       t.timestamps
     end
