@@ -67,28 +67,35 @@ Artwork.create(title: 'Two Fs (San Diego)', artist: 'Vic Barquin', year: 2020, d
 Artwork.create(title: 'Cat Clinic', artist: 'Vic Barquin', year: 2020, description: 'edition of 20. Lithography assistance from Eric Wilson', 
     size:'11 x 8.5', tags:'photolithography, screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/13432492/CatClinic_150dpi_IG_1500.jpg')
             
+
+# Artwork.create(title: '', artist: '', year: 20, description: '', 
+#     size:'', tags:'', available: true, user_id: , url: '')
+
+# Trade.create(trader_id: 1, trader_art_id: 1, trader_note: "",
+#      vendor_id: 2, vendor_art_id: 2, completed: false, completed_date: '' )
+
+Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool! Big fan of the use of positive / negative space + color", 
+    vendor_id: 7, vendor_art_id: 16, completed: true )
+Trade.create(trader_id: 2, trader_art_id: 6, trader_note: "I love this piece! It would go perfect with the rest of my collection... please consider this block print I did this year!",
+    vendor_id: 4, vendor_art_id: 13, completed: false )
+Trade.create(trader_id: 2, trader_art_id: 7, trader_note: "Such a cool print. I've always wanted to do screen printing myself. It looks so fun!",
+    vendor_id: 7, vendor_art_id: 18, completed: false )
+
+
+
+
+
+
+
+
+
+
 # Artwork.create(title: 'hand', artist: 'James Dawson', year: 2021, description: 'pen drawing of my hand.', 
 #     size:'6 x 10', tags:'pen, paper', available: true, user_id: 5, url: 'https://scontent-ort2-2.xx.fbcdn.net/v/t39.30808-6/272132515_2290432351098409_6171715577324902631_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a26aad&_nc_ohc=93EwQ49dKWQAX_rpjCg&_nc_ht=scontent-ort2-2.xx&oh=00_AT-QcR-Pcf6YhtuZPtFtT2HH8tiH8SbAfAyPwmDuSgxarg&oe=620B7F26')
 # Artwork.create(title: 'BB and Lucille', artist: 'James Dawson', year: 2021, description: 'a drawing of one of my idols.', 
 #     size:'6 x 10', tags:'pen, paper, portrait', available: true, user_id: 5, url: 'https://scontent-ort2-2.xx.fbcdn.net/v/t39.30808-6/272123967_2290432357765075_1913419949804577425_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=a26aad&_nc_ohc=66erMMbl9LUAX_Hqn8s&_nc_ht=scontent-ort2-2.xx&oh=00_AT9Fcq2anrYmVsPJe6CpcjA1P5xphrMV3psQvKOrdAleHA&oe=620BFD9F')
 # Artwork.create(title: 'BB and Lucille', artist: 'James Dawson', year: 2021, description: 'a drawing I made of Jimi Hendrix.', 
 #     size:'6 x 10', tags:'pen, paper, portrait', available: true, user_id: 5, url: 'https://scontent-ort2-2.xx.fbcdn.net/v/t39.30808-6/272160367_2290432364431741_6936449882475929096_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=a26aad&_nc_ohc=FjZkqYFgR38AX-FSRyr&_nc_ht=scontent-ort2-2.xx&oh=00_AT-ZJMUZPI_NjfsyylzDZaMtAHh80l0bcs226Fy_CY5Fhg&oe=620C73A3')
-
-# Artwork.create(title: '', artist: '', year: 20, description: '', 
-#     size:'', tags:'', available: true, user_id: , url: '')
-
-
-# Trade.create()
-
-
-
-
-
-
-
-
-
-
 
 
 
