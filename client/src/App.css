@@ -71,13 +71,14 @@ h4 {
 
 #nav {
   position: fixed;
-  top: 8.75%;
-  left: 50%;
+  top: 8%;
+  right: 2%;
   display: flex;
   flex-flow: row;
-  justify-content: flex-end;
+  align-self: flex-end;
   margin-top: 0px;
   margin-right: 70px;
+  margin-left:400px;
   /* background-color:darkslategray; */
 }
 
@@ -95,16 +96,16 @@ h4 {
 
 .navLink:hover {
   text-decoration: underline;
-  text-underline-offset: .9em;
-  text-decoration-thickness: .3em;
+  text-underline-offset: .58em;
+  text-decoration-thickness: .24em;
 }
 
 .navLink.active {
   font-weight: bold;
   letter-spacing: 0px;
   text-decoration: underline;
-  text-underline-offset: .9em;
-  text-decoration-thickness: .3em;
+  text-underline-offset: .58em;
+  text-decoration-thickness: .24em;
 }
 
 .inupLinks {
@@ -156,7 +157,7 @@ h4 {
 #home {
   position: fixed;
   font-weight:bold;
-  font-size: 3em;
+  font-size: 2.5em;
   display: flex;
   align-self: flex-start;
   margin-top: 50px;
@@ -308,3 +309,44 @@ background-color: transparent;
   margin-top: 100px;
 }
 
+#loginfo {
+display: flex;
+flex-flow: column;
+margin-top: 150px;
+}
+
+.inButton {
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: .75px;
+  align-self: center;
+  width: 200px;
+  height: 50px;
+  border-color: white;
+  border-style: solid;
+  border-width: 4px;
+  padding: auto;
+  color: white;
+  text-transform: uppercase;
+}
+
+.inButton:hover {
+  color: darkslategray;
+  background-color:white;
+  font-weight:900;
+}
+
+.input {
+  border-radius: 50px;
+  text-align:center;
+  font-size: 20px;
+  letter-spacing: .7px;
+  align-self: center;
+  width: 600px;
+  height: 50px;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  color: white;
+}

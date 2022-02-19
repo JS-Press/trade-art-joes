@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {NavLink} from "react-router-dom"
+import {NavLink, Link} from "react-router-dom"
 
 function Navbar({ handleLogout, loggedIn }){
 
@@ -12,7 +12,7 @@ function Navbar({ handleLogout, loggedIn }){
         <NavLink className='navLink' to="/about">about</NavLink>
         <NavLink className='navLink' to="/myart">my art</NavLink>
         <NavLink className='navLink' to="/mytrades">my trades</NavLink>
-        <NavLink className='navLink' id='logout' to="/logout" onClick={handleLogout} >logout</NavLink>
+        <Link className='navLink' id='logout' to="/" onClick={handleLogout} >logout</Link>
         <p style={{ fontSize:16, fontWeight:200, marginTop:8, marginLeft:8, borderRadius:50 }} >hi Jeanette!</p>
         </div>
         </>
