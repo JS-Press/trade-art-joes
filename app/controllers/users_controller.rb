@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   
   def show
     user = User.find(params[:id])
-    render json: user, include: :ratings, status: :ok
+    render json: user, include: :artworks, status: :ok
   end
 
   def create

@@ -17,7 +17,7 @@ const ArtCard = ({ title, artist, year, size, description, url, tags, user, id, 
             <div className='ArtDeets'>
             <h2>{title}</h2>
             <h4>{tags}</h4>
-            <h4>{size}</h4>
+            <h4>{size}"</h4>
             <h4>{year}</h4>
             <br></br>
             <h4>by {artist}</h4>

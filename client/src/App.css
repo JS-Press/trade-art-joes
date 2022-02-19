@@ -71,7 +71,7 @@ h4 {
 
 #nav {
   position: fixed;
-  top: 8%;
+  top: 8.75%;
   left: 50%;
   display: flex;
   flex-flow: row;
@@ -176,6 +176,27 @@ h4 {
   text-decoration-thickness: .15em;
 }
 
+.ArtistArtCards {
+  position: relative;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-top: 100px;
+  background-color: transparent;
+  margin: 98px;
+  top: 65px; 
+}
+
+.ArtistArtCard {
+  max-width:250px;
+  max-height:250px;
+  display: flex;
+  flex-flow: column;
+  margin: 10px;
+  margin-right: 35px;
+  background-color: transparent;
+}
+
 .ArtCards {
 position: relative;
 display: flex;
@@ -183,7 +204,6 @@ flex-flow: row;
 justify-content: flex-start;
 margin: 98px;
 top: 62px;
-
 }
 
 .ArtCard {
@@ -194,7 +214,6 @@ top: 62px;
   margin: 10px;
   margin-right: 35px;
   background-color: transparent;
-  
 }
 
 .CardImgs {

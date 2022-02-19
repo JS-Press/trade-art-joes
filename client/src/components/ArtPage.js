@@ -1,8 +1,10 @@
 import React, { useEffect, useState} from 'react';
 import { useParams } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 const ArtPage = () => {
 
+    const navigate = useNavigate()
     let { id } = useParams();
     const [art, setArt] = useState(null)
 
@@ -17,14 +19,18 @@ const ArtPage = () => {
                 })}
             })
         }, [])
+
+        function handleArtistClick(e){
+            navigate(`/users/${art.user_id}`)
+            }
     
     return (
         <div className='ArtPage' >
             { art? <> 
             <img className='ArtPageImg' src={art.url} />
             <div className='ArtPageDeets'>
-                <div className='nameIcons'>
-                    <img src={art.user.profile_pic} alt='icon' className='icon'/>
+                <div className='nameIcons' >
+                    <img src={art.user.profile_pic} alt='icon' className='icon' onClick={handleArtistClick} />
                     <div className='nameInfo'>
                         <h2 style={{ fontSize:20 }}>{art.artist}</h2>
                         <h4 style={{ marginTop:5 }}>{art.user.city}, {art.user.state}</h4>
