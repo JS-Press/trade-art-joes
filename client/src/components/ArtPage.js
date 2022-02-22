@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 
-const ArtPage = () => {
+const ArtPage = ({setTradeArtwork}) => {
 
     const navigate = useNavigate()
     let { id } = useParams();
@@ -22,7 +22,12 @@ const ArtPage = () => {
 
         function handleArtistClick(e){
             navigate(`/users/${art.user_id}`)
-            }
+        }
+
+        function handleOfferClick(e){
+            setTradeArtwork(art)
+            navigate(`/makeTrade`)
+        }
     
     return (
         <div className='ArtPage' >
@@ -46,7 +51,7 @@ const ArtPage = () => {
                 <br></br>
                 <h4>{art.description}</h4>
                 <br></br>
-                <button className='TradeButton' >Offer a Trade</button>
+                <button className='TradeButton' onClick={handleOfferClick} >Offer a Trade</button>
             </div>
             </> 
             :<>

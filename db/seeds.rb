@@ -33,6 +33,23 @@ Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad S
     size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
 Artwork.create(title: 'LOSTCAT (RED BLUE)', artist: 'Jarad Solomon', year: 2020, description: 'drawing of a lost cat. Screen-printed in red, blue, and lighter blue.', 
     size:'10 x 14', tags:'paper, illustration, silkscreen', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/f53b96/1717522970/il_1588xN.1717522970_fzit.jpg')
+Artwork.create(title: '2 Livingrooms #7', artist: 'Jarad Solomon', year: 2016, description: '2 color Risograph on archival 80lb french paper', 
+    size:'11 x 17', tags:'paper, risograph, print', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/05e356/1211531879/il_1588xN.1211531879_h56f.jpg')
+Artwork.create(title: 'In-Flight-Safety brochure', artist: 'Jarad Solomon', year: 2018, description: 'Double-sided 4-color risograph. Made from an algorithmic analysis of collected airline safety cards', 
+    size:'10.75 x 16.75', tags:'paper, risograph, print', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/1901b3/2214313486/il_794xN.2214313486_s615.jpg')
+Artwork.create(title: 'beware dog doodle stickers', artist: 'Jarad Solomon', year: 2018, description: 'bright red risograph on white sticker paper.', 
+    size:'4.25 x 8.5', tags:'paper, risograph, print, sticker', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d4013c/3325484396/il_794xN.3325484396_kmko.jpg')
+Artwork.create(title: 'Emojiscape #1', artist: 'Jarad Solomon', year: 2015, description: 'Experiment using generative code to abstract emoji faces. 2 color Risograph on archival 80lb french paper.', 
+    size:'11 x 14', tags:'paper, risograph, print', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/953e88/1025317835/il_794xN.1025317835_drk0.jpg')
+Artwork.create(title: 'Udder Neon', artist: 'Jarad Solomon', year: 2015, description: 'Bright Pinkt cow udder shaped neon sign.', 
+    size:'15 x 20 x 5', tags:'neon, sculpture', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/11552344/IMG_9213_670.jpg')
+Artwork.create(title: 'Prego Furniture #2', artist: 'Jarad Solomon', year: 2013, description: 'Cube storage furniture peice. Photo paper spray mounted on 3/4in plywood.', 
+    size:'15 x 20 x 5', tags:'sculpture, furniture, woodworking', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/7667089/IMG_7323.JPG')
+Artwork.create(title: 'Wicker Lounge Chair', artist: 'Jarad Solomon', year: 2013, description: 'Experimental furniture made of tied together wicker baskets', 
+    size:'45 x 40 x 32', tags:'sculpture, furniture, wicker, mixed media', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/8609724/IMG_8750.jpg')
+Artwork.create(title: 'Averaged Chairs', artist: 'Jarad Solomon', year: 2013, description: 'Two Queen Anne Chairs vertically sliced, offset, and rebuilt as averages of each other.', 
+    size:'17 x 15 x 40', tags:'sculpture, furniture, woodworking', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/9279601/finished_670.jpeg')
+                
 
 Artwork.create(title: 'worm #1', artist: 'Jeanette Tokarz', year: 2019, description: 'the first worm I ever made!', 
     size:'8.5 x 11', tags:'illustration, paper, ink', available: true, user_id: 2, url: 'https://i.etsystatic.com/19062942/r/il/c9db32/3324699900/il_1588xN.3324699900_ovzu.jpg')
@@ -41,6 +58,13 @@ Artwork.create(title: 'Lady Figure Print in Peach', artist: 'Jeanette Tokarz', y
 
 Artwork.create(title: 'Burn Your Art', artist: 'Danny Alegretti', year: 2020, description: 'match box for burning all that art.', 
     size:'1.25 x 2.5', tags:'cardboard, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/30cd0c8e-32ca-4b86-852f-49f06810eaab/matches2.gif?format=750w')
+Artwork.create(title: 'valentinys #1', artist: 'Danny Alegretti', year: 2021, description: 'tear and share valentines cards made in collaboration with OG homies Ginger Gold and risograph printed on fancy GLO-TONE paper by Riso World. each bundle includes one pink sheet and one yellow sheet (12 cards in totaly) with the option to purchase 12 envelopes so you can easily send them to all yer lovers out there.', 
+    size:'2.25 x 4', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/6003328b2f57da1e2e6cdc65/1643071180069-NRRQBOXONE5T1N1WCDFG/valentinys_individualsnow-1.jpg?format=500w')
+Artwork.create(title: 'valentinys #2', artist: 'Danny Alegretti', year: 2021, description: 'tear and share valentines cards made in collaboration with OG homies Ginger Gold and risograph printed on fancy GLO-TONE paper by Riso World. each bundle includes one pink sheet and one yellow sheet (12 cards in totaly) with the option to purchase 12 envelopes so you can easily send them to all yer lovers out there.', 
+    size:'2.25 x 4', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/6003328b2f57da1e2e6cdc65/1643071153297-AFUVR0C5L1PZQ0ZH48R4/valentinys_individualsnow-3.jpg?format=500w')
+Artwork.create(title: 'The Last Day of February', artist: 'Danny Alegretti', year: 2019, description: 'The Last Day of February is a risograph zine was made in collaboration with graphic designer Elizabeth Vande Griend. The zine investigates themes of seasonal depression, love, and the city of Chicago.', 
+    size:'5.5 x 8', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/1582764109755-O2BOQEADIQ4MEPHVXQOX/DSC_4506-Edit-Edit.jpg.jpeg?format=1000w')
+
 
 Artwork.create(title: 'Bay Leaf Bag', artist: 'Daniel Coleman', year: 2015, description: 'Cortland tote bag made using local, sustainable materials and high quality craftsmanship.', 
     size:'20 x 20 x 4', tags:'pattern making, leather working, fiber art, design', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1429914556063-XMAK1GHY7G2KDRGNLRNM/Cortland_Tote-big.jpg?format=2500w')
@@ -52,6 +76,11 @@ Artwork.create(title: "Brunch with Jamie", artist: 'Daniel Coleman', year: 2016,
     size:'16 x 16', tags:'digital illustration, glycee', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1535711458724-SO7Z8HVYBUH19A9B8ETT/image-asset.jpeg?format=1500w')
 Artwork.create(title: "Goat Farming", artist: 'Daniel Coleman', year: 2016, description: 'I think the purpose of art is to get people to see things differently. Most of my work comes from everyday photos shot on my phone. What do you think art is for?', 
     size:'8 x 8', tags:'digital illustration, modern', available: true, user_id: 4, url: 'https://pbs.twimg.com/media/DngycQ1UYAA-2wd?format=jpg&name=large')
+Artwork.create(title: "In San Francisco In 2016", artist: 'Daniel Coleman', year: 2017, description: 'Digital artwork I made in Oakland in 2017', 
+    size:'10 x 14', tags:'digital illustration, modern', available: true, user_id: 4, url: 'https://pbs.twimg.com/media/Dmxal5IU8AAtb28?format=jpg&name=large')
+Artwork.create(title: "Wildebeest", artist: 'Daniel Coleman', year: 2015, description: 'A cat toy inspired by a fish skeleton. ', 
+    size:'4 x 16 X 1', tags:'fiber, product Design', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1443541216789-NN3ZRDX3CANC0L7LKCJA/IMG_4336.jpg?format=1500w')
+
 
 Artwork.create(title: 'Giraffe', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, one-of-a-kind object. ', 
     size:'9 x 16 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0843KYL_1_1024x1024.jpg?v=1612479769')
