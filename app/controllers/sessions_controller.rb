@@ -3,8 +3,9 @@ class SessionsController < ApplicationController
     # rescue_from BCrypt::Errors::InvalidHash, with: :render_not_found_response
   
     def create
-      user = User.find_by(name: params[:name])
-      if user && user.password === params[:password_digest]
+      user = User.find_by(username: params[:username])
+      # byebug
+      if user && user.password_digest === params[:password_digest]
         session[:user_id] ||= user.id
         render json: user, status: :ok
       else

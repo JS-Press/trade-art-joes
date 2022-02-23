@@ -1,6 +1,12 @@
 class UsersController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
   
+
+  def index 
+    render json: User.all, status: :ok
+  end
+
+
   def show
     user = User.find(params[:id])
     render json: user, include: :artworks, status: :ok

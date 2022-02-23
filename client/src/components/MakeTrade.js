@@ -1,9 +1,9 @@
 import React from 'react';
 
-const MakeTrade = ({tradeArtwork}) => {
+const MakeTrade = ({tradeArtwork, user}) => {
 
-    console.log(tradeArtwork)
-
+    console.log('tradeArtwork: '+ tradeArtwork.title)
+    console.log('user: '+ user.first_name)
     return (
         <div>
             <p className='loading' >loading trade</p>
