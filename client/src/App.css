@@ -356,9 +356,12 @@ margin-top: 150px;
   /* margin-left: 10%; */
   display:flex;
   flex-flow: column;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .SignUpInfo {
+  margin-top: -90px;
   display:flex;
   flex-flow: row;
   justify-content: space-around;
@@ -393,5 +396,6 @@ margin-top: 150px;
   border-style: solid;
   border-width: 1px;
   color: white;
+  margin-top: -15px;
 }
 
