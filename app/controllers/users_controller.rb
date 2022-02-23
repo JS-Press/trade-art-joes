@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
-  
+  rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
 
   def index 
     render json: User.all, status: :ok
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   private 
 
 def user_params 
-    params.permit( :name, :first_name, :last_name, :password_digest, :email, :bio, :street_address, :city, :state, :zip, :website )
+  params.permit( :username, :first_name, :last_name, :password_digest, :email, :bio, :street_address, :city, :state, :zip, :website, :profile_pic )
 end
   
 def render_not_found_response 

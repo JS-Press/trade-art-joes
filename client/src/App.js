@@ -73,7 +73,7 @@ function handleLogout(){
       <Route path='/' element={<Home artworks={artworks}/>} />
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login handleLogin={handleLogin} />} />
-      <Route path='/signup' element={<Signup />} />
+      <Route path='/signup' element={<Signup handleLogin={handleLogin} />} />
       <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setTradeArtwork} loggedIn={loggedIn}/>} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
       <Route path='/makeTrade' element={<MakeTrade tradeArtwork={tradeArtwork} user={user}/>} />
