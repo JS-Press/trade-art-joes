@@ -6,8 +6,9 @@ const Signup = ({ handleLogin }) => {
     const navigate = useNavigate()
     // const [name, setName] = useState('');
     // const [value, setValue] = useState('');
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({ username:'', first_name:'', last_name:'', password_digest:'', email:'', bio:'', street_address:'', city:'', state:'', zip:'', website:'', profile_pic:'' });
     const [errors, setErrors] = useState('');
+
 
 
   const onChangeForm = (event) => {
@@ -31,7 +32,7 @@ const Signup = ({ handleLogin }) => {
     }).then((r) => {
       if (r.ok) {
         r.json().then((user) => handleLogin(user));
-        setFormData({})
+        setFormData({ username:'', first_name:'', last_name:'', password_digest:'', email:'', bio:'', street_address:'', city:'', state:'', zip:'', website:'', profile_pic:'' })
         navigate('/')
       } else {
         r.json().then((err) => setErrors(err.errors));
@@ -73,7 +74,7 @@ const Signup = ({ handleLogin }) => {
                         </div>
                         <div className='SignUpInfoCmini'>
                         <p style={{alignSelf:'flex-start', fontSize:20 }} >profile pic link</p>
-                        <input className='inputS' name='profile_pic' value={formData.profile_pic} onChange={onChangeForm} type="password"/>
+                        <input className='inputS' name='profile_pic' value={formData.profile_pic} onChange={onChangeForm} type="text"/>
                         </div>
                     </div>
     
@@ -92,7 +93,7 @@ const Signup = ({ handleLogin }) => {
                     <p style={{alignSelf:'flex-start', fontSize:20 }} >bio</p>
                     <input className='inputS' name='bio' value={formData.bio} onChange={onChangeForm} type="text"/>
                         <p style={{alignSelf:'flex-start', fontSize:20 }} >mailing address</p>
-                        <input className='inputS' name='address' value={formData.address} onChange={onChangeForm} type="text"/>
+                        <input className='inputS' name='street_address' value={formData.street_address} onChange={onChangeForm} type="text"/>
                     <div className='SignUpInfoR'>
                         <div className='SignUpInfoCmini' style={{marginRight:50}}>
                         <p style={{alignSelf:'flex-start', fontSize:20 }} >city</p>
@@ -111,7 +112,7 @@ const Signup = ({ handleLogin }) => {
                         </div>
                         <div className='SignUpInfoCmini' style={{alignSelf: 'flex-end'}}>
                         <p style={{alignSelf:'flex-start', fontSize:20 }} >zip</p>
-                        <input className='inputS' name='zipcode' value={formData.zipcode} onChange={onChangeForm} type="text"/>
+                        <input className='inputS' name='zip' value={formData.zip} onChange={onChangeForm} type="text"/>
                         </div>
                     </div>
                 </div>
