@@ -40,8 +40,12 @@ class TradesController < ApplicationController
     end
   end
 
-  def complete 
-    
+  def completedIndex 
+    user = User.find(params[:id])
+    userTrades = user.sent_trades.concat user.received_trades
+    completedTrades = userTrades.select { |t| t.completed }
+
+    render json: completedTrades, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
   end
 
   private 
