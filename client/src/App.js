@@ -17,7 +17,7 @@ function App() {
   const [artworks, setArtworks] = useState([])
   const [trades, setTrades] = useState([])
   const [loggedIn, setLoggedIn] = useState(false)
-  const [tradeArtwork, setTradeArtwork] = useState({})
+  const [selectedArtwork, setSelectedArtwork] = useState({})
 
   useEffect( () => {
     fetch(`/artworks`).then((r) => {
@@ -74,9 +74,9 @@ function handleLogout(){
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login handleLogin={handleLogin} />} />
       <Route path='/signup' element={<Signup handleLogin={handleLogin} />} />
-      <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setTradeArtwork} loggedIn={loggedIn}/>} />
+      <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn}/>} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
-      <Route path='/makeTrade' element={<MakeTrade tradeArtwork={tradeArtwork} user={user}/>} />
+      <Route path='/makeTrade' element={<MakeTrade selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
     </Routes>
     </div>
     </Router>

@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def show
     user = User.find(params[:id])
-    render json: user, include: :artworks, status: :ok
+    render json: user, include: [:artworks, :sent_trades, :received_trades], status: :ok
   end
 
   def create
@@ -20,6 +20,7 @@ class UsersController < ApplicationController
       render json: { errors: 'error: missing info' }, status: :unprocessable_entity
     end
   end
+
 
   private 
 
