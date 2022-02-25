@@ -1,11 +1,9 @@
 class UsersController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
-  rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
 
   def index 
     render json: User.all, status: :ok
   end
-
 
   def show
     user = User.find(params[:id])
@@ -18,14 +16,15 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       render json: user, status: :created
     else
-      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+      # render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: 'error: missing info' }, status: :unprocessable_entity
     end
   end
 
   private 
 
 def user_params 
-  params.permit( :username, :first_name, :last_name, :password_digest, :email, :bio, :street_address, :city, :state, :zip, :website, :profile_pic )
+  params.permit( :username, :first_name, :last_name, :password_digest, :email, :bio, :street_address, :city, :state, :zip, :website, :profile_pic, :user )
 end
   
 def render_not_found_response 

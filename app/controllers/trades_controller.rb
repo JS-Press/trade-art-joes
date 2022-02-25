@@ -40,6 +40,10 @@ class TradesController < ApplicationController
     end
   end
 
+  def complete 
+    
+  end
+
   private 
 
   def trade_params 

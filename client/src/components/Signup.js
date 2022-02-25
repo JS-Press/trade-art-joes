@@ -35,7 +35,7 @@ const Signup = ({ handleLogin }) => {
         setFormData({ username:'', first_name:'', last_name:'', password_digest:'', email:'', bio:'', street_address:'', city:'', state:'', zip:'', website:'', profile_pic:'' })
         navigate('/')
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        r.json().then((err) => setErrors(err));
       }
     });
   }
@@ -118,7 +118,7 @@ const Signup = ({ handleLogin }) => {
                 </div>
             </div>
             <button className="inButton" style={{width: 450, height: 55, marginTop:-75, position:'relative'}} onClick={handleSubmit} >SignUp</button>
-            <p className='loading' >{errors}</p>
+            <p className='loading' >{errors.errors}</p>
         </div>
     );
 }

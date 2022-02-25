@@ -4,6 +4,7 @@ puts "🌱 Seeding data..."
 names = ["Vincent", "Pablo", "Paul", "Albrecht", "Andy", "Edgar", "Diego", "Edvard", "Claude", "Francis", "George", "Gustav", "Jackson", "Jasper", "Henri", "Rosa", "Mark", "Marcel", "Pierre", "Piet", "Ray", "Roy", "Salvador", "Wassily", "Barbara", "Diane", "Anne", "Dorothea", "Eva", "Frida", "Georgia", "Sally", "Jan", "Yayoi", "Jeanette"]
 passwords = ["cat", "bat", "hat", "mat", "rat", "flat", "gnat", "wat", "tat", "vat", "pat", "sat", "dat"]
 
+## users
 User.create(username:'JSpress', first_name:'Jarad', last_name:'Solomon', password_digest: passwords.sample, email:'jaradsolomon@gmail.com', 
     bio:'Interdisciplinary design media artist based in Logan Square Chicago.', street_address:'2239 N Sawyer Ave', city:'Chicago', state:'IL', zip:'60647', website:'www.jaradsolomon.com', profile_pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdxrrtycZ8D0kYtXknN1I95jhhC8iHppv9w&usqp=CAU' )
 User.create(username:'HalfFull', first_name:'Jeanette', last_name:'Tokarz', password_digest: passwords.sample, email:'tokarzjeanette@gmail.com', 
@@ -22,11 +23,11 @@ User.create(username:'VicArt', first_name:'Vic', last_name:'Barquin', password_d
     street_address:'8928 Holly Ave NE', city:'Albuquerque', state:'NM', zip:'87122', website:'https://www.victoriamariebarquin.com/', profile_pic: 'https://canserrat.org/wp-content/uploads/2017/07/VictoriaMarieBarquin-1-365x365.jpg' )
 
 
-
+## artworks
 Artwork.create(title: 'In-Flight', artist: 'Jarad Solomon', year: 2018, description: 'art book made of algorythmically generated airline safety cards.', 
     size:'8 x 10', tags:'risograph, paper, zine', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d534fa/2261803069/il_1588xN.2261803069_p7io.jpg')
 Artwork.create(title: 'Flower Post Stamp Garden #4', artist: 'Jarad Solomon', year: 2017, description: 'augmented reality risograph poster made from flower post stamps.', 
-    size:'11 x 17', tags:'risograph, paper, augmented reality, found object, collage, pattern making', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d24f9f/2261903475/il_1588xN.2261903475_fmso.jpg')
+    size:'11 x 17', tags:'risograph, paper, augmented reality, found object, collage, pattern making', available: false, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d24f9f/2261903475/il_1588xN.2261903475_fmso.jpg')
 Artwork.create(title: 'garden generative drawing series #1', artist: 'Jarad Solomon', year: 2016, description: 'plant doodle with top part drawn by a computer analyzing the bottom part.', 
     size:'10 x 14', tags:'risograph, paper, illustration, computer generated, digital', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/02fa0e/3323074566/il_1588xN.3323074566_po69.jpg')
 Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad Solomon', year: 2014, description: 'zine of worms with eyes and a mouth.', 
@@ -38,7 +39,7 @@ Artwork.create(title: '2 Livingrooms #7', artist: 'Jarad Solomon', year: 2016, d
 Artwork.create(title: 'In-Flight-Safety brochure', artist: 'Jarad Solomon', year: 2018, description: 'Double-sided 4-color risograph. Made from an algorithmic analysis of collected airline safety cards', 
     size:'10.75 x 16.75', tags:'paper, risograph, print', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/1901b3/2214313486/il_794xN.2214313486_s615.jpg')
 Artwork.create(title: 'beware dog doodle stickers', artist: 'Jarad Solomon', year: 2018, description: 'bright red risograph on white sticker paper.', 
-    size:'4.25 x 8.5', tags:'paper, risograph, print, sticker', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d4013c/3325484396/il_794xN.3325484396_kmko.jpg')
+    size:'4.25 x 8.5', tags:'paper, risograph, print, sticker', available: false, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d4013c/3325484396/il_794xN.3325484396_kmko.jpg')
 Artwork.create(title: 'Emojiscape #1', artist: 'Jarad Solomon', year: 2015, description: 'Experiment using generative code to abstract emoji faces. 2 color Risograph on archival 80lb french paper.', 
     size:'11 x 14', tags:'paper, risograph, print', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/953e88/1025317835/il_794xN.1025317835_drk0.jpg')
 Artwork.create(title: 'Udder Neon', artist: 'Jarad Solomon', year: 2015, description: 'Bright Pinkt cow udder shaped neon sign.', 
@@ -48,8 +49,7 @@ Artwork.create(title: 'Prego Furniture #2', artist: 'Jarad Solomon', year: 2013,
 Artwork.create(title: 'Wicker Lounge Chair', artist: 'Jarad Solomon', year: 2013, description: 'Experimental furniture made of tied together wicker baskets', 
     size:'45 x 40 x 32', tags:'sculpture, furniture, wicker, mixed media', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/8609724/IMG_8750.jpg')
 Artwork.create(title: 'Averaged Chairs', artist: 'Jarad Solomon', year: 2013, description: 'Two Queen Anne Chairs vertically sliced, offset, and rebuilt as averages of each other.', 
-    size:'17 x 15 x 40', tags:'sculpture, furniture, woodworking', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/9279601/finished_670.jpeg')
-                
+    size:'17 x 15 x 40', tags:'sculpture, furniture, woodworking', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/9279601/finished_670.jpeg')         
 
 Artwork.create(title: 'worm #1', artist: 'Jeanette Tokarz', year: 2019, description: 'the first worm I ever made!', 
     size:'8.5 x 11', tags:'illustration, paper, ink', available: true, user_id: 2, url: 'https://i.etsystatic.com/19062942/r/il/c9db32/3324699900/il_1588xN.3324699900_ovzu.jpg')
@@ -61,10 +61,9 @@ Artwork.create(title: 'Burn Your Art', artist: 'Danny Alegretti', year: 2020, de
 Artwork.create(title: 'valentinys #1', artist: 'Danny Alegretti', year: 2021, description: 'tear and share valentines cards made in collaboration with OG homies Ginger Gold and risograph printed on fancy GLO-TONE paper by Riso World. each bundle includes one pink sheet and one yellow sheet (12 cards in totaly) with the option to purchase 12 envelopes so you can easily send them to all yer lovers out there.', 
     size:'2.25 x 4', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/6003328b2f57da1e2e6cdc65/1643071180069-NRRQBOXONE5T1N1WCDFG/valentinys_individualsnow-1.jpg?format=500w')
 Artwork.create(title: 'valentinys #2', artist: 'Danny Alegretti', year: 2021, description: 'tear and share valentines cards made in collaboration with OG homies Ginger Gold and risograph printed on fancy GLO-TONE paper by Riso World. each bundle includes one pink sheet and one yellow sheet (12 cards in totaly) with the option to purchase 12 envelopes so you can easily send them to all yer lovers out there.', 
-    size:'2.25 x 4', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/6003328b2f57da1e2e6cdc65/1643071153297-AFUVR0C5L1PZQ0ZH48R4/valentinys_individualsnow-3.jpg?format=500w')
+    size:'2.25 x 4', tags:'risograph, print', available: false, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/6003328b2f57da1e2e6cdc65/1643071153297-AFUVR0C5L1PZQ0ZH48R4/valentinys_individualsnow-3.jpg?format=500w')
 Artwork.create(title: 'The Last Day of February', artist: 'Danny Alegretti', year: 2019, description: 'The Last Day of February is a risograph zine was made in collaboration with graphic designer Elizabeth Vande Griend. The zine investigates themes of seasonal depression, love, and the city of Chicago.', 
     size:'5.5 x 8', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/1582764109755-O2BOQEADIQ4MEPHVXQOX/DSC_4506-Edit-Edit.jpg.jpeg?format=1000w')
-
 
 Artwork.create(title: 'Bay Leaf Bag', artist: 'Daniel Coleman', year: 2015, description: 'Cortland tote bag made using local, sustainable materials and high quality craftsmanship.', 
     size:'20 x 20 x 4', tags:'pattern making, leather working, fiber art, design', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1429914556063-XMAK1GHY7G2KDRGNLRNM/Cortland_Tote-big.jpg?format=2500w')
@@ -81,21 +80,68 @@ Artwork.create(title: "In San Francisco In 2016", artist: 'Daniel Coleman', year
 Artwork.create(title: "Wildebeest", artist: 'Daniel Coleman', year: 2015, description: 'A cat toy inspired by a fish skeleton. ', 
     size:'4 x 16 X 1', tags:'fiber, product Design', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1443541216789-NN3ZRDX3CANC0L7LKCJA/IMG_4336.jpg?format=1500w')
 
-
 Artwork.create(title: 'Giraffe', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, one-of-a-kind object. ', 
     size:'9 x 16 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0843KYL_1_1024x1024.jpg?v=1612479769')
    
 Artwork.create(title: 'Handwriting: A Way to Self-Expression', artist: 'Vic Barquin', year: 2018, description: 'Three layer screenprint. Included in Chicago Printmakers Collaborative`s 2018 Calendar.', 
     size:'18 x 24', tags:'screenprint, handwriting', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/14256184/Handwriting_150dpi_1079.jpg')
 Artwork.create(title: 'Red Socks', artist: 'Vic Barquin', year: 2021, description: 'The transition from what was an immeasurably tragic year into another offers the promise to begin anew. Without active and deliberate retrospection, this passive consolation fails to account for a year of reckonings that have been incited on a scale of collective and individual necessity; the same convenient conviction that has falsely upheld that the failings, tragedies, and prejudices of the past also remain there. A reckoning in its simplest definition is a settling of accounts. When we attempt to reckon with the events of the past year, four years, or one’s own life, what events or experiences do we account for? This collection of work records the efforts of artists as they confront the collision of intimate, national, or global histories.', 
-    size:'10 x 14', tags:'screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/14256184/RedSocksPink_72dpi_648.jpg')
+    size:'10 x 14', tags:'screenprint', available: false, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/14256184/RedSocksPink_72dpi_648.jpg')
 Artwork.create(title: 'Casa Linda Variation II', artist: 'Vic Barquin', year: 2015, description: 'intaglio and wood grain monotype', 
     size:'18 x 14', tags:'monoprint, intaglio', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/10076224/screen-porch_72res_cropped_670.jpg')
 Artwork.create(title: 'Two Fs (San Diego)', artist: 'Vic Barquin', year: 2020, description: 'edition of 20', 
     size:'11 x 8.5', tags:'stone lithography, screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/13432492/TwoFs_150dpi_web_670.jpg')
 Artwork.create(title: 'Cat Clinic', artist: 'Vic Barquin', year: 2020, description: 'edition of 20. Lithography assistance from Eric Wilson', 
     size:'11 x 8.5', tags:'photolithography, screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/13432492/CatClinic_150dpi_IG_1500.jpg')
-            
+     
+# re-posts
+Artwork.create(title: 'Flower Post Stamp Garden #4', artist: 'Jarad Solomon', year: 2017, description: 'augmented reality risograph poster made from flower post stamps.', 
+    size:'11 x 17', tags:'risograph, paper, augmented reality, found object, collage, pattern making', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d24f9f/2261903475/il_1588xN.2261903475_fmso.jpg')    
+Artwork.create(title: 'Red Socks', artist: 'Vic Barquin', year: 2021, description: 'The transition from what was an immeasurably tragic year into another offers the promise to begin anew. Without active and deliberate retrospection, this passive consolation fails to account for a year of reckonings that have been incited on a scale of collective and individual necessity; the same convenient conviction that has falsely upheld that the failings, tragedies, and prejudices of the past also remain there. A reckoning in its simplest definition is a settling of accounts. When we attempt to reckon with the events of the past year, four years, or one’s own life, what events or experiences do we account for? This collection of work records the efforts of artists as they confront the collision of intimate, national, or global histories.', 
+    size:'10 x 14', tags:'screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/14256184/RedSocksPink_72dpi_648.jpg')
+
+## trades
+# completed examples
+Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool! Big fan of the use of positive / negative space + color", 
+    vendor_id: 7, vendor_art_id: 29, completed: true, completed_date: '2020-04-21' )
+Trade.create(trader_id: 1, trader_art_id: 8, trader_note: "This is so dope! It's going to be the perfect gift for my partner!",
+    vendor_id: 3, vendor_art_id: 18, completed: true, completed_date: '2021-11-20' )
+
+# sent examples
+Trade.create(trader_id: 1, trader_art_id: 6, trader_note: "Such a beautiful color and texture!",
+    vendor_id: 7, vendor_art_id: 30, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 5, trader_note: "This print is so good! I'm gonna send you a couple offers...",
+    vendor_id: 2, vendor_art_id: 14, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 4, trader_note: "maybe this one is ncase you didn't like the last so much :)",
+    vendor_id: 2, vendor_art_id: 14, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 5, trader_note: "Woo cat stuff!",
+    vendor_id: 7, vendor_art_id: 32, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 13, trader_note: "Chair for chair?",
+    vendor_id: 4, vendor_art_id: 21, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 1, trader_note: "Love this style!",
+    vendor_id: 4, vendor_art_id: 22, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 3, trader_note: "Trying to complete my collection!",
+    vendor_id: 3, vendor_art_id: 17, completed: false, completed_date: '' )
+Trade.create(trader_id: 1, trader_art_id: 4, trader_note: "Blown away by your work lately :)",
+    vendor_id: 2, vendor_art_id: 15, completed: false, completed_date: '' )
+    
+# received examples
+Trade.create(trader_id: 2, trader_art_id: 6, trader_note: "I love this piece! It would go perfect with the rest of my collection... please consider this block print I did this year!",
+    vendor_id: 1, vendor_art_id: 5, completed: false, completed_date: '' )
+Trade.create(trader_id: 2, trader_art_id: 7, trader_note: "Such a cool print. I've always wanted to do something like this. It looks like fun!",
+    vendor_id: 1, vendor_art_id: 2, completed: false, completed_date: '' )
+Trade.create(trader_id: 6, trader_art_id: 27, trader_note: "Giraffe for neon - how about it?",
+    vendor_id: 1, vendor_art_id: 10, completed: false, completed_date: '' )
+Trade.create(trader_id: 4, trader_art_id: 24, trader_note: "Love your art! Trade?",
+    vendor_id: 1, vendor_art_id: 10, completed: false, completed_date: '' )
+Trade.create(trader_id: 7, trader_art_id: 28, trader_note: "These seem like they'd be a good trade! What do you think?",
+    vendor_id: 1, vendor_art_id: 9, completed: false, completed_date: '' )
+Trade.create(trader_id: 7, trader_art_id: 31, trader_note: "This one really caught my eye? Interested in a trade?",
+    vendor_id: 1, vendor_art_id: 5, completed: false, completed_date: '' )
+Trade.create(trader_id: 3, trader_art_id: 19, trader_note: "Zine trade?",
+    vendor_id: 1, vendor_art_id: 1, completed: false, completed_date: '' )
+
+
 
 # Artwork.create(title: '', artist: '', year: 20, description: '', 
 #     size:'', tags:'', available: true, user_id: , url: '')
@@ -103,28 +149,7 @@ Artwork.create(title: 'Cat Clinic', artist: 'Vic Barquin', year: 2020, descripti
 # Trade.create(trader_id: 1, trader_art_id: 1, trader_note: "",
 #      vendor_id: 2, vendor_art_id: 2, completed: false, completed_date: '' )
 
-Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool! Big fan of the use of positive / negative space + color", 
-    vendor_id: 7, vendor_art_id: 16, completed: true )
-Trade.create(trader_id: 2, trader_art_id: 6, trader_note: "I love this piece! It would go perfect with the rest of my collection... please consider this block print I did this year!",
-    vendor_id: 4, vendor_art_id: 13, completed: false )
-Trade.create(trader_id: 2, trader_art_id: 7, trader_note: "Such a cool print. I've always wanted to do screen printing myself. It looks so fun!",
-    vendor_id: 7, vendor_art_id: 18, completed: false )
 
-
-
-
-
-
-
-
-
-
-# Artwork.create(title: 'hand', artist: 'James Dawson', year: 2021, description: 'pen drawing of my hand.', 
-#     size:'6 x 10', tags:'pen, paper', available: true, user_id: 5, url: 'https://scontent-ort2-2.xx.fbcdn.net/v/t39.30808-6/272132515_2290432351098409_6171715577324902631_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=a26aad&_nc_ohc=93EwQ49dKWQAX_rpjCg&_nc_ht=scontent-ort2-2.xx&oh=00_AT-QcR-Pcf6YhtuZPtFtT2HH8tiH8SbAfAyPwmDuSgxarg&oe=620B7F26')
-# Artwork.create(title: 'BB and Lucille', artist: 'James Dawson', year: 2021, description: 'a drawing of one of my idols.', 
-#     size:'6 x 10', tags:'pen, paper, portrait', available: true, user_id: 5, url: 'https://scontent-ort2-2.xx.fbcdn.net/v/t39.30808-6/272123967_2290432357765075_1913419949804577425_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=a26aad&_nc_ohc=66erMMbl9LUAX_Hqn8s&_nc_ht=scontent-ort2-2.xx&oh=00_AT9Fcq2anrYmVsPJe6CpcjA1P5xphrMV3psQvKOrdAleHA&oe=620BFD9F')
-# Artwork.create(title: 'BB and Lucille', artist: 'James Dawson', year: 2021, description: 'a drawing I made of Jimi Hendrix.', 
-#     size:'6 x 10', tags:'pen, paper, portrait', available: true, user_id: 5, url: 'https://scontent-ort2-2.xx.fbcdn.net/v/t39.30808-6/272160367_2290432364431741_6936449882475929096_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=a26aad&_nc_ohc=FjZkqYFgR38AX-FSRyr&_nc_ht=scontent-ort2-2.xx&oh=00_AT-ZJMUZPI_NjfsyylzDZaMtAHh80l0bcs226Fy_CY5Fhg&oe=620C73A3')
 
 
 

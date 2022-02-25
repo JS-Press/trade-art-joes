@@ -26,7 +26,7 @@ function Navbar({ handleLogout, loggedIn, user }){
         <div id='nav'>
         <NavLink className='navLink' to="/about">about</NavLink>
         <NavLink className='inupLinks' to="/login">login</NavLink>
-        <NavLink className='inupLinks' to="/signup">signup</NavLink>
+        <NavLink className='inupLinks'  to="/signup">signup</NavLink>
         <p style={{ fontSize:18, fontWeight:200, marginTop:6, borderRadius:50, marginLeft:20 }} >Welcome!</p>
         </div>
         </>
