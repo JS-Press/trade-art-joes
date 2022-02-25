@@ -23,7 +23,8 @@ const Artistpage = ({artworks}) => {
         }, [])
 
     const artistWorks = artworks.filter(c => c.user_id === artist.id)
-    const artCards = artistWorks.map(c => <ArtistArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} />)
+    const avail_art = artistWorks.filter(a => a.available === true)
+    const artCards = avail_art.map(c => <ArtistArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} />)
     
 
     

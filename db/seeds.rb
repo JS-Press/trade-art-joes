@@ -21,6 +21,9 @@ User.create(username:'KyleArts', first_name:'Kyle', last_name:'Riley', password_
 User.create(username:'VicArt', first_name:'Vic', last_name:'Barquin', password_digest: passwords.sample, email:'vic@gmail.com', 
     bio:"Vic Barquin is an artist, printmaker, and arts administrator from Cranbury, New Jersey. She received a BFA in Printmaking with honors from Massachusetts College of Art and Design in 2016. At graduation she was awarded the Genevieve McMillan-Reba Stewart Traveling Fellowship which funded her residency at the Can Serrat International Art Centre in El Bruc, Catalonia. She then moved to Chicago, Illinois where she facilitated events and exhibitions as part of her studio practice.", 
     street_address:'8928 Holly Ave NE', city:'Albuquerque', state:'NM', zip:'87122', website:'https://www.victoriamariebarquin.com/', profile_pic: 'https://canserrat.org/wp-content/uploads/2017/07/VictoriaMarieBarquin-1-365x365.jpg' )
+User.create(username:'PicklemanArt', first_name:'Jason', last_name:'Pickleman', password_digest: passwords.sample, email:'jasonP@gmail.com', 
+    bio:"Bridging the gap between fine and commercial art, Jason Pickleman has created a body of work that is both conceptual and popular, applying media as varied as neon, offset printing, silkscreen, collage, photography and commercially available ready-mades. Pickleman's studio, JNL graphic design was begun in 1992 and specializes in the creation of graphic ephemera of unique cultural significance.", 
+    street_address:'9205 S Dixie Hwy', city:'Miami', state:'FL', zip:'33156', website:'https://pickleman.art/', profile_pic: 'https://www.chicagotribune.com/resizer/Ny0SnUb64P5VEGuwzeXtnWFEsCk=/415x563/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/PXPBTCZ6P5ELHGTPXQVPHDL5FE.jpg' )
 
 
 ## artworks
@@ -29,7 +32,7 @@ Artwork.create(title: 'In-Flight', artist: 'Jarad Solomon', year: 2018, descript
 Artwork.create(title: 'Flower Post Stamp Garden #4', artist: 'Jarad Solomon', year: 2017, description: 'augmented reality risograph poster made from flower post stamps.', 
     size:'11 x 17', tags:'risograph, paper, augmented reality, found object, collage, pattern making', available: false, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d24f9f/2261903475/il_1588xN.2261903475_fmso.jpg')
 Artwork.create(title: 'garden generative drawing series #1', artist: 'Jarad Solomon', year: 2016, description: 'plant doodle with top part drawn by a computer analyzing the bottom part.', 
-    size:'10 x 14', tags:'risograph, paper, illustration, computer generated, digital', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/02fa0e/3323074566/il_1588xN.3323074566_po69.jpg')
+    size:'10 x 14', tags:'risograph, paper, illustration, computer generated, digital', available: false, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/02fa0e/3323074566/il_1588xN.3323074566_po69.jpg')
 Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad Solomon', year: 2014, description: 'zine of worms with eyes and a mouth.', 
     size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
 Artwork.create(title: 'LOSTCAT (RED BLUE)', artist: 'Jarad Solomon', year: 2020, description: 'drawing of a lost cat. Screen-printed in red, blue, and lighter blue.', 
@@ -72,7 +75,7 @@ Artwork.create(title: 'Lintite Stool', artist: 'Daniel Coleman', year: 2016, des
 Artwork.create(title: 'J-bae in Tenerifaaaeee', artist: 'Daniel Coleman', year: 2016, description: 'colorful computer drawing of bae.', 
     size:'10 x 10', tags:'digital illustration, glycee', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1535711460810-XP0KNFZEVLQL9UHZEM50/image-asset.jpeg?format=1500w')
 Artwork.create(title: "Brunch with Jamie", artist: 'Daniel Coleman', year: 2016, description: 'framed digital print. I made this drawing with a computer mousepad.', 
-    size:'16 x 16', tags:'digital illustration, glycee', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1535711458724-SO7Z8HVYBUH19A9B8ETT/image-asset.jpeg?format=1500w')
+    size:'16 x 16', tags:'digital illustration, glycee', available: false, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1535711458724-SO7Z8HVYBUH19A9B8ETT/image-asset.jpeg?format=1500w')
 Artwork.create(title: "Goat Farming", artist: 'Daniel Coleman', year: 2016, description: 'I think the purpose of art is to get people to see things differently. Most of my work comes from everyday photos shot on my phone. What do you think art is for?', 
     size:'8 x 8', tags:'digital illustration, modern', available: true, user_id: 4, url: 'https://pbs.twimg.com/media/DngycQ1UYAA-2wd?format=jpg&name=large')
 Artwork.create(title: "In San Francisco In 2016", artist: 'Daniel Coleman', year: 2017, description: 'Digital artwork I made in Oakland in 2017', 
@@ -94,11 +97,26 @@ Artwork.create(title: 'Two Fs (San Diego)', artist: 'Vic Barquin', year: 2020, d
 Artwork.create(title: 'Cat Clinic', artist: 'Vic Barquin', year: 2020, description: 'edition of 20. Lithography assistance from Eric Wilson', 
     size:'11 x 8.5', tags:'photolithography, screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/13432492/CatClinic_150dpi_IG_1500.jpg')
      
+Artwork.create(title: 'RE:PURPOSE 3', artist: 'Jason Pickleman', year: 2019, description: 're-purposed neon signs.', 
+    size:'11 x 23 x 3', tags:'neon', available: true, user_id: 8, url: 'https://images.squarespace-cdn.com/content/v1/5dfbfc83a16ab5503da19f75/1583345370505-CRK2KYIUJG0ZMLYQ1K5S/IMG_0764.JPG?format=2500w')
+Artwork.create(title: 'Hearts Divided (pink/red)', artist: 'Jason Pickleman', year: 2019, description: 'edition of 5', 
+    size:'68 x 7 x 3', tags:'neon', available: true, user_id: 8, url: 'https://img1.wsimg.com/isteam/ip/651c130a-ac7e-40f9-a8f8-2728979dcc99/hearts%20divided.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1300,h:800')
+Artwork.create(title: 'Open Campfire', artist: 'Jason Pickleman', year: 2018, description: 'I made this sculpture from illuminated LEDs.', 
+size:'~20 x 30 x 10', tags:'LED, lights, found object', available: true, user_id: 8, url: 'https://www.chicagomag.com/wp-content/archive/images/2016/0816/C201608-C-Jason-Pickleman-Open-Campfire.jpg')
+Artwork.create(title: 'Silver-plated boots', artist: 'Jason Pickleman', year: 1995, description: 'I memorialized my teenage punk years by silver-plating my combat boots.', 
+    size:'12 x 10 x 16', tags:'sculpture, metal-working', available: true, user_id: 8, url: 'https://www.chicagomag.com/wp-content/archive/images/2016/0816/C201608-C-Jason-Pickleman-boots.jpg')
+
 # re-posts
 Artwork.create(title: 'Flower Post Stamp Garden #4', artist: 'Jarad Solomon', year: 2017, description: 'augmented reality risograph poster made from flower post stamps.', 
     size:'11 x 17', tags:'risograph, paper, augmented reality, found object, collage, pattern making', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/d24f9f/2261903475/il_1588xN.2261903475_fmso.jpg')    
 Artwork.create(title: 'Red Socks', artist: 'Vic Barquin', year: 2021, description: 'The transition from what was an immeasurably tragic year into another offers the promise to begin anew. Without active and deliberate retrospection, this passive consolation fails to account for a year of reckonings that have been incited on a scale of collective and individual necessity; the same convenient conviction that has falsely upheld that the failings, tragedies, and prejudices of the past also remain there. A reckoning in its simplest definition is a settling of accounts. When we attempt to reckon with the events of the past year, four years, or one’s own life, what events or experiences do we account for? This collection of work records the efforts of artists as they confront the collision of intimate, national, or global histories.', 
     size:'10 x 14', tags:'screenprint', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/14256184/RedSocksPink_72dpi_648.jpg')
+Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad Solomon', year: 2014, description: 'zine of worms with eyes and a mouth.', 
+    size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
+Artwork.create(title: 'The Last Day of February', artist: 'Danny Alegretti', year: 2019, description: 'The Last Day of February is a risograph zine was made in collaboration with graphic designer Elizabeth Vande Griend. The zine investigates themes of seasonal depression, love, and the city of Chicago.', 
+    size:'5.5 x 8', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/1582764109755-O2BOQEADIQ4MEPHVXQOX/DSC_4506-Edit-Edit.jpg.jpeg?format=1000w')
+
+
 
 ## trades
 # completed examples
@@ -106,6 +124,12 @@ Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool!
     vendor_id: 7, vendor_art_id: 29, completed: true, completed_date: '2020-04-21' )
 Trade.create(trader_id: 1, trader_art_id: 8, trader_note: "This is so dope! It's going to be the perfect gift for my partner!",
     vendor_id: 3, vendor_art_id: 18, completed: true, completed_date: '2021-11-20' )
+Trade.create(trader_id: 3, trader_art_id: 19, trader_note: "Zine trade!",
+    vendor_id: 1, vendor_art_id: 4, completed: true, completed_date: '2021-11-20' )
+Trade.create(trader_id: 4, trader_art_id: 23, trader_note: "I'm very into this style!",
+    vendor_id: 1, vendor_art_id: 3, completed: true, completed_date: '2021-11-20' )
+
+
 
 # sent examples
 Trade.create(trader_id: 1, trader_art_id: 6, trader_note: "Such a beautiful color and texture!",
@@ -120,7 +144,7 @@ Trade.create(trader_id: 1, trader_art_id: 13, trader_note: "Chair for chair?",
     vendor_id: 4, vendor_art_id: 21, completed: false, completed_date: '' )
 Trade.create(trader_id: 1, trader_art_id: 1, trader_note: "Love this style!",
     vendor_id: 4, vendor_art_id: 22, completed: false, completed_date: '' )
-Trade.create(trader_id: 1, trader_art_id: 3, trader_note: "Trying to complete my collection!",
+Trade.create(trader_id: 1, trader_art_id: 7, trader_note: "Trying to complete my collection!",
     vendor_id: 3, vendor_art_id: 17, completed: false, completed_date: '' )
 Trade.create(trader_id: 1, trader_art_id: 4, trader_note: "Blown away by your work lately :)",
     vendor_id: 2, vendor_art_id: 15, completed: false, completed_date: '' )
@@ -128,7 +152,7 @@ Trade.create(trader_id: 1, trader_art_id: 4, trader_note: "Blown away by your wo
 # received examples
 Trade.create(trader_id: 2, trader_art_id: 6, trader_note: "I love this piece! It would go perfect with the rest of my collection... please consider this block print I did this year!",
     vendor_id: 1, vendor_art_id: 5, completed: false, completed_date: '' )
-Trade.create(trader_id: 2, trader_art_id: 7, trader_note: "Such a cool print. I've always wanted to do something like this. It looks like fun!",
+Trade.create(trader_id: 2, trader_art_id: 15, trader_note: "Such a cool print. I've always wanted to do something like this. It looks like fun!",
     vendor_id: 1, vendor_art_id: 2, completed: false, completed_date: '' )
 Trade.create(trader_id: 6, trader_art_id: 27, trader_note: "Giraffe for neon - how about it?",
     vendor_id: 1, vendor_art_id: 10, completed: false, completed_date: '' )
@@ -138,8 +162,9 @@ Trade.create(trader_id: 7, trader_art_id: 28, trader_note: "These seem like they
     vendor_id: 1, vendor_art_id: 9, completed: false, completed_date: '' )
 Trade.create(trader_id: 7, trader_art_id: 31, trader_note: "This one really caught my eye? Interested in a trade?",
     vendor_id: 1, vendor_art_id: 5, completed: false, completed_date: '' )
-Trade.create(trader_id: 3, trader_art_id: 19, trader_note: "Zine trade?",
-    vendor_id: 1, vendor_art_id: 1, completed: false, completed_date: '' )
+Trade.create(trader_id: 8, trader_art_id: 35, trader_note: "Nice neon! Would you be interested in a sign trade?",
+    vendor_id: 1, vendor_art_id: 10, completed: false, completed_date: '' )
+
 
 
 
