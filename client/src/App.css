@@ -95,7 +95,8 @@ h4 {
 }
 
 .navLink:hover {
-  text-decoration: underline;
+  font-weight: bold;
+  letter-spacing: .2px;
   text-underline-offset: .58em;
   text-decoration-thickness: .24em;
 }
@@ -435,3 +436,43 @@ margin-left: -10px;
   margin-top: 200px;
 }
 
+
+.tradeDropdown {
+  display:flex;
+  flex-flow: column;
+ }
+ 
+ .tradeLink {
+   /* position: fixed; */
+   font-size: 14px;
+   margin-right: 10px;
+   margin-left: 10px;
+   top:0px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: 200;
+   border-radius: 50px;
+   padding: 2px;
+   margin-bottom: 0px;
+ }
+ 
+ .tradeLink:hover {
+  font-weight: bold;
+ }
+ 
+ .tradeLink.active {
+   font-weight: bold;
+ }
+
+ #noLine {
+   margin-bottom: -3px;
+ }
+
+ #noLine:hover {
+   text-decoration: none;
+ }
+
+ #noLine.active {
+  text-decoration: none;
+
+}
