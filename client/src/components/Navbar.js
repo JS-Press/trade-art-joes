@@ -17,9 +17,9 @@ function Navbar({ handleLogout, loggedIn, user }){
         {isShown ?
         <div className='tradeDropdown' id='noLine' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >
           <NavLink className='navLink' to="/mytrades" id='noLine' >my trades</NavLink>
-          <NavLink className='tradeLink' to='/mytrades/sent' >sent</NavLink>
-          <NavLink className='tradeLink' to="/mytrades/received">received</NavLink>
-          <NavLink className='tradeLink' to="/mytrades/completed">completed</NavLink>
+          <NavLink className='tradeLink' to='/TradesSent' >sent</NavLink>
+          <NavLink className='tradeLink' to="/TradesRec">received</NavLink>
+          <NavLink className='tradeLink' to="/TradesComp/:id">completed</NavLink>
         </div>
         :<>
         <NavLink className='navLink' to="/mytrades" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</NavLink>

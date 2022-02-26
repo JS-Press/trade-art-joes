@@ -9,13 +9,16 @@ import Signup from './components/Signup'
 import About from './components/About'
 import ArtPage from './components/ArtPage'
 import ArtistPage from './components/ArtistPage'
-import MakeTrade from './components/MakeTrade'
+import MyTrades from './components/MyTrades'
+import TradeMake from './components/TradeMake'
+import TradesSent from './components/TradesSent'
+import TradesRec from './components/TradesRec'
+import TradesComp from './components/TradesComp'
 
 function App() {
 
   const [user, setUser] = useState({})
   const [artworks, setArtworks] = useState([])
-  const [trades, setTrades] = useState([])
   const [loggedIn, setLoggedIn] = useState(false)
   const [selectedArtwork, setSelectedArtwork] = useState({})
 
@@ -28,14 +31,6 @@ function App() {
         })
         }, [])
 
-  useEffect( () => {
-    fetch(`/trades`).then((r) => {
-        if (r.ok) {
-            r.json().then(data => {
-            setTrades(data)
-            })}
-        })
-        }, [])
 
   useEffect(() => {
     fetch(`/me`).then((r) => {
@@ -76,7 +71,11 @@ function handleLogout(){
       <Route path='/signup' element={<Signup handleLogin={handleLogin} />} />
       <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn}/>} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
-      <Route path='/makeTrade' element={<MakeTrade selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
+      <Route path='/TradeMake' element={<TradeMake selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
+      <Route path='/MyTrades' element={<MyTrades user={user} />} />
+      <Route path='/TradesSent' element={<TradesSent user={user} />} />
+      <Route path='/TradesRec' element={<TradesRec user={user} />} />
+      <Route path='/TradesComp/:id' element={<TradesComp />} />
     </Routes>
     </div>
     </Router>

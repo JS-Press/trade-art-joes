@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import ArtistArtCard from './ArtistArtCard'
 
-const MakeTrade = ({selectedArtwork, user, artworks}) => {
+const TradeMake = ({selectedArtwork, user, artworks}) => {
 
 
     const [vendor, setVendor] = useState({})
@@ -54,4 +54,4 @@ const MakeTrade = ({selectedArtwork, user, artworks}) => {
     );
 }
 
-export default MakeTrade;
+export default TradeMake;
