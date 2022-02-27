@@ -22,10 +22,8 @@ const Tradescomp = ({ user }) => {
         
     return (
         <div>
-            <p>trades completed!</p>
-            <div className='artCards'>
+            <div className='tradeCards'>
                {tradeCards}
-               <p>no</p>
            </div>
         </div>
     );

@@ -24,7 +24,7 @@ const Tradessent = ({user}) => {
         <div>
             <p>trades sent!</p>
             <div className='artCards'>
-               {tradeCards}
+               {/* {tradeCards} */}
            </div>
         </div>
     );

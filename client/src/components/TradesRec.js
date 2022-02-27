@@ -23,7 +23,7 @@ const Tradesrec = ({user}) => {
         <div>
            <p>trades received!</p>
            <div className='artCards' >
-               {tradeCards}
+               {/* {tradeCards} */}
            </div>
         </div>
     );
