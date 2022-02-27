@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import TradeCompCard from './TadeCompCard'
+import TradeCompCard from './TradeCompCard'
 
 const Tradescomp = ({ user }) => {
 
@@ -10,22 +10,23 @@ const Tradescomp = ({ user }) => {
         fetch(`/tradesComp/${user.id}`).then((r) => {
             if (r.ok) {
                 r.json().then(data => {
-                console.log(data)
+                setTrades(data)
                 })}
             })
             }, [])
 
-    console.log('user: ' + user + 'trades >')
+    console.log("trades completed: > ")
     console.log(trades)
 
-    const tradeCards = trades.map(t => <TradeCompCard trade={t}/>)
+    const tradeCards = trades.map(t => <TradeCompCard key={t.id} trade={t}/>)
         
     return (
         <div>
-             <p>trades completed!</p>
-             <div className='ArtCards' >
-             {tradeCards}
-             </div>
+            <p>trades completed!</p>
+            <div className='artCards'>
+               {tradeCards}
+               <p>no</p>
+           </div>
         </div>
     );
 }

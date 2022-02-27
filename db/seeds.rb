@@ -5,7 +5,7 @@ names = ["Vincent", "Pablo", "Paul", "Albrecht", "Andy", "Edgar", "Diego", "Edva
 passwords = ["cat", "bat", "hat", "mat", "rat", "flat", "gnat", "wat", "tat", "vat", "pat", "sat", "dat"]
 
 ## users
-User.create(username:'JSpress', first_name:'Jarad', last_name:'Solomon', password_digest: passwords.sample, email:'jaradsolomon@gmail.com', 
+User.create(username:'j', first_name:'Jarad', last_name:'Solomon', password_digest: 'j', email:'jaradsolomon@gmail.com', 
     bio:'Interdisciplinary design media artist based in Logan Square Chicago.', street_address:'2239 N Sawyer Ave', city:'Chicago', state:'IL', zip:'60647', website:'www.jaradsolomon.com', profile_pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdxrrtycZ8D0kYtXknN1I95jhhC8iHppv9w&usqp=CAU' )
 User.create(username:'HalfFull', first_name:'Jeanette', last_name:'Tokarz', password_digest: passwords.sample, email:'tokarzjeanette@gmail.com', 
     bio:'Self-taught folk-artist focused in ceramics and linocut prints.', street_address:'1629 N Sawyer Ave', city:'Chicago', state:'IL', zip:'60647', website:'www.etsy.com/shop/JeanetteTokarz', profile_pic: 'https://media-exp1.licdn.com/dms/image/C4E03AQH20xYulSOLFQ/profile-displayphoto-shrink_200_200/0/1608656775759?e=1649289600&v=beta&t=stqnpgUtsEoKQ6wVOG4DWW2yWATFbq0fcrlcqMO5_hI' )
@@ -128,7 +128,7 @@ Trade.create(trader_id: 1, trader_art_id: 8, trader_note: "This is so dope! It's
 
 Trade.create(trader_id: 3, trader_art_id: 19, trader_note: "Zine trade!",
              vendor_id: 1, vendor_art_id: 4, completed: true, completed_date: '2021-11-20' )
-             
+
 Trade.create(trader_id: 4, trader_art_id: 23, trader_note: "I'm very into this style!",
             vendor_id: 1, vendor_art_id: 3, completed: true, completed_date: '2021-11-20' )
 

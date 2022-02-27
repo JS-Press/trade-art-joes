@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import TradeCompCard from './TradeCompCard'
 
 const Tradessent = ({user}) => {
 
@@ -16,9 +17,15 @@ const Tradessent = ({user}) => {
     console.log("trades sent: > ")
     console.log(trades)
 
+    const tradeCards = trades.map(t => <TradeCompCard key={t.id} trade={t}/>)
+
+
     return (
         <div>
             <p>trades sent!</p>
+            <div className='artCards'>
+               {tradeCards}
+           </div>
         </div>
     );
 }
