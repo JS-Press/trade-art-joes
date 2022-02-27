@@ -4,7 +4,6 @@ import {NavLink, Link} from "react-router-dom"
 function Navbar({ handleLogout, loggedIn, user }){
 
     const [isShown, setIsShown] = useState(false);
-    console.log(isShown)
 
     return (
 <> 
@@ -19,7 +18,7 @@ function Navbar({ handleLogout, loggedIn, user }){
           <NavLink className='navLink' to="/mytrades" id='noLine' >my trades</NavLink>
           <NavLink className='tradeLink' to='/TradesSent' >sent</NavLink>
           <NavLink className='tradeLink' to="/TradesRec">received</NavLink>
-          <NavLink className='tradeLink' to="/TradesComp/:id">completed</NavLink>
+          <NavLink className='tradeLink' to="/TradesComp">completed</NavLink>
         </div>
         :<>
         <NavLink className='navLink' to="/mytrades" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</NavLink>

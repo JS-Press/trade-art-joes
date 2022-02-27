@@ -31,7 +31,6 @@ function App() {
         })
         }, [])
 
-
   useEffect(() => {
     fetch(`/me`).then((r) => {
       if (r.ok) {
@@ -41,9 +40,6 @@ function App() {
         })}
       })
     }, [])
-
-  // console.log(trades)
-  
 
   function handleLogin(u){
     setLoggedIn(true)
@@ -75,7 +71,7 @@ function handleLogout(){
       <Route path='/MyTrades' element={<MyTrades user={user} />} />
       <Route path='/TradesSent' element={<TradesSent user={user} />} />
       <Route path='/TradesRec' element={<TradesRec user={user} />} />
-      <Route path='/TradesComp/:id' element={<TradesComp />} />
+      <Route path='/TradesComp' element={<TradesComp user={user} />} />
     </Routes>
     </div>
     </Router>

@@ -6,7 +6,7 @@ class TradesController < ApplicationController
     if trade 
       render json: trade, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
     else 
-      render json: {errors: "artwork does not exist"}, status: :unprocessable_entity
+      render json: {errors: "does not exist"}, status: :unprocessable_entity
     end
   end
 
@@ -40,11 +40,23 @@ class TradesController < ApplicationController
     end
   end
 
-  def completedIndex 
+  def sent 
+    user = User.find(params[:id]) 
+    userTrades = user.sent_trades.select { |t| t.completed === false }
+    render json: userTrades, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
+  end
+
+  def received
+    user = User.find(params[:id])  
+    userTrades = user.received_trades.select { |t| t.completed === false }
+    render json: userTrades, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
+  end
+
+  def completed
     user = User.find(params[:id])
+    # user = User.find_by(id: session[:user_id])  
     userTrades = user.sent_trades.concat user.received_trades
     completedTrades = userTrades.select { |t| t.completed }
-
     render json: completedTrades, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
   end
 

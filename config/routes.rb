@@ -14,7 +14,9 @@ Rails.application.routes.draw do
   get '/trades', to: 'trades#index'
   get '/trades/:id', to: 'trades#show'
   post '/trades', to: 'trades#create'
-  get '/completedTrades/:id', to: 'trades#completedIndex'
+  get '/tradesComp/:id', to: 'trades#completed'
+  get '/tradesSent/:id', to: 'trades#sent'
+  get '/tradesRec/:id', to: 'trades#received'
 
 
   get 'artworks/create'

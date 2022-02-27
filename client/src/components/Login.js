@@ -17,8 +17,7 @@ const Login = ( { handleLogin } ) => {
   }
 
     function handleLogClick(){
-      console.log('trying to log in ' + username)
-
+      // console.log('trying to log in ' + username)
       fetch("/login", {
         method: "POST",
         headers: {"Content-Type": "application/json",},
