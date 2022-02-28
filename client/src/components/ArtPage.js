@@ -26,7 +26,7 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
 
         function handleOfferClick(e){
             setTradeArtwork(art)
-            navigate(`/makeTrade`)
+            navigate(`/tradeMake`)
         }
     
     return (

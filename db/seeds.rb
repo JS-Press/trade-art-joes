@@ -184,13 +184,6 @@ Trade.create(trader_id: 8, trader_art_id: 35, trader_note: "Nice neon! Would you
 
 
 
-# Artwork.create(title: '', artist: '', year: 20, description: '', 
-#     size:'', tags:'', available: true, user_id: , url: '')
-
-# Trade.create(trader_id: 1, trader_art_id: 1, trader_note: "",
-#      vendor_id: 2, vendor_art_id: 2, completed: false, completed_date: '' )
-
-
 
 
 
