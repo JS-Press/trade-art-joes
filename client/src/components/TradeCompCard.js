@@ -13,12 +13,13 @@ function handleTradeClick(){
 
     return (
         <div className='tradeCard' onClick={handleTradeClick} >
-            <img className='tradeCardImg' src={trade.vendor_art.url} alt='trade art 1'/>
-            <img className='tradeCardImg2' src={trade.trader_art.url} alt='trade art 2'/>
-            <div className='TradeArtDeets' style={{marginTop:110}} ></div>
-                {/* <h2>with {trade.trader.first_name} and {trade.vendor.first_name}</h2> */}
-                <h3 style={{fontStyle:'italic', fontSize:16, fontWeight: 300, letterSpacing:1.5, marginTop:20, marginBottom:8, marginLeft:16 }}>COMPLETED {trade.completed_date}</h3>
-            <button className='detailButton' onClick={handleTradeClick} >trade details</button>
+            <img className='tradeCardImg' style={{alignSelf:'center', marginLeft:-85,}} src={trade.vendor_art.url} alt='trade art 1'/>
+            <img className='tradeCardImg2' style={{alignSelf:'center', marginLeft:-85,}} src={trade.trader_art.url} alt='trade art 2'/>
+            <div className='TradeArtDeets' style={{marginTop:85}} ></div>
+                <h2 style={{alignSelf:'center', marginLeft:-85,}} >offer from: {trade.trader.first_name}</h2>
+                <h2 style={{alignSelf:'center', marginLeft:-85, marginTop:-5, marginBottom:-5 }} >sent to: {trade.vendor.first_name}</h2>
+                <h3 style={{fontStyle:'italic', fontSize:16, fontWeight: 300, letterSpacing:1.5, marginTop:20, marginBottom:8, marginLeft:-85, alignSelf:'center' }}>COMPLETED {trade.completed_date}</h3>
+            <button className='detailButton' style={{alignSelf:'center', marginLeft:-85,}} onClick={handleTradeClick} >trade details</button>
                 <br></br>
                 <br></br>
             </div>

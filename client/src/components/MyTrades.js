@@ -1,12 +1,17 @@
 import React from 'react';
+import TradesSent from './TradesSent'
+import TradesRec from './TradesRec'
+import TradesComp from './TradesComp'
 
-const Mytrades = () => {
+const Mytrades = ({user}) => {
 
 
 
     return (
         <div>
-             <p>All my trades!!</p>
+             {/* <TradesSent user={user} />
+             <TradesRec user={user} />
+             <TradesComp user={user} /> */}
         </div>
     );
 }
