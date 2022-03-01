@@ -8,7 +8,7 @@ const TradeCompCard = ({ trade }) => {
 
     const str = trade.completed_date
     const dateObj = new Date(str);
-    const month = dateObj.getMonth() + 1; //months from 1-12
+    const month = dateObj.getMonth() + 1;
     const day = dateObj.getDate();
     const year = dateObj.getFullYear();
     const newdate = month + "/" + day + "/" + year;

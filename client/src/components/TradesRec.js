@@ -5,6 +5,8 @@ const Tradesrec = ({user}) => {
 
     const [trades, setTrades] = useState([])
 
+    // console.log('user: ' + user)
+
     useEffect( () => {
         fetch(`/tradesRec/${user.id}`).then((r) => {
             if (r.ok) {
