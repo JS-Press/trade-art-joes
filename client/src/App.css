@@ -520,3 +520,23 @@ background-position:center;
 .TradeArtDeets {
   margin-top: 80px;
 }
+
+.detailButton {
+  border-color: white;
+  border-style: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  width: 170px;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 10px;
+  border-width: 4px;
+}
+
+.detailButton:hover {
+  border-color: transparent;
+  font-weight: 900;
+  
+}

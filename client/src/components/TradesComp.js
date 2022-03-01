@@ -15,8 +15,8 @@ const Tradescomp = ({ user }) => {
             })
             }, [])
 
-    console.log("trades completed: > ")
-    console.log(trades)
+    // console.log("trades completed: > ")
+    // console.log(trades)
 
     const tradeCards = trades.map(t => <TradeCompCard key={t.id} trade={t}/>)
         

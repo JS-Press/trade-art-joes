@@ -14,8 +14,8 @@ const Tradesrec = ({user}) => {
             })
             }, [])
 
-    console.log("trades received: > ")
-    console.log(trades)
+    // console.log("trades received: > ")
+    // console.log(trades)
 
     const tradeCards = trades.map(t => <TradeRecCard key={t.id} trade={t}/>)
 

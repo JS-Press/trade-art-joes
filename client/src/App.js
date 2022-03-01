@@ -67,8 +67,8 @@ function handleLogout(){
       <Route path='/signup' element={<Signup handleLogin={handleLogin} />} />
       <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn}/>} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
-      <Route path='/TradeMake' element={<TradeMake selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
-      <Route path='/MyTrades' element={<MyTrades user={user} />} />
+      <Route path='/tradeMake' element={<TradeMake selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
+      <Route path='/myTrades' element={<MyTrades user={user} />} />
       <Route path='/tradesSent' element={<TradesSent user={user} />} />
       <Route path='/tradesReceived' element={<TradesRec user={user} />} />
       <Route path='/tradesCompleted' element={<TradesComp user={user} />} />

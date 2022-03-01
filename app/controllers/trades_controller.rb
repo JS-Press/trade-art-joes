@@ -55,8 +55,9 @@ class TradesController < ApplicationController
   def completed
     user = User.find(params[:id])
     # user = User.find_by(id: session[:user_id])  
-    userTrades = user.sent_trades.concat user.received_trades
-    completedTrades = userTrades.select { |t| t.completed }
+    # userTrades = user.sent_trades.concat user.received_trades
+    completedTrades = user.sent_trades.select { |t| t.completed }
+    completedTrades += user.received_trades.select { |t| t.completed }
     render json: completedTrades, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
   end
 
