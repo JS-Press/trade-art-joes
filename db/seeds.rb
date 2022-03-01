@@ -120,18 +120,17 @@ Artwork.create(title: 'The Last Day of February', artist: 'Danny Alegretti', yea
 
 ## trades
 # completed examples
-Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool! Big fan of the use of positive / negative space + color", 
-            vendor_id: 7, vendor_art_id: 29, completed: true, completed_date: '2020-04-21' )
-
-Trade.create(trader_id: 1, trader_art_id: 8, trader_note: "This is so dope! It's going to be the perfect gift for my partner!",
-            vendor_id: 3, vendor_art_id: 18, completed: true, completed_date: '2021-11-20' )
+Trade.create(trader_id: 4, trader_art_id: 23, trader_note: "I'm very into this style!",
+    vendor_id: 1, vendor_art_id: 3, completed: true, completed_date: '2022-01-28' )
 
 Trade.create(trader_id: 3, trader_art_id: 19, trader_note: "Zine trade!",
-             vendor_id: 1, vendor_art_id: 4, completed: true, completed_date: '2021-11-20' )
+    vendor_id: 1, vendor_art_id: 4, completed: true, completed_date: '2021-11-03' )
 
-Trade.create(trader_id: 4, trader_art_id: 23, trader_note: "I'm very into this style!",
-            vendor_id: 1, vendor_art_id: 3, completed: true, completed_date: '2021-11-20' )
+Trade.create(trader_id: 1, trader_art_id: 8, trader_note: "This is so dope! It's going to be the perfect gift for my partner!",
+    vendor_id: 3, vendor_art_id: 18, completed: true, completed_date: '2020-08-22' )
 
+Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool! Big fan of the use of positive / negative space + color", 
+            vendor_id: 7, vendor_art_id: 29, completed: true, completed_date: '2019-02-13' )
 
 
 # sent examples

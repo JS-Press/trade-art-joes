@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2022_02_08_050025) do
     t.integer "vendor_id"
     t.integer "vendor_art_id"
     t.boolean "completed"
-    t.datetime "completed_date"
+    t.date "completed_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
