@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/tradesSent/:id', to: 'trades#sent'
   get '/tradesRec/:id', to: 'trades#received'
   post '/trades', to: 'trades#create'
+  delete '/trades/:id', to: 'trades#destroy'
 
 
   get 'artworks/create'

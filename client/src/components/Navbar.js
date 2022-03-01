@@ -15,14 +15,15 @@ function Navbar({ handleLogout, loggedIn, user }){
         <NavLink className='navLink' to="/myart">my art</NavLink>
         {isShown ?
         <div className='tradeDropdown' id='noLine' onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >
-          <NavLink className='navLink' to="/mytrades" id='noLine' >my trades</NavLink>
+          {/* <NavLink className='navLink' to="/mytrades" id='noLine' >my trades</NavLink> */}
+          <h2 className='navLink' style={{fontWeight:700, fontSize:28, marginTop:0, marginBottom:-5, letterSpacing:0}} >my trades</h2>
           <NavLink className='tradeLink' to='/tradesSent' >sent</NavLink>
           <NavLink className='tradeLink' to="/tradesReceived">received</NavLink>
           <NavLink className='tradeLink' to="/tradesCompleted">completed</NavLink>
         </div>
         :<>
-        <NavLink className='navLink' to="/mytrades" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</NavLink>
-        {/* <h2 className='navLink' style={{fontWeight:700, fontSize:28, marginTop:0, letterSpacing:0}} >my trades</h2> */}
+        {/* <NavLink className='navLink' to="/mytrades" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</NavLink> */}
+        <h2 className='navLink' style={{fontWeight:200, fontSize:28, marginTop:0, letterSpacing:1.8}} onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</h2>
         </>
         }
         <Link className='navLink' id='logout' to="/" onClick={handleLogout} >logout</Link>

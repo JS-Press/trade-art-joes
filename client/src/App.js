@@ -9,7 +9,6 @@ import Signup from './components/Signup'
 import About from './components/About'
 import ArtPage from './components/ArtPage'
 import ArtistPage from './components/ArtistPage'
-import MyTrades from './components/MyTrades'
 import TradeMake from './components/TradeMake'
 import TradesSent from './components/TradesSent'
 import TradesRec from './components/TradesRec'
@@ -68,7 +67,6 @@ function handleLogout(){
       <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn}/>} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
       <Route path='/tradeMake' element={<TradeMake selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
-      <Route path='/myTrades' element={<MyTrades user={user} />} />
       <Route path='/tradesSent' element={<TradesSent user={user} />} />
       <Route path='/tradesReceived' element={<TradesRec user={user} />} />
       <Route path='/tradesCompleted' element={<TradesComp user={user} />} />
