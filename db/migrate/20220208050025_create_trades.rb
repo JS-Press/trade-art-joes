@@ -7,6 +7,7 @@ class CreateTrades < ActiveRecord::Migration[6.1]
       t.integer :vendor_id
       t.integer :vendor_art_id
       t.boolean :completed
+      t.date :offered_date
       t.date :completed_date
 
       t.timestamps
