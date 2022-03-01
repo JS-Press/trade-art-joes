@@ -535,12 +535,14 @@ background-position:center;
   width: 170px;
   color: white;
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 100;
   padding: 10px;
   border-width: 4px;
+  letter-spacing:.6px;
 }
 
 .detailButton:hover {
+  letter-spacing:.1px;
   border-color: transparent;
   font-weight: 900;
 }
@@ -552,7 +554,7 @@ font-size: 20px;
 font-weight: 800;
 letter-spacing: .75px;
 align-self: left;
-width: 300px;
+width: 250px;
 height: 35px;
 border-color: white;
 border-style: solid;
@@ -561,7 +563,7 @@ padding: auto;
 color: darkslategray;
 background-color: white;
 margin-left: -25px;
-margin-top:5px;
+margin-top:4.5px;
 margin-bottom:5px;
 }
 

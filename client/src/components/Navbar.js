@@ -23,7 +23,7 @@ function Navbar({ handleLogout, loggedIn, user }){
         </div>
         :<>
         {/* <NavLink className='navLink' to="/mytrades" onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</NavLink> */}
-        <h2 className='navLink' style={{fontWeight:200, fontSize:28, marginTop:0, letterSpacing:1.8}} onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</h2>
+        <h2 className='navLink' style={{fontWeight:200, fontSize:28, marginTop:0, letterSpacing:1.9}} onMouseEnter={() => setIsShown(true)} onMouseLeave={() => setIsShown(false)} >my trades</h2>
         </>
         }
         <Link className='navLink' id='logout' to="/" onClick={handleLogout} >logout</Link>

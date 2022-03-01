@@ -26,7 +26,7 @@ function handleTradeClick(){
                 <h2 style={{alignSelf:'center', marginLeft:-85,}} >offer from: {trade.trader.first_name}</h2>
                 <h2 style={{alignSelf:'center', marginLeft:-85, marginTop:-5, marginBottom:-5 }} >sent to: {trade.vendor.first_name}</h2>
                 <h3 style={{fontStyle:'italic', fontSize:16, fontWeight: 300, letterSpacing:1.5, marginTop:20, marginBottom:8, marginLeft:-85, alignSelf:'center' }}>COMPLETED {newdate}</h3>
-            <button className='detailButton' style={{alignSelf:'center', marginLeft:-85,}} onClick={handleTradeClick} >trade details</button>
+                {/* <button className='detailButton' style={{alignSelf:'center', marginLeft:-85,}} onClick={handleTradeClick} >trade details</button> */}
                 <br></br>
                 <br></br>
             </div>

@@ -28,7 +28,7 @@ const Tradereccard = ({trade}) => {
         <h2 style={{ marginTop:10, marginBottom:5, alignSelf:'center', marginLeft:-85 }}>From: {trade.trader.first_name} {trade.trader.last_name}</h2>
          <h3 style={{ alignSelf:'center', fontStyle:'italic', fontWeight: 300, letterSpacing:1.5, marginTop:3, marginBottom:10, marginLeft:-85, fontSize:16 }}>RECEIVED {newdate}</h3>
             <button className='respond' style={{alignSelf:'center', marginLeft:-85,}} onClick={handleRespondClick}>respond to offer</button>
-            <button className='detailButton' style={{alignSelf:'center', marginLeft:-85,}} onClick={handleTradeClick} >trade details</button>
+            {/* <button className='detailButton' style={{alignSelf:'center', marginLeft:-85,}} onClick={handleTradeClick} >trade details</button> */}
             <br></br>
             <br></br>
         </div>
