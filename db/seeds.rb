@@ -34,7 +34,7 @@ Artwork.create(title: 'Flower Post Stamp Garden #4', artist: 'Jarad Solomon', ye
 Artwork.create(title: 'garden generative drawing series #1', artist: 'Jarad Solomon', year: 2016, description: 'plant doodle with top part drawn by a computer analyzing the bottom part.', 
     size:'10 x 14', tags:'risograph, paper, illustration, computer generated, digital', available: false, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/02fa0e/3323074566/il_1588xN.3323074566_po69.jpg')
 Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad Solomon', year: 2014, description: 'zine of worms with eyes and a mouth.', 
-    size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
+    size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: false, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
 Artwork.create(title: 'LOSTCAT (RED BLUE)', artist: 'Jarad Solomon', year: 2020, description: 'drawing of a lost cat. Screen-printed in red, blue, and lighter blue.', 
     size:'10 x 14', tags:'paper, illustration, silkscreen', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/f53b96/1717522970/il_1588xN.1717522970_fzit.jpg')
 Artwork.create(title: '2 Livingrooms #7', artist: 'Jarad Solomon', year: 2016, description: '2 color Risograph on archival 80lb french paper', 
@@ -83,9 +83,10 @@ Artwork.create(title: "In San Francisco In 2016", artist: 'Daniel Coleman', year
 Artwork.create(title: "Wildebeest", artist: 'Daniel Coleman', year: 2015, description: 'A cat toy inspired by a fish skeleton. ', 
     size:'4 x 16 X 1', tags:'fiber, product Design', available: true, user_id: 4, url: 'https://images.squarespace-cdn.com/content/v1/5339bd96e4b092d3a373b1b7/1443541216789-NN3ZRDX3CANC0L7LKCJA/IMG_4336.jpg?format=1500w')
 
-Artwork.create(title: 'Giraffe', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, one-of-a-kind object. ', 
+Artwork.create(title: 'Giraffe', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, one-of-a-kind object.', 
     size:'9 x 16 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0843KYL_1_1024x1024.jpg?v=1612479769')
-   
+    
+
 Artwork.create(title: 'Handwriting: A Way to Self-Expression', artist: 'Vic Barquin', year: 2018, description: 'Three layer screenprint. Included in Chicago Printmakers Collaborative`s 2018 Calendar.', 
     size:'18 x 24', tags:'screenprint, handwriting', available: true, user_id: 7, url: 'https://payload.cargocollective.com/1/14/454814/14256184/Handwriting_150dpi_1079.jpg')
 Artwork.create(title: 'Red Socks', artist: 'Vic Barquin', year: 2021, description: 'The transition from what was an immeasurably tragic year into another offers the promise to begin anew. Without active and deliberate retrospection, this passive consolation fails to account for a year of reckonings that have been incited on a scale of collective and individual necessity; the same convenient conviction that has falsely upheld that the failings, tragedies, and prejudices of the past also remain there. A reckoning in its simplest definition is a settling of accounts. When we attempt to reckon with the events of the past year, four years, or one’s own life, what events or experiences do we account for? This collection of work records the efforts of artists as they confront the collision of intimate, national, or global histories.', 
@@ -115,7 +116,16 @@ Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad S
     size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
 Artwork.create(title: 'The Last Day of February', artist: 'Danny Alegretti', year: 2019, description: 'The Last Day of February is a risograph zine was made in collaboration with graphic designer Elizabeth Vande Griend. The zine investigates themes of seasonal depression, love, and the city of Chicago.', 
     size:'5.5 x 8', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/1582764109755-O2BOQEADIQ4MEPHVXQOX/DSC_4506-Edit-Edit.jpg.jpeg?format=1000w')
-
+ # more
+Artwork.create(title: 'Horse', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, one-of-a-kind object.', 
+    size:'15 x 12 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0842KYL_2_1024x1024.jpg?v=1612479577')
+Artwork.create(title: 'Crying Cowboy', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted one-of-a-kind bust, can hang on the wall or lean on a shelf.', 
+    size:'15 x 20 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/2022-02-21_10of57_1024x1024.jpg?v=1645917254')
+Artwork.create(title: 'Tropical Fish', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted one-of-a-kind bust, can hang on the wall or lean on a shelf.', 
+    size:'3 x 8 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0844KYL_1024x1024.jpg?v=1612480047')
+Artwork.create(title: 'Duck with Ducklings', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, wood object.', 
+    size:'17 x 6.5 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/2022-02-21_7of57_1024x1024.jpg?v=1645917093')
+    
 
 
 ## trades
