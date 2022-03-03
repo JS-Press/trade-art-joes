@@ -35,7 +35,7 @@ const Tradesentcard = ({ trade }) => {
         <img className='tradeCardImg' onClick={handleTradeClick} src={trade.trader_art.url} alt='trade art 1' style={{alignSelf:'center', marginLeft:-160 }} />
         <img className='tradeCardImg2' onClick={handleTradeClick} src={trade.vendor_art.url} alt='trade art 2'style={{alignSelf:'center', marginLeft:-160 }} />
         <h2 style={{ marginTop:110, marginBottom:-120, alignSelf:'center', marginLeft:-165 }}>To: {trade.vendor.first_name} {trade.vendor.last_name}</h2>
-        <h3 style={{fontStyle:'italic', alignSelf:'center', fontSize:16, fontWeight: 300, letterSpacing:1.5, marginTop:130, marginBottom:8, marginLeft:-160 }}>SENT {newdate}</h3>
+        <h3 style={{fontStyle:'italic', alignSelf:'center', fontSize:16, fontWeight: 300, letterSpacing:1.5, marginTop:130, marginBottom:15, marginLeft:-160 }}>SENT {newdate}</h3>
         <button className='respond' style={{alignSelf:'center', marginLeft:-160 }} onClick={handleCancelClick}>cancel offer</button>
         <br></br>
         <br></br>

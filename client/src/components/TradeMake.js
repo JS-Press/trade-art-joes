@@ -25,8 +25,8 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
     // console.log('vendor: ' + vendor.first_name)
 
     const traderArtworks = artworks.filter(c => c.user_id === user.id)
-    console.log(traderArtworks)
-    const traderOptions = traderArtworks.map(c => <TraderArtCard key={c.id} art={c} handleSelectArt={handleSelectArt} />)
+    const avail_art = traderArtworks.filter(a => a.available === true)
+    const traderOptions = avail_art.map(c => <TraderArtCard key={c.id} art={c} handleSelectArt={handleSelectArt} />)
    
 
     return (
@@ -42,7 +42,7 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <img src={selectedArtwork.url} alt={selectedArtwork.title} className='vendorImg' />
                     <div style={{ marginLeft:-11, backgroundColor:'transparent' }}>
-                    <h2 style={{ marginTop:30 }}>{selectedArtwork.title}</h2>
+                    <h2 style={{ fontSize:20, marginTop:30 }}>"{selectedArtwork.title}"</h2>
                     <h4>{selectedArtwork.tags}</h4>
                     <h4>{selectedArtwork.size}</h4>
                     <h4>{selectedArtwork.year}</h4>
@@ -51,7 +51,11 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                 <div className='dotted' ></div>
                 {offerArt.url === transUrl? <>
                 <div style={{marginLeft: 15, marginTop: 200, display: 'flex', flexFlow: 'row' }}>
-                    <img className='traderImgD' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
+                    <div style={{display: 'flex', flexFlow: 'column'}}>
+                        <img className='traderImgD' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
+                        <p style={{position:'relative', top:-190, fontSize:20, backgroundColor:'transparent', width:200, alignSelf:'center', marginLeft:-20}}>select the artwork you want to trade</p>
+                        <button className='respond' style={{alignSelf:'center', top:-90, height:60, fontSize:30, width:250, marginBottom:15, backgroundColor:'darkslategray', color:'white', marginTop:130 }} >Send</button>
+                    </div>
                     <div className='traderOptions'>
                         {traderOptions}
                     </div>
@@ -62,6 +66,13 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                     <div style={{display: 'flex', flexFlow: 'column'}}>
                         <img className='traderImg' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
                         <h4 className='deselect' onClick={() => setOfferArt({url:transUrl})}>deselect</h4>
+                        <div style={{width:250, marginLeft:10, marginTop:-15, backgroundColor:'transparent' }} >
+                            <h2 style={{fontSize:20, marginTop:25, width:240 }}>"{offerArt.title}"</h2>
+                            <h4>{offerArt.tags}</h4>
+                            <h4>{offerArt.size}"</h4>
+                            <h4>{offerArt.year}</h4>  
+                        </div>
+                        <button className='respond' style={{alignSelf:'center', marginTop:30, height:60, fontSize:30, width:250, marginBottom:15 }} >Send</button>
                     </div>
                     <div className='traderOptions'>
                         {traderOptions}
