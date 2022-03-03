@@ -9,6 +9,11 @@ color:white;
 
 }
 
+input {
+text-align: left;
+padding:auto;
+}
+
 p {
 background-color: transparent;
 text-align: center;
@@ -576,7 +581,7 @@ margin-bottom:5px;
   border-color: white;
   margin-left: 25px;
   display: flex;
-  height: 500px;
+  height: 570px;
   margin-top: 200px;
   }
 
@@ -588,6 +593,10 @@ width:155px;
 height:155px;
 background-size:contain;
 background-position:center;
+}
+
+.tradeCardImgs:hover {
+  outline-width: 10px;
 }
 
 .traderOptions {

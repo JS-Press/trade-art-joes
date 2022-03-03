@@ -3,9 +3,10 @@ import TraderArtCard from './TraderArtCard'
 
 const TradeMake = ({selectedArtwork, user, artworks}) => {
 
-    const transUrl ='https://images.hasgeek.com/embed/file/65c4929262a84c78b29ad37321df2eca'
+    const transUrl ='https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png?20091205084734'
     const [vendor, setVendor] = useState({})
     const [offerArt, setOfferArt] = useState({url:transUrl})
+    const [note, setNote] = useState('')
 
     useEffect( () => {
         fetch(`/users/${selectedArtwork.user_id}`).then((r) => {
@@ -18,6 +19,16 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
 
     function handleSelectArt(a){
         setOfferArt(a)
+    }
+
+    function changeNote(e){
+        setNote(e.target.value)
+    }
+
+    function handleSend(){
+        console.log('sending...')
+        console.log('note: ' + note)
+        console.log('offer: ' + offerArt)
     }
 
 
@@ -54,10 +65,14 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                     <div style={{display: 'flex', flexFlow: 'column'}}>
                         <img className='traderImgD' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
                         <p style={{position:'relative', top:-190, fontSize:20, backgroundColor:'transparent', width:200, alignSelf:'center', marginLeft:-20}}>select the artwork you want to trade</p>
-                        <button className='respond' style={{alignSelf:'center', top:-90, height:60, fontSize:30, width:250, marginBottom:15, backgroundColor:'darkslategray', color:'white', marginTop:130 }} >Send</button>
+                        <button className='respond' style={{alignSelf:'center', top:-90, height:60, fontSize:30, width:250, marginBottom:15, backgroundColor:'darkslategray', color:'white', marginTop:200 }} >Send</button>
                     </div>
-                    <div className='traderOptions'>
-                        {traderOptions}
+                    <div style={{display: 'flex', flexFlow: 'column'}} >
+                        <div className='traderOptions'>
+                            {traderOptions}
+                        </div>
+                        <h4 style={{ marginTop:-25, fontStyle:'normal', fontWeight:800, letterSpacing:1.2 }}>Include a note <em style={{fontWeight:300}}>(Optional)</em></h4>
+                        <input style={{ paddingLeft:40, marginTop:30, height:145, width:500, textAlign:'left' }} className='inputS' name='note' value={note} onChange={changeNote} type="text"/>
                     </div>
                 </div>
                 </>
@@ -72,10 +87,14 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                             <h4>{offerArt.size}"</h4>
                             <h4>{offerArt.year}</h4>  
                         </div>
-                        <button className='respond' style={{alignSelf:'center', marginTop:30, height:60, fontSize:30, width:250, marginBottom:15 }} >Send</button>
+                        <button className='respond' style={{position:'absolute', top:665, alignSelf:'center', marginTop:45, height:60, fontSize:30, width:250, marginBottom:15 }} onClick={handleSend} >Send</button>
                     </div>
-                    <div className='traderOptions'>
-                        {traderOptions}
+                    <div style={{display: 'flex', flexFlow: 'column'}} >
+                        <div className='traderOptions'>
+                            {traderOptions}
+                        </div>
+                        <h4 style={{ marginTop:-25, fontStyle:'noraml', fontWeight:800, letterSpacing:1.2 }}>Include a note <em style={{fontWeight:300}}>(Optional)</em></h4>
+                        <input style={{ paddingLeft:40, marginTop:30, height:145, width:500, textAlign:'left' }} className='inputS' name='note' value={note} onChange={changeNote} type="text"/>
                     </div>
                 </div>
                 </>}
