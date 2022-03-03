@@ -1,11 +1,11 @@
 import React, { useState, useEffect} from 'react';
-import ArtistArtCard from './ArtistArtCard'
+import TraderArtCard from './TraderArtCard'
 
 const TradeMake = ({selectedArtwork, user, artworks}) => {
 
-
+    const transUrl ='https://images.hasgeek.com/embed/file/65c4929262a84c78b29ad37321df2eca'
     const [vendor, setVendor] = useState({})
-    const [offerArt, setOfferArt] = useState({url:'https://images.hasgeek.com/embed/file/65c4929262a84c78b29ad37321df2eca'})
+    const [offerArt, setOfferArt] = useState({url:transUrl})
 
     useEffect( () => {
         fetch(`/users/${selectedArtwork.user_id}`).then((r) => {
@@ -16,13 +16,17 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
             })
         }, [])
 
+    function handleSelectArt(a){
+        setOfferArt(a)
+    }
+
 
     // console.log('trader: ' + user.first_name)
     // console.log('vendor: ' + vendor.first_name)
 
     const traderArtworks = artworks.filter(c => c.user_id === user.id)
     console.log(traderArtworks)
-    const traderOptions = traderArtworks.map(c => <ArtistArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} />)
+    const traderOptions = traderArtworks.map(c => <TraderArtCard key={c.id} art={c} handleSelectArt={handleSelectArt} />)
    
 
     return (
@@ -45,10 +49,25 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                     </div>
                 </div>
                 <div className='dotted' ></div>
+                {offerArt.url === transUrl? <>
                 <div style={{marginLeft: 15, marginTop: 200, display: 'flex', flexFlow: 'row' }}>
-                <img className='traderImg' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
-                {traderOptions}
+                    <img className='traderImgD' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
+                    <div className='traderOptions'>
+                        {traderOptions}
+                    </div>
                 </div>
+                </>
+                :<>
+                <div style={{marginLeft: 15, marginTop: 200, display: 'flex', flexFlow: 'row' }}>
+                    <div style={{display: 'flex', flexFlow: 'column'}}>
+                        <img className='traderImg' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
+                        <h4 className='deselect' onClick={() => setOfferArt({url:transUrl})}>deselect</h4>
+                    </div>
+                    <div className='traderOptions'>
+                        {traderOptions}
+                    </div>
+                </div>
+                </>}
             </div>
         </div>
     );
