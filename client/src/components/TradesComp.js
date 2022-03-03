@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import TradeCompCard from './TradeCompCard'
+import CompletedTrade from './CompletedTrade'
 
 const Tradescomp = ({ user }) => {
 
     const [trades, setTrades] = useState([])
-
+    const [selectedTrade, setSelectedTrade] = useState({})
+    const [shown, setShown] = useState(false)
     
     useEffect( () => {
         fetch(`/tradesComp/${user.id}`).then((r) => {
@@ -15,10 +17,15 @@ const Tradescomp = ({ user }) => {
             })
             }, [])
 
+function handleSelectTrade(t){
+    setSelectedTrade(t)
+    setShown(true)
+}
+
     // console.log("trades completed: > ")
     // console.log(trades)
 
-    const tradeCards = trades.map(t => <TradeCompCard key={t.id} trade={t}/>)
+    const tradeCards = trades.map(t => <TradeCompCard key={t.id} trade={t} handleSelectTrade={handleSelectTrade} />)
         
     return (
         <div>
@@ -26,6 +33,14 @@ const Tradescomp = ({ user }) => {
             <div className='tradeCards' style={{marginLeft:120}}>
                {tradeCards}
            </div>
+           {shown?<>
+           <div className='CT' >
+               <h3 style={{display:'flex',alignSelf:'flex-end', backgroundColor:'transparent'}} onClick={()=> setShown(false)}>GO BACK</h3>
+            <CompletedTrade trade={selectedTrade} />
+           </div>
+           </>:
+           <>
+           </>}
         </div>
     );
 }

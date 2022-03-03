@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-const TradeCompCard = ({ trade }) => {
+const TradeCompCard = ({ trade, handleSelectTrade }) => {
 
     // console.log("TC for " + trade.trader + ' and ' + trade.vendor)
     // console.log(trade)
@@ -14,7 +14,7 @@ const TradeCompCard = ({ trade }) => {
     const newdate = month + "/" + day + "/" + year;
 
 function handleTradeClick(){
-    console.log(trade.id)
+    handleSelectTrade(trade)
 }
 
 
