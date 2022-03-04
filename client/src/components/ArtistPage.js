@@ -31,7 +31,7 @@ const Artistpage = ({artworks}) => {
     return (
         <div>
             { artist? <>
-                <div className='ArtistArtCards' >
+                <div className='ArtistArtCards' style={{marginTop:160}}>
                     {artCards}
                 </div>
                 <div style={{ marginLeft:100, marginTop:150, display: 'flex', flexDirection: 'row', height:400, position:'fixed' }} >

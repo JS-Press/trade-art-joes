@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get '/artworks', to: 'artworks#index'
   get '/artworks/:id', to: 'artworks#show'
+  delete '/artworks/:id', to: 'artworks#destroy'
 
   get '/users/:id', to: 'users#show'
   get '/users', to: 'users#index'

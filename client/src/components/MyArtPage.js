@@ -18,7 +18,7 @@ const Myartpage = () => {
         }, [])
 
     function handleArtistClick(e){
-        navigate(`/myArt`)
+        navigate(`/users/${art.user_id}`)
     }
 
     return (

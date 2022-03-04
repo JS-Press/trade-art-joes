@@ -656,3 +656,19 @@ background-position:center;
   color: darkslategray;
   font-weight: 900;
 }
+
+.details {
+  color: white;
+  border-style: none;
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 8px;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+.details:hover {
+  font-weight: 900;
+  letter-spacing: .8px;
+  text-decoration: none;
+}

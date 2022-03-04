@@ -25,7 +25,7 @@ const Myart = ({user}) => {
         const avail_art = artistWorks.filter(a => a.available === true)
         console.log("available art: ")
         console.log(avail_art)
-        const artCards = avail_art.map(c => <MyArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} />)
+        const artCards = avail_art.map(c => <MyArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} setArtist={setArtist} />)
     
         
 
@@ -35,7 +35,7 @@ const Myart = ({user}) => {
             <div className='ArtCards' style={{marginTop:150}}>
             {artCards}
             </div>
-            <div style={{ marginLeft:100, marginTop:150, display: 'flex', flexDirection: 'row', height:400, position:'fixed' }} >
+            <div style={{ marginLeft:100, marginTop:180, display: 'flex', flexDirection: 'row', height:400, position:'fixed' }} >
                 <img src={artist.profile_pic} alt='icon' className='icon' />
                 <div className='nameInfo' style={{display: 'flex', flexDirection: 'column'}}>
                     {/* <h2 style={{ fontSize:48, marginRight:50, marginTop:4 }}>Art by {artist.first_name} {artist.last_name}</h2> */}
