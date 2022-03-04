@@ -34,7 +34,7 @@ const Artistpage = ({artworks}) => {
                 <div className='ArtistArtCards' >
                     {artCards}
                 </div>
-                <div style={{ marginLeft:100, marginTop:250, display: 'flex', flexDirection: 'row', height:400 }} >
+                <div style={{ marginLeft:100, marginTop:150, display: 'flex', flexDirection: 'row', height:400, position:'fixed' }} >
                     <img src={artist.profile_pic} alt='icon' className='icon' />
                     <div className='nameInfo' style={{display: 'flex', flexDirection: 'column'}}>
                         <h2 style={{ fontSize:48, marginRight:50, marginTop:4 }}>Art by {artist.first_name} {artist.last_name}</h2>

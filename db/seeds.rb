@@ -116,7 +116,10 @@ Artwork.create(title: 'Worms with Eyes and a Mouth (Volume 2)', artist: 'Jarad S
     size:'2.75 x 4.25', tags:'paper, illustration, zine, folded', available: true, user_id: 1, url: 'https://i.etsystatic.com/13059752/r/il/2ded6f/1765005629/il_794xN.1765005629_qw0h.jpg')
 Artwork.create(title: 'The Last Day of February', artist: 'Danny Alegretti', year: 2019, description: 'The Last Day of February is a risograph zine was made in collaboration with graphic designer Elizabeth Vande Griend. The zine investigates themes of seasonal depression, love, and the city of Chicago.', 
     size:'5.5 x 8', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/1582764109755-O2BOQEADIQ4MEPHVXQOX/DSC_4506-Edit-Edit.jpg.jpeg?format=1000w')
- # more
+Artwork.create(title: 'valentinys #2', artist: 'Danny Alegretti', year: 2021, description: 'tear and share valentines cards made in collaboration with OG homies Ginger Gold and risograph printed on fancy GLO-TONE paper by Riso World. each bundle includes one pink sheet and one yellow sheet (12 cards in totaly) with the option to purchase 12 envelopes so you can easily send them to all yer lovers out there.', 
+    size:'2.25 x 4', tags:'risograph, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/6003328b2f57da1e2e6cdc65/1643071153297-AFUVR0C5L1PZQ0ZH48R4/valentinys_individualsnow-3.jpg?format=500w')
+    
+# more
 Artwork.create(title: 'Horse', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted, free standing, one-of-a-kind object.', 
     size:'15 x 12 x .5', tags:'painted wood', available: true, user_id: 6, url: 'https://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0842KYL_2_1024x1024.jpg?v=1612479577')
 Artwork.create(title: 'Crying Cowboy', artist: 'Kyle Riley', year: 2022, description: 'Hand-painted one-of-a-kind bust, can hang on the wall or lean on a shelf.', 
