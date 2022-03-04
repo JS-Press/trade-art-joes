@@ -22,7 +22,7 @@ function shuffle(array) {
 
     return (
         <>
-            <div className='ArtCards' >
+            <div className='ArtCards' style={{marginTop:110}}>
             { artworks? <>
             {art_cards}
             </>

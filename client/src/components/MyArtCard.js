@@ -6,13 +6,12 @@ const Myartcard = ({ title, artist, year, size, description, url, tags, user, id
     const navigate = useNavigate()
 
     function handleClick(e){
-    console.log('nav to myArtworks: ' + id)
-    // navigate(`/myArtworks/${id}`)
+    navigate(`/myArtworks/${id}`)
     }
 
     return (
-        <div className='ArtistArtCard' onClick={handleClick} >
-            <img className='CardImgs' src={url} value={id} alt='art image not found'/>
+        <div className='ArtistArtCard' onClick={handleClick}>
+            <img  className='CardImgs' src={url} value={id} alt='art image not found'/>
             <div className='ArtDeets'>
             <h2 style={{fontSize:20}}>{title}</h2>
             <h4 style={{fontSize:14}}>{tags}</h4>

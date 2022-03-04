@@ -32,19 +32,18 @@ const Myart = ({user}) => {
     return (
         <div>
             {artistWorks? <>
-            <div className='ArtCards'>
+            <div className='ArtCards' style={{marginTop:150}}>
             {artCards}
             </div>
             <div style={{ marginLeft:100, marginTop:150, display: 'flex', flexDirection: 'row', height:400, position:'fixed' }} >
                 <img src={artist.profile_pic} alt='icon' className='icon' />
                 <div className='nameInfo' style={{display: 'flex', flexDirection: 'column'}}>
                     {/* <h2 style={{ fontSize:48, marginRight:50, marginTop:4 }}>Art by {artist.first_name} {artist.last_name}</h2> */}
-                    <h2 style={{ fontSize:32, marginRight:50, marginTop:8 }}>Your Available Artworks</h2>
+                    <h2 style={{ fontSize:25, marginRight:50, marginTop:13, textTransform:'uppercase' }}>Available Artworks</h2>
                     <h4 style={{ marginTop:2, marginLeft:-9 }}>{artist.first_name} {artist.last_name}</h4>
                     <h4 style={{ marginTop:15, marginLeft:-9 }}>{artist.city}, {artist.state}</h4>
                 </div>
             </div>
-            
             </>:
             <>
             <p>loading....your....art....</p>

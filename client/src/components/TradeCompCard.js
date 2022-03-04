@@ -19,7 +19,7 @@ function handleTradeClick(){
 
 
     return (
-        <div className='tradeCard' onClick={handleTradeClick} >
+        <div className='tradeCard' style={{marginRight:48}} onClick={handleTradeClick} >
             <img className='tradeCardImg' style={{alignSelf:'center', marginLeft:-85,}} src={trade.vendor_art.url} alt='trade art 1'/>
             <img className='tradeCardImg2' style={{alignSelf:'center', marginLeft:-85,}} src={trade.trader_art.url} alt='trade art 2'/>
             <div className='TradeArtDeets' style={{marginTop:85}} ></div>

@@ -631,5 +631,28 @@ background-position:center;
   position:fixed;
   top:50%;
   left:50%;
+}
 
+#upload {
+  position: fixed;
+  border-color: white;
+  border-width: 5px;
+  border-radius: 2em;
+  border-style: solid;
+  color: white;
+  top:110px;
+  right: 110px;
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: .25px;
+  font-size: .9em;
+  font-weight: 600;
+}
+
+#upload:hover {
+  background-color: white;
+  color: darkslategray;
+  font-weight: 900;
 }
