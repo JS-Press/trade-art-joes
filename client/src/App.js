@@ -13,6 +13,7 @@ import TradeMake from './components/TradeMake'
 import TradesSent from './components/TradesSent'
 import TradesRec from './components/TradesRec'
 import TradesComp from './components/TradesComp'
+import MyArt from './components/MyArt'
 
 function App() {
 
@@ -64,6 +65,7 @@ function handleLogout(){
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login handleLogin={handleLogin} />} />
       <Route path='/signup' element={<Signup handleLogin={handleLogin} />} />
+      <Route path='/myArt' element={<MyArt user={user}/>} />
       <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn}/>} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
       <Route path='/tradeMake' element={<TradeMake selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
