@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { useNavigate } from "react-router-dom";
 
-const Myartcard = ({ title, artist, year, size, url, tags, user, id, handleDelete }) => {
+const Myartcard = ({ title, artist, year, size, url, tags, user, id, handleDeleteClick }) => {
 
     const navigate = useNavigate()
     
@@ -21,7 +21,7 @@ const Myartcard = ({ title, artist, year, size, url, tags, user, id, handleDelet
             <h4 style={{fontSize:14}}>{year}</h4>
             <div style={{display:'flex', flexFlow:'column', marginTop:-45 }} ></div>
                 <button className='details' style={{ marginLeft:23 }} onClick={handleDeetClick} >DETAILS</button>
-                <button className='TradeButton' style={{marginLeft:8, padding:10, fontSize:14, borderWidth:4, width:120}} onClick={()=>handleDelete(id)}>X DELETE</button>
+                <button className='TradeButton' style={{marginLeft:8, padding:10, fontSize:14, borderWidth:4, width:120}} onClick={()=>handleDeleteClick(id)}>X DELETE</button>
             </div>
         </div>
     );

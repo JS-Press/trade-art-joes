@@ -684,7 +684,7 @@ border-radius:5em;
 padding-top:50px;
 margin-left: 20%;
 margin-right:20%;
-margin-top:-20%;
+margin-top:-320px;
 }
 
 .button {
@@ -695,7 +695,6 @@ margin-top:-20%;
   color:darkslategray;
   border-style:solid;
   border-color:white;
-  border-width: 15px;
   border-radius:50em;
   width: 25%;
   height: 70px;

@@ -5,7 +5,10 @@ const Tradessent = ({user}) => {
 
     const [trades, setTrades] = useState([])
     
+    
     useEffect( () => {
+        console.log('user in effect: ')
+        console.log(user)
         fetch(`/tradesSent/${user.id}`).then((r) => {
             if (r.ok) {
                 r.json().then(data => {
@@ -30,7 +33,8 @@ const Tradessent = ({user}) => {
                 <img src={user.profile_pic} alt='icon' className='icon' />
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:720, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>SENT</p>
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
-            </div>
+        </div>
+        
     </div>
     );
 }

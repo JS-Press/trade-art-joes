@@ -7,8 +7,6 @@ const Myart = ({user}) => {
     const [confirmShown, setConfirmShown] = useState(false)
     const [deletingArt, setDeletingArt] = useState(null)
 
-    console.log(confirmShown)
-
     useEffect( () => {
         fetch(`/users/${user.id}`).then((r) => {
             if (r.ok) {
@@ -18,8 +16,8 @@ const Myart = ({user}) => {
             })
         }, [])
 
-        function handleDelete(id){
-            console.log('deleting: #' + id)
+
+        function handleDeleteClick(id){
             setConfirmShown(true)
             setDeletingArt(id)
             }
@@ -32,6 +30,7 @@ const Myart = ({user}) => {
                 console.log('successful delete!')
                 setDeletingArt(null)
                 setConfirmShown(false)
+                r.json().then(data => { setArtist(data) })
               }else {
                 console.log('unsuccessful delete :(')
             }})
@@ -39,7 +38,7 @@ const Myart = ({user}) => {
 
         const artistWorks = artist.artworks.filter(c => c.user_id === artist.id)
         const avail_art = artistWorks.filter(a => a.available === true)
-        const artCards = avail_art.map(c => <MyArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} handleDelete={handleDelete} />)
+        const artCards = avail_art.map(c => <MyArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} handleDeleteClick={handleDeleteClick} />)
 
       
 
@@ -67,7 +66,7 @@ const Myart = ({user}) => {
             <div className='popUp' style={{borderWidth:8}}>
                 <br></br>
                 <br></br>
-                <p style={{fontSize:30}}>Are you sure you want to cancel your offer?</p>
+                <p style={{fontSize:30}}>Are you sure you want to delete your artwork?</p>
                 <p style={{fontSize:30}}>This action can't be undone :(</p>
                 <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around'}}>
                 <button className='button' onClick={()=>setConfirmShown(false)}>no</button>

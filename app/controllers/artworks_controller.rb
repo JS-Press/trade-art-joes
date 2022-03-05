@@ -32,12 +32,18 @@ class ArtworksController < ApplicationController
   end
 
   def destroy
-    art = Artwork.find( params[:id] )
-    if art 
-      Artwork.destroy( params[:id] )
-      head :no_content
-    else 
-      render json: {errors: "artwork does not exist."}, status: :unprocessable_entity
+    user = User.find_by(id: session[:user_id])  
+    if user
+      art = Artwork.find( params[:id] )
+      if art 
+        Artwork.destroy( params[:id] )
+        render json: user, include: :artworks, status: :ok
+      else 
+        render json: {errors: "artwork does not exist."}, status: :unprocessable_entity
+      end
+    else
+      puts "need to be logged in sorry"
+      render json: { errors: ["must login"] }, status: :unauthorized
     end
   end
 
