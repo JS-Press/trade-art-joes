@@ -54,10 +54,10 @@ Artwork.create(title: 'Wicker Lounge Chair', artist: 'Jarad Solomon', year: 2013
 Artwork.create(title: 'Averaged Chairs', artist: 'Jarad Solomon', year: 2013, description: 'Two Queen Anne Chairs vertically sliced, offset, and rebuilt as averages of each other.', 
     size:'17 x 15 x 40', tags:'sculpture, furniture, woodworking', available: true, user_id: 1, url: 'https://payload.cargocollective.com/1/9/305078/9279601/finished_670.jpeg')         
 
-Artwork.create(title: 'worm #1', artist: 'Jeanette Tokarz', year: 2019, description: 'the first worm I ever made!', 
-    size:'8.5 x 11', tags:'illustration, paper, ink', available: true, user_id: 2, url: 'https://i.etsystatic.com/19062942/r/il/c9db32/3324699900/il_1588xN.3324699900_ovzu.jpg')
-Artwork.create(title: 'Lady Figure Print in Peach', artist: 'Jeanette Tokarz', year: 2020, description: 'Handmade linocut print, each print has its own unique qualities! This edition will be limited availability only 15 prints made. Peach color was hand mixed to create this beautiful print!', 
-    size:'8 x 10', tags:'linocut, paper', available: true, user_id: 2, url: 'https://i.etsystatic.com/19062942/r/il/5d9e8f/3372373527/il_1588xN.3372373527_5kav.jpg')
+Artwork.create(title: 'cosmic snake', artist: 'Jeanette Tokarz', year: 2019, description: 'hand cut lino print of a snake. Oil-Based Relief Ink', 
+    size:'8.5 x 11', tags:'linocut, paper, ink', available: true, user_id: 2, url: 'https://i.etsystatic.com/19062942/r/il/c9db32/3324699900/il_1588xN.3324699900_ovzu.jpg')
+Artwork.create(title: 'Lady Figure Print in Peach', artist: 'Jeanette Tokarz', year: 2020, description: 'Handmade gradient linocut print, each print has its own unique qualities! This edition will be limited availability only 15 prints made. Peach color was hand mixed to create this beautiful print! Oil-Based Relief Ink', 
+    size:'8 x 10', tags:'linocut, paper, ink', available: true, user_id: 2, url: 'https://i.etsystatic.com/19062942/r/il/5d9e8f/3372373527/il_1588xN.3372373527_5kav.jpg')
 
 Artwork.create(title: 'Burn Your Art', artist: 'Danny Alegretti', year: 2020, description: 'match box for burning all that art.', 
     size:'1.25 x 2.5', tags:'cardboard, print', available: true, user_id: 3, url: 'https://images.squarespace-cdn.com/content/v1/5e0a5c3b1d3864051d629ab1/30cd0c8e-32ca-4b86-852f-49f06810eaab/matches2.gif?format=750w')

@@ -63,6 +63,8 @@ const Myart = ({user}) => {
             <p>loading....your....art....</p>
             </>}
             {confirmShown? <>
+            <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
+            </div>
             <div className='popUp' style={{borderWidth:8}}>
                 <br></br>
                 <br></br>
@@ -71,7 +73,7 @@ const Myart = ({user}) => {
                 <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around'}}>
                 <button className='button' onClick={()=>setConfirmShown(false)}>no</button>
                 <button className='button' onClick={handleDeleteOffer}>yes</button>
-                </div>
+            </div>
             </div>
             </>:
             <>
