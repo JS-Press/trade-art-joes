@@ -22,7 +22,7 @@ const Myart = ({user}) => {
             setDeletingArt(id)
             }
 
-        function handleDeleteOffer(){
+        function handleDeleteArt(){
             fetch(`/artworks/${deletingArt}`, {
                 method: "DELETE"
               }).then((r) => {
@@ -63,17 +63,17 @@ const Myart = ({user}) => {
             <p>loading....your....art....</p>
             </>}
             {confirmShown? <>
-            <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
-            </div>
+            {/* <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
+            </div> */}
             <div className='popUp' style={{borderWidth:8}}>
                 <br></br>
                 <br></br>
                 <p style={{fontSize:30}}>Are you sure you want to delete your artwork?</p>
                 <p style={{fontSize:30}}>This action can't be undone :(</p>
-                <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around'}}>
+                <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent'}}>
                 <button className='button' onClick={()=>setConfirmShown(false)}>no</button>
-                <button className='button' onClick={handleDeleteOffer}>yes</button>
-            </div>
+                <button className='button' onClick={handleDeleteArt}>yes</button>
+                </div>
             </div>
             </>:
             <>

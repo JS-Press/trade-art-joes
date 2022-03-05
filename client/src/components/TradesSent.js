@@ -4,23 +4,44 @@ import TradeSentCard from './TradeSentCard'
 const Tradessent = ({user}) => {
 
     const [trades, setTrades] = useState([])
+    const [confirmShown, setConfirmShown] = useState(false)
+    const [deletingTrade, setDeletingTrade] = useState(null)
     
     
-    useEffect( () => {
-        console.log('user in effect: ')
-        console.log(user)
-        fetch(`/tradesSent/${user.id}`).then((r) => {
-            if (r.ok) {
-                r.json().then(data => {
-                setTrades(data)
-                })}
-            })
-            }, [])
+useEffect( () => {
+    console.log('user in effect: ')
+    console.log(user)
+    fetch(`/tradesSent/${user.id}`).then((r) => {
+        if (r.ok) {
+            r.json().then(data => {
+            setTrades(data)
+            })}
+        })
+        }, [])
 
-    // console.log("trades sent: > ")
-    // console.log(trades)
+function handleDeleteClick(id){
+    setConfirmShown(true)
+    setDeletingTrade(id)
+    }
 
-    const tradeCards = trades.map(t => <TradeSentCard key={t.id} trade={t}/>)
+function handleDeleteOffer(){
+    fetch(`/trades/${deletingTrade}`, {
+        method: "DELETE"
+        }).then((r) => {
+        if (r.ok) {
+            r.json().then(data => { 
+                console.log('successful delete!')
+                setDeletingTrade(null)
+                setConfirmShown(false)
+                console.log('setting trades: ')
+                setTrades(data) })
+        }else {
+        console.log('unsuccessful delete :(')
+    }})
+}
+
+
+    const tradeCards = trades.map(t => <TradeSentCard key={t.id} trade={t} handleDeleteClick={handleDeleteClick} />)
 
 
     return (
@@ -34,7 +55,22 @@ const Tradessent = ({user}) => {
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:720, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>SENT</p>
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
         </div>
-        
+        {confirmShown? <>
+        {/* <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
+        </div> */}
+        <div className='popUp' style={{borderWidth:8, marginTop:-580, height:480, width:850}}>
+            <br></br>
+            <br></br>
+            <p style={{fontSize:30}}>Are you sure you want to cancel your offer?</p>
+            <p style={{fontSize:30}}>This action can't be undone :(</p>
+            <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent' }}>
+                <button className='button' onClick={()=>setConfirmShown(false)}>no</button>
+                <button className='button' onClick={handleDeleteOffer}>yes</button>
+            </div>
+        </div>
+        </>:
+        <>
+        </>}
     </div>
     );
 }

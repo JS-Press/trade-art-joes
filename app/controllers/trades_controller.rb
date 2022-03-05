@@ -31,13 +31,19 @@ class TradesController < ApplicationController
   end
 
   def destroy
-    # user = User.find_by(id: session[:user_id])  
-    # if user
+    user = User.find_by(id: session[:user_id])  
+    if user
+      trade = Trade.find( params[:id] )
+      if trade 
         Trade.destroy( params[:id] )
-        head :no_content
-    #   else 
-    #     render json: { errors: [ 'gotta be logged in to do that' ] }, status: :unauthorized
-    # end
+        render json: Trade.all, include: [:trader, :trader_art, :vendor, :vendor_art], status: :ok
+      else 
+        render json: {errors: "trade does not exist."}, status: :unprocessable_entity
+      end
+    else
+      puts "need to be logged in sorry"
+      render json: { errors: ["must login"] }, status: :unauthorized
+    end
   end
 
   def sent 
