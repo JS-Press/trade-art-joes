@@ -30,6 +30,27 @@ class TradesController < ApplicationController
       end
   end
 
+  def update 
+    user = User.find_by(id: session[:user_id])  
+    if user
+        trade = Trade.find_by(id: params[:id])
+        trade.completed = true
+        if trade.save
+          trade.trader_art.available = false
+          trade.vendor_art.available = false
+          trade.trader_art.sent_offers.each(&:destroy)
+          trade.trader_art.received_offers.each(&:destroy)
+          trade.vendor_art.sent_offers.each(&:destroy)
+          trade.vendor_art.received_offers.each(&:destroy)
+          render json: Trade.all, include: [:trader, :trader_art, :vendor, :vendor_art], status: :created
+        else
+            render json: { errors: "trade not able to confirm."}, status: :unprocessable_entity
+        end
+    else 
+        render json: { errors: ["must login"] }, status: :unauthorized
+    end
+end
+
   def destroy
     user = User.find_by(id: session[:user_id])  
     if user

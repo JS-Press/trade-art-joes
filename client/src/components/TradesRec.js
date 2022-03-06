@@ -31,9 +31,20 @@ const Tradesrec = ({user}) => {
         console.log(t)
     }
 
-    function handleRejectOffer(t){
+    function handleRejectOffer(){
         console.log('rejecting: ')
-        console.log(t)
+        console.log(respondingTrade)
+        fetch(`/trades/${respondingTrade.id}`, {
+            method: "DELETE"
+          }).then((r) => {
+            if (r.ok) {
+            console.log('successful delete!')
+            // setRespondingTrade(null)
+            setConfirmShown(false)
+            r.json().then(data => { setTrades(data) })
+          }else {
+            console.log('unsuccessful delete :(')
+        }})
     }
 
     
