@@ -27,13 +27,13 @@ const Tradesrec = ({user}) => {
     }
 
     function handleConfirmOffer(t){
+        console.log('confirming: ')
         console.log(t)
-        setConfirmShown(false)
     }
 
     function handleRejectOffer(t){
+        console.log('rejecting: ')
         console.log(t)
-        setConfirmShown(false)
     }
 
     
@@ -54,15 +54,28 @@ const Tradesrec = ({user}) => {
             </div>
             {confirmShown?<>
                 <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
-            <br></br>
-            <br></br>
-            <p style={{fontSize:28}}>Respond to trade?</p>
-            <br></br>
-            <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent' }}>
-                <button className='button' onClick={handleRejectOffer}>no</button>
-                <button className='button' onClick={handleConfirmOffer}>yes</button>
-            </div>
-            </div>
+                    <button className='details' style={{marginLeft:50, marginTop:-50, fontSize:16}} onClick={()=>setConfirmShown(false)} >GO BACK</button>
+                    <p style={{fontSize:28, marginTop:-30, fontWeight:700, letterSpacing:.4 }}>Confirm your trade with {respondingTrade.trader.first_name}?</p>
+                    <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent'}} >
+                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
+
+                        </div>
+                        <div className='dotted' style={{marginLeft:425, marginTop:10, height:250, marginBottom:-40}}></div>
+                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
+
+                        </div>
+                    </div>
+                    <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent' }}>
+                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
+                            <button className='button' style={{width:320}} onClick={handleRejectOffer}>no deal</button>
+                            <p style={{textTransform:'uppercase', fontSize:16, fontWeight:300, letterSpacing:.4}} >no worries!</p>
+                        </div>
+                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
+                            <button className='button' style={{width:320}} onClick={handleConfirmOffer}>confirm</button>
+                            <p style={{textTransform:'uppercase', fontSize:16, fontWeight:300, letterSpacing:.4 }} >let's trade!</p>
+                        </div>
+                    </div>
+                </div>
             </>:
             <>
             </>}
