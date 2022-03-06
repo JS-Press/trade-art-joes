@@ -65,12 +65,12 @@ const Myart = ({user}) => {
             {confirmShown? <>
             {/* <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
             </div> */}
-            <div className='popUp' style={{borderWidth:8}}>
+            <div className='popUp' style={{marginTop:-335}}>
                 <br></br>
-                <br></br>
-                <p style={{fontSize:30}}>Are you sure you want to delete your artwork?</p>
-                <p style={{fontSize:30}}>This action can't be undone :(</p>
-                <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent'}}>
+                <p style={{fontSize:28}}>Are you sure you want to delete your artwork?</p>
+                <p style={{fontSize:28}}>The art's incomplete trade offers will also be deleted</p>
+                <p style={{fontSize:28}}>This action can't be undone :(</p>
+                <div style={{marginTop:-30, display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent'}}>
                 <button className='button' onClick={()=>setConfirmShown(false)}>no</button>
                 <button className='button' onClick={handleDeleteArt}>yes</button>
                 </div>

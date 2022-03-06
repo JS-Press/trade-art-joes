@@ -58,11 +58,12 @@ function handleDeleteOffer(){
         {confirmShown? <>
         {/* <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
         </div> */}
-        <div className='popUp' style={{borderWidth:8, marginTop:-580, height:480, width:850}}>
+        <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
             <br></br>
             <br></br>
-            <p style={{fontSize:30}}>Are you sure you want to cancel your offer?</p>
-            <p style={{fontSize:30}}>This action can't be undone :(</p>
+            <p style={{fontSize:28}}>Are you sure you want to cancel your offer?</p>
+            <p style={{fontSize:28}}>This action can't be undone :(</p>
+            <br></br>
             <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent' }}>
                 <button className='button' onClick={()=>setConfirmShown(false)}>no</button>
                 <button className='button' onClick={handleDeleteOffer}>yes</button>

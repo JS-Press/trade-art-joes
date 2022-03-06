@@ -35,7 +35,11 @@ class ArtworksController < ApplicationController
     user = User.find_by(id: session[:user_id])  
     if user
       art = Artwork.find( params[:id] )
-      if art 
+      if art
+        sent_trades = art.sent_offers
+        rec_trades = art.received_offers
+        sent_trades.each(&:destroy)
+        rec_trades.each(&:destroy)
         Artwork.destroy( params[:id] )
         render json: user, include: :artworks, status: :ok
       else 

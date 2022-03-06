@@ -150,12 +150,6 @@ Trade.create(trader_id: 1, trader_art_id: 2, trader_note: "This work is so cool!
 Trade.create(trader_id: 1, trader_art_id: 8, trader_note: "Such a beautiful color and texture!",
             vendor_id: 7, vendor_art_id: 30, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
-Trade.create(trader_id: 1, trader_art_id: 5, trader_note: "This print is so good! I'm gonna send you a couple offers...",
-            vendor_id: 2, vendor_art_id: 14, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
-
-Trade.create(trader_id: 1, trader_art_id: 4, trader_note: "maybe this one is ncase you didn't like the last so much :)",
-            vendor_id: 2, vendor_art_id: 14, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
-
 Trade.create(trader_id: 1, trader_art_id: 5, trader_note: "Woo cat stuff!",
              vendor_id: 7, vendor_art_id: 32, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
@@ -168,15 +162,19 @@ Trade.create(trader_id: 1, trader_art_id: 1, trader_note: "Love this style!",
 Trade.create(trader_id: 1, trader_art_id: 7, trader_note: "Trying to complete my collection!",
             vendor_id: 3, vendor_art_id: 17, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
+Trade.create(trader_id: 1, trader_art_id: 4, trader_note: "maybe this one is ncase you didn't like the last so much :)",
+            vendor_id: 2, vendor_art_id: 14, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
+
 Trade.create(trader_id: 1, trader_art_id: 6, trader_note: "Blown away by your work lately :)",
              vendor_id: 2, vendor_art_id: 15, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
+
+Trade.create(trader_id: 1, trader_art_id: 5, trader_note: "This print is so good! I'm gonna send you a couple offers...",
+            vendor_id: 2, vendor_art_id: 14, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
+    
+
     
 # received examples
-Trade.create(trader_id: 2, trader_art_id: 14, trader_note: "I love this piece! It would go perfect with the rest of my collection... please consider this block print I did this year!",
-           vendor_id: 1, vendor_art_id: 8, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
-Trade.create(trader_id: 2, trader_art_id: 15, trader_note: "Such a cool print. I've always wanted to do something like this. It looks like fun!",
-            vendor_id: 1, vendor_art_id: 2, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
 Trade.create(trader_id: 6, trader_art_id: 27, trader_note: "Giraffe for neon - how about it?",
            vendor_id: 1, vendor_art_id: 11, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
@@ -187,11 +185,19 @@ Trade.create(trader_id: 4, trader_art_id: 24, trader_note: "Love your art! Trade
 Trade.create(trader_id: 7, trader_art_id: 28, trader_note: "These seem like they'd be a good trade! What do you think?",
             vendor_id: 1, vendor_art_id: 9, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
+Trade.create(trader_id: 2, trader_art_id: 14, trader_note: "I love this piece! It would go perfect with the rest of my collection... please consider this block print I did this year!",
+            vendor_id: 1, vendor_art_id: 8, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
+
 Trade.create(trader_id: 7, trader_art_id: 31, trader_note: "This one really caught my eye? Interested in a trade?",
             vendor_id: 1, vendor_art_id: 5, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
 
+Trade.create(trader_id: 2, trader_art_id: 15, trader_note: "Such a cool print. I've always wanted to do something like this. It looks like fun!",
+            vendor_id: 1, vendor_art_id: 2, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
+
 Trade.create(trader_id: 8, trader_art_id: 35, trader_note: "Nice neon! Would you be interested in a sign trade?",
             vendor_id: 1, vendor_art_id: 10, completed: false, completed_date: '', offered_date:Date.today-rand(10000) )
+
+
 
 
 
