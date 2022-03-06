@@ -705,3 +705,15 @@ margin-top:-320px;
   background-color: darkslategray;
   color: white;
 }
+
+.reviewImgs {
+  outline-style: solid;
+  outline-width: 7.5px;
+  object-fit: cover;
+  width:180px;
+  background-color: transparent;
+  height:180px;
+  background-size:contain;
+  background-position:center;
+  margin-left:-700;
+}

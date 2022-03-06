@@ -57,15 +57,27 @@ const Tradesrec = ({user}) => {
                     <button className='details' style={{marginLeft:50, marginTop:-50, fontSize:16}} onClick={()=>setConfirmShown(false)} >GO BACK</button>
                     <p style={{fontSize:28, marginTop:-30, fontWeight:700, letterSpacing:.4 }}>Confirm your trade with {respondingTrade.trader.first_name}?</p>
                     <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent'}} >
-                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
-
+                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent', marginLeft:60, marginRight:-185 }}>
+                            <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent', justifyContent:'space-between'}} >
+                                <img style={{marginRight:40, marginTop:90, marginLeft:-2}} src={respondingTrade.trader.profile_pic} alt='icon' className='icon' />
+                                <img style={{marginRight:-21}} className='reviewImgs' src={respondingTrade.trader_art.url} alt='art image not found'/>
+                            </div>
+                            <h3 style={{ marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5 }}>{respondingTrade.trader.first_name} {respondingTrade.trader.last_name}</h3>
+                            <h4 style={{marginLeft:0, marginRight:-888, backgroundColor:'transparent'}}>{respondingTrade.trader.street_address}</h4>
+                            <h4 style={{marginLeft:0, marginRight:-888, backgroundColor:'transparent'}}>{respondingTrade.trader.city}, {respondingTrade.trader.state} {respondingTrade.trader.zip}</h4>
                         </div>
-                        <div className='dotted' style={{marginLeft:425, marginTop:10, height:250, marginBottom:-40}}></div>
-                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
-
+                        <div className='dotted' style={{marginLeft:250, marginTop:-9, height:295, marginBottom:-40}}></div>
+                        <div style={{display:'flex', flexFlow:'column', justifyContent:'space-between', backgroundColor:'transparent', marginLeft:60, textAlign:'right', width:'40%' }}>
+                            <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent'}} >
+                                <img style={{marginLeft:-15}} className='reviewImgs' src={respondingTrade.vendor_art.url} alt='art image not found'/>
+                                <img style={{ marginLeft:42, marginTop:90 }} src={respondingTrade.vendor.profile_pic} alt='icon' className='icon' />
+                            </div>
+                            <h3 style={{textAlign:'right', marginRight:32, marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5, backgroundColor:'transparent' }}>{respondingTrade.vendor.first_name} {respondingTrade.vendor.last_name}</h3>
+                            <h4 style={{ textAlign:'right', marginRight:32, backgroundColor:'transparent' }}>{respondingTrade.vendor.street_address}</h4>
+                            <h4 style={{textAlign:'right', marginRight:32, backgroundColor:'transparent' }}>{respondingTrade.trader.city}, {respondingTrade.trader.state} {respondingTrade.trader.zip}</h4>
                         </div>
                     </div>
-                    <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent' }}>
+                    <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent', marginTop:-40 }}>
                         <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent' }}>
                             <button className='button' style={{width:320}} onClick={handleRejectOffer}>no deal</button>
                             <p style={{textTransform:'uppercase', fontSize:16, fontWeight:300, letterSpacing:.4}} >no worries!</p>
