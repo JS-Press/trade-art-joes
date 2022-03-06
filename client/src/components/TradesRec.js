@@ -4,8 +4,8 @@ import TradeRecCard from './TradeRecCard'
 const Tradesrec = ({user}) => {
 
     const [trades, setTrades] = useState([])
-
-    // console.log('user: ' + user)
+    const [confirmShown, setConfirmShown] = useState(false)
+    const [respondingTrade, setRespondingTrade] = useState(null)
 
     useEffect( () => {
         fetch(`/tradesRec/${user.id}`).then((r) => {
@@ -16,10 +16,30 @@ const Tradesrec = ({user}) => {
             })
             }, [])
 
-    // console.log("trades received: > ")
-    // console.log(trades)
+    function handleRespond(t_id){
+    fetch(`/trades/${t_id}`).then((r) => {
+        if (r.ok) {
+            r.json().then(data => {
+            setRespondingTrade(data)
+            setConfirmShown(true)
+            })}
+        })
+    }
 
-    const tradeCards = trades.map(t => <TradeRecCard key={t.id} trade={t}/>)
+    function handleConfirmOffer(t){
+        console.log(t)
+        setConfirmShown(false)
+    }
+
+    function handleRejectOffer(t){
+        console.log(t)
+        setConfirmShown(false)
+    }
+
+    
+    console.log(respondingTrade)
+
+    const tradeCards = trades.map(t => <TradeRecCard key={t.id} trade={t} handleRespond={handleRespond} />)
 
     return (
         <div>
@@ -32,6 +52,20 @@ const Tradesrec = ({user}) => {
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:720, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>RECEIVED</p>
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
             </div>
+            {confirmShown?<>
+                <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
+            <br></br>
+            <br></br>
+            <p style={{fontSize:28}}>Respond to trade?</p>
+            <br></br>
+            <div style={{display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent' }}>
+                <button className='button' onClick={handleRejectOffer}>no</button>
+                <button className='button' onClick={handleConfirmOffer}>yes</button>
+            </div>
+            </div>
+            </>:
+            <>
+            </>}
         </div>
     );
 }

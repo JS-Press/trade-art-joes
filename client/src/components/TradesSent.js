@@ -9,8 +9,6 @@ const Tradessent = ({user}) => {
     
     
 useEffect( () => {
-    console.log('user in effect: ')
-    console.log(user)
     fetch(`/tradesSent/${user.id}`).then((r) => {
         if (r.ok) {
             r.json().then(data => {
