@@ -5,7 +5,7 @@ const Tradessent = ({user}) => {
 
     const [trades, setTrades] = useState([])
     const [confirmShown, setConfirmShown] = useState(false)
-    const [deletingTrade, setDeletingTrade] = useState(null)
+    const [deletingTrade, setDeletingTrade] = useState({})
     
 useEffect( () => {
     fetch(`/tradesSent/${user.id}`).then((r) => {
@@ -28,10 +28,11 @@ function handleDeleteOffer(){
         if (r.ok) {
             r.json().then(data => { 
                 console.log('successful delete!')
-                setDeletingTrade(null)
                 setConfirmShown(false)
-                console.log('setting trades: ')
-                setTrades(data) })
+                setDeletingTrade({})
+                const newTrades = trades.filter( t => t.id !== deletingTrade.id )
+                setTrades(newTrades) 
+            })
         }else {
         console.log('unsuccessful delete :(')
     }})
@@ -52,7 +53,7 @@ function handleDeleteOffer(){
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:720, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>SENT</p>
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
         </div>
-        {confirmShown? <>
+        {confirmShown && deletingTrade? <>
         {/* <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
         </div> */}
         <div className='popUp' style={{marginTop:-580, height:480, width:850}}>

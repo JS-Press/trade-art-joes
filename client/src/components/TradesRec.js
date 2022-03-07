@@ -46,7 +46,7 @@ const Tradesrec = ({user}) => {
                 setConfirmShown(false)
                 setRespondingTrade({})
                 console.log('trade confirmation success')
-                navigate('/tradesCompleted')
+                // navigate('/tradesCompleted')
                 })
             } else {
                 console.log('unsuccessful confirm attempt :(')

@@ -616,9 +616,10 @@ background-position:center;
   margin-top:15px;
   text-decoration: underline;
   text-decoration-thickness: 5px;
-  text-underline-offset: 8px;
+  text-underline-offset: 9px;
   letter-spacing: 1px;
   font-weight: 200;
+  font-size: 15px;
 }
 
 .deselect:hover {

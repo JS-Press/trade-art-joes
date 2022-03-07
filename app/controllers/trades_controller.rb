@@ -19,6 +19,7 @@ class TradesController < ApplicationController
     user = User.find_by(id: session[:user_id])  
       if user
           new_trade = Trade.new( trade_params )
+          new_trade.offered_date = Date.today
           if new_trade.save
               render json: new_trade, status: :created
           else

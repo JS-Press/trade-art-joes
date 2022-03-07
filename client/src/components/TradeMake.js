@@ -1,8 +1,10 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect} from 'react'
 import TraderArtCard from './TraderArtCard'
+import { useNavigate } from "react-router-dom"
 
 const TradeMake = ({selectedArtwork, user, artworks}) => {
 
+    const navigate = useNavigate()
     const transUrl ='https://upload.wikimedia.org/wikipedia/commons/5/59/Empty.png?20091205084734'
     const [vendor, setVendor] = useState({})
     const [offerArt, setOfferArt] = useState({url:transUrl})
@@ -26,20 +28,36 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
     }
 
     function handleSend(){
-        console.log('sending...')
-        console.log('note: ' + note)
-        console.log('offer: ' + offerArt)
+        fetch("/trades", {
+            method: "POST",
+            headers: {"Content-Type": "application/json",},
+            body: JSON.stringify({
+              trader_id: user.id,
+              trader_art_id: offerArt.id,
+              trader_note: note,
+              vendor_id: vendor.id,
+              vendor_art_id: selectedArtwork.id,
+              completed: false,
+            //   offered_date: new Date(),
+            }),
+          }).then((r) => {
+            if (r.ok) {
+              r.json().then((t) => {
+                navigate('/tradesSent')
+                // setNote('')
+                // setOfferArt({url:transUrl})
+                // setVendor({})
+                });
+            } else {
+              r.json().then((err) => console.log(err));
+            }
+          })
     }
-
-
-    // console.log('trader: ' + user.first_name)
-    // console.log('vendor: ' + vendor.first_name)
 
     const traderArtworks = artworks.filter(c => c.user_id === user.id)
     const avail_art = traderArtworks.filter(a => a.available === true)
     const traderOptions = avail_art.map(c => <TraderArtCard key={c.id} art={c} handleSelectArt={handleSelectArt} />)
    
-
     return (
         <div>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -53,7 +71,7 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                     <img src={selectedArtwork.url} alt={selectedArtwork.title} className='vendorImg' />
                     <div style={{ marginLeft:-11, backgroundColor:'transparent' }}>
-                    <h2 style={{ fontSize:20, marginTop:30 }}>"{selectedArtwork.title}"</h2>
+                    <h2 style={{ fontSize:20, marginTop:30, marginBottom:-15 }}>"{selectedArtwork.title}"</h2>
                     <h4>{selectedArtwork.tags}</h4>
                     <h4>{selectedArtwork.size}</h4>
                     <h4>{selectedArtwork.year}</h4>
@@ -82,7 +100,7 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                         <img className='traderImg' src={offerArt.url} style={{ marginTop:10, marginLeft:8, marginRight: 30 }}/>
                         <h4 className='deselect' onClick={() => setOfferArt({url:transUrl})}>deselect</h4>
                         <div style={{width:250, marginLeft:10, marginTop:-15, backgroundColor:'transparent' }} >
-                            <h2 style={{fontSize:20, marginTop:25, width:240 }}>"{offerArt.title}"</h2>
+                            <h2 style={{fontSize:20, marginTop:25, width:240 , marginBottom:-15 }}>"{offerArt.title}"</h2>
                             <h4>{offerArt.tags}</h4>
                             <h4>{offerArt.size}"</h4>
                             <h4>{offerArt.year}</h4>  
@@ -94,7 +112,7 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
                             {traderOptions}
                         </div>
                         <h4 style={{ marginTop:-25, fontStyle:'noraml', fontWeight:800, letterSpacing:1.2 }}>Include a note <em style={{fontWeight:300}}>(Optional)</em></h4>
-                        <input style={{ paddingLeft:40, marginTop:30, height:145, width:500, textAlign:'left' }} className='inputS' name='note' value={note} onChange={changeNote} type="text"/>
+                        <textarea style={{ paddingLeft:35, paddingTop:30, paddingRight:30, marginTop:30, height:115, width:500, textAlign:'left' }} className='inputS' name='note' value={note} onChange={changeNote} type="textarea" rows={5} cols={5}/>
                     </div>
                 </div>
                 </>}
