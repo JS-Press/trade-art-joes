@@ -176,7 +176,7 @@ Trade.create(trader_id: 1, trader_art_id: 5, trader_note: "This print is so good
 # received examples
 
 
-Trade.create(trader_id: 6, trader_art_id: 27, trader_note: "Giraffe for neon - how about it?",
+Trade.create(trader_id: 6, trader_art_id: 27, trader_note: "I dig your process! It's cool to see some other crafty people out there making weird crafty stuff",
            vendor_id: 1, vendor_art_id: 11, completed: false, completed_date: '', offered_date:Date.today-rand(2000) )
 
 Trade.create(trader_id: 4, trader_art_id: 24, trader_note: "Love your art! Trade?",

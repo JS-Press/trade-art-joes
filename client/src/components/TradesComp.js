@@ -41,8 +41,8 @@ function handleSelectTrade(t){
           {shown?<>
             <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
                     <button className='details' style={{marginLeft:50, marginTop:-50, fontSize:16}} onClick={()=>setShown(false)} >GO BACK</button>
-                    <p style={{fontStyle:'normal', fontSize:28, marginTop:-55, fontWeight:700, letterSpacing:.4 }}>Trade with {selectedTrade.trader.first_name} and {selectedTrade.vendor.first_name}</p>
-                    <p style={{fontSize:16, fontWeight:300, marginTop:-15, marginBottom:28 }}>COMPLETED: {selectedTrade.completed_date}</p>
+                    <p style={{fontStyle:'normal', fontSize:28, marginTop:-55, fontWeight:700, letterSpacing:.4 }}>offer sent by {selectedTrade.trader.first_name} to {selectedTrade.vendor.first_name}</p>
+                    <p style={{fontSize:16, fontWeight:300, marginTop:-20, marginBottom:22 }}>COMPLETED: {selectedTrade.completed_date}</p>
                     <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent'}} >
                         <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent', marginLeft:60, marginRight:-185 }}>
                             <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent', justifyContent:'space-between'}} >
@@ -65,8 +65,8 @@ function handleSelectTrade(t){
                         </div>
                     </div>
                         <p style={{fontSize:14, fontWeight:300, marginTop:25}}>note from {selectedTrade.trader.first_name}</p>
-                        <div style={{padding:'auto', marginLeft:60, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:50, width:730, height:60, alignSelf:'center', justifyContent:'space-around'}}>
-                            <p style={{marginLeft:10, marginLeft:10, fontSize:16, fontWeight:700 ,alignSelf:'center', textAlign:'left', marginTop:14}}>{selectedTrade.trader_note}</p>
+                        <div style={{paddingLeft:10, paddingRight:10, paddingTop:5, paddingBottom:5, marginLeft:60, marginTop:12, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:50, borderWidth:.1, width:712, height:69, alignSelf:'center', justifyContent:'space-around'}}>
+                            <p style={{ width:700, marginTop:12, marginLeft:5, marginRight:5, fontSize:14, fontWeight:700 ,alignSelf:'center', textAlign:'left' }}>{selectedTrade.trader_note}</p>
                         </div>
                 </div>
            </>:

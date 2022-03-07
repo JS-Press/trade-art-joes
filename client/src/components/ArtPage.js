@@ -17,11 +17,6 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
             })
         }, [])
 
-    console.log('art: ')
-    console.log(art)
-    
-    // console.log('id: ' + id )
-
 
     function handleArtistClick(e){
         navigate(`/users/${art.user_id}`)
@@ -35,7 +30,7 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
     return (
         <div className='ArtPage' >
             { art? <> 
-            <img className='ArtPageImg' src={art.url} />
+            <img className='ArtPageImg' src={art.url}/>
             <div className='ArtPageDeets'>
                 <div className='nameIcons' >
                     <img src={art.user.profile_pic} alt='icon' className='icon' onClick={handleArtistClick} />
@@ -58,6 +53,14 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
                 <button className='TradeButton' onClick={handleOfferClick} >Offer a Trade</button>
             </>
             :<>
+            </>
+            }
+            { art.available? <>
+            </>:
+            <>
+            <div style={{paddingLeft:8, paddingRight:4, paddingTop:5, paddingBottom:3, marginLeft:0, marginTop:52, marginBottom:60, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:50, borderWidth:.1, width:280, height:69, justifyContent:'space-around'}}>
+                <h4 style={{backgroundColor:'transparent'}}>artwork has been traded :)</h4>
+            </div>
             </>
             }
                 
