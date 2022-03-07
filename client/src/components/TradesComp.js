@@ -23,9 +23,13 @@ function handleSelectTrade(t){
 }
 
     // console.log("trades completed: > ")
-    // console.log(trades)
+    console.log(trades)
+    trades.reverse()
+    console.log(trades)
+    
 
-    const tradeCards = trades.map(t => <TradeCompCard key={t.id} trade={t} handleSelectTrade={handleSelectTrade} />)
+    const ordered = trades.sort((a,b) =>  new Date(b.completed_date) - new Date(a.completed_date))
+    const tradeCards = ordered.map(t => <TradeCompCard key={t.id} trade={t} handleSelectTrade={handleSelectTrade} />)
         
     return (
         <div>

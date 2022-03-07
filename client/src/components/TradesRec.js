@@ -1,8 +1,10 @@
 import React, {useEffect, useState}  from 'react';
-import TradeRecCard from './TradeRecCard'
+import TradeRecCard from './TradeRecCard';
+import { useNavigate } from "react-router-dom";
 
 const Tradesrec = ({user}) => {
 
+    const navigate = useNavigate()
     const [trades, setTrades] = useState([])
     const [confirmShown, setConfirmShown] = useState(false)
     const [respondingTrade, setRespondingTrade] = useState(null)
@@ -26,9 +28,27 @@ const Tradesrec = ({user}) => {
         })
     }
 
-    function handleConfirmOffer(t){
+    function handleConfirmOffer(){
         console.log('confirming: ')
-        console.log(t)
+        console.log(respondingTrade)
+        fetch(`/confirm/${respondingTrade.id}`, {
+            method: "PATCH",
+            headers: {"Content-Type": "application/json",},
+            body: JSON.stringify({
+              completed: true
+            }),
+          }).then((r) => {
+            if (r.ok) {r.json().then((data) => {
+                setTrades(data)
+                setConfirmShown(false)
+                setRespondingTrade({})
+                console.log('trade confirmation success')
+                navigate('/tradesCompleted')
+                })
+            } else {
+                console.log('unsuccessful confirm attempt :(')
+            }
+          })
     }
 
     function handleRejectOffer(){
@@ -47,10 +67,8 @@ const Tradesrec = ({user}) => {
         }})
     }
 
-    
-    console.log(respondingTrade)
-
-    const tradeCards = trades.map(t => <TradeRecCard key={t.id} trade={t} handleRespond={handleRespond} />)
+    const ordered = trades.sort((a,b) =>  new Date(b.offered_date) - new Date(a.offered_date))
+    const tradeCards = ordered.map(t => <TradeRecCard key={t.id} trade={t} handleRespond={handleRespond} />)
 
     return (
         <div>

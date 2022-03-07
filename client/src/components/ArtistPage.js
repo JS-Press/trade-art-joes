@@ -8,10 +8,16 @@ const Artistpage = ({artworks}) => {
     const navigate = useNavigate()
     let { id } = useParams();
     const [artist, setArtist] = useState({id:0})
+    const [art, setArt] = useState(artworks)
 
-    // console.log('artist: ' + artist)
-    // console.log('artworks: ' + artworks)
-    // console.log('id: ' + id )
+    useEffect( () => {
+        fetch(`/artworks`).then((r) => {
+            if (r.ok) {
+                r.json().then(data => {
+                setArt(data)
+                })}
+            })
+            }, [])
 
     useEffect( () => {
         fetch(`/users/${id}`).then((r) => {
@@ -22,7 +28,7 @@ const Artistpage = ({artworks}) => {
             })
         }, [])
 
-    const artistWorks = artworks.filter(c => c.user_id === artist.id)
+    const artistWorks = art.filter(c => c.user_id === artist.id)
     const avail_art = artistWorks.filter(a => a.available === true)
     const artCards = avail_art.map(c => <ArtistArtCard key={c.id} id={c.id} title={c.title} tags={c.tags} size={c.size} year={c.year} url={c.url} />)
     

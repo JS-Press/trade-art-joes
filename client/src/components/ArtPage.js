@@ -7,10 +7,7 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
     const navigate = useNavigate()
     let { id } = useParams();
     const [art, setArt] = useState(null)
-
-    // console.log('art: ' + art)
-    // console.log('id: ' + id )
-
+    
     useEffect( () => {
         fetch(`/artworks/${id}`).then((r) => {
             if (r.ok) {
@@ -20,14 +17,20 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
             })
         }, [])
 
-        function handleArtistClick(e){
-            navigate(`/users/${art.user_id}`)
-        }
+    console.log('art: ')
+    console.log(art)
+    
+    // console.log('id: ' + id )
 
-        function handleOfferClick(e){
-            setTradeArtwork(art)
-            navigate(`/tradeMake`)
-        }
+
+    function handleArtistClick(e){
+        navigate(`/users/${art.user_id}`)
+    }
+
+    function handleOfferClick(e){
+        setTradeArtwork(art)
+        navigate(`/tradeMake`)
+    }
     
     return (
         <div className='ArtPage' >
@@ -51,7 +54,7 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
                 <br></br>
                 <h4>{art.description}</h4>
                 <br></br>
-            { loggedIn? <>
+            { loggedIn && art.available? <>
                 <button className='TradeButton' onClick={handleOfferClick} >Offer a Trade</button>
             </>
             :<>

@@ -7,8 +7,6 @@ const Tradessent = ({user}) => {
     const [confirmShown, setConfirmShown] = useState(false)
     const [deletingTrade, setDeletingTrade] = useState(null)
     
-    console.log(deletingTrade)
-    
 useEffect( () => {
     fetch(`/tradesSent/${user.id}`).then((r) => {
         if (r.ok) {
@@ -39,8 +37,8 @@ function handleDeleteOffer(){
     }})
 }
 
-
-    const tradeCards = trades.map(t => <TradeSentCard key={t.id} trade={t} handleDeleteClick={handleDeleteClick} />)
+    const ordered = trades.sort((a,b) =>  new Date(b.offered_date) - new Date(a.offered_date))
+    const tradeCards = ordered.map(t => <TradeSentCard key={t.id} trade={t} handleDeleteClick={handleDeleteClick} />)
 
 
     return (
