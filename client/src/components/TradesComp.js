@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react'
 import TradeCompCard from './TradeCompCard'
-import CompletedTrade from './CompletedTrade'
+import { useNavigate } from "react-router-dom"
 
 const Tradescomp = ({ user }) => {
 
+    const navigate = useNavigate()
     const [trades, setTrades] = useState([])
     const [selectedTrade, setSelectedTrade] = useState({})
     const [shown, setShown] = useState(false)
@@ -21,11 +22,6 @@ function handleSelectTrade(t){
     setSelectedTrade(t)
     setShown(true)
 }
-
-    // console.log("trades completed: > ")
-    console.log(trades)
-    trades.reverse()
-    console.log(trades)
     
 
     const ordered = trades.sort((a,b) =>  new Date(b.completed_date) - new Date(a.completed_date))
@@ -43,10 +39,36 @@ function handleSelectTrade(t){
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
             </div>
           {shown?<>
-           <div className='CT' >
-               <h3 style={{display:'flex',alignSelf:'flex-end', backgroundColor:'transparent'}} onClick={()=> setShown(false)}>GO BACK</h3>
-            <CompletedTrade trade={selectedTrade} />
-           </div>
+            <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
+                    <button className='details' style={{marginLeft:50, marginTop:-50, fontSize:16}} onClick={()=>setShown(false)} >GO BACK</button>
+                    <p style={{fontStyle:'normal', fontSize:28, marginTop:-55, fontWeight:700, letterSpacing:.4 }}>Trade with {selectedTrade.trader.first_name} and {selectedTrade.vendor.first_name}</p>
+                    <p style={{fontSize:16, fontWeight:300, marginTop:-15, marginBottom:28 }}>COMPLETED: {selectedTrade.completed_date}</p>
+                    <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent'}} >
+                        <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent', marginLeft:60, marginRight:-185 }}>
+                            <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent', justifyContent:'space-between'}} >
+                                <img style={{marginRight:40, marginTop:90, marginLeft:-2}} src={selectedTrade.trader.profile_pic} alt='icon' className='icon' />
+                                <img style={{marginRight:-21}} className='reviewImgs' src={selectedTrade.trader_art.url} alt='art not found' onClick={()=>navigate(`/artworks/${selectedTrade.trader_art.id}`)} />
+                            </div>
+                            <h3 style={{ marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5 }}>{selectedTrade.trader.first_name} {selectedTrade.trader.last_name}</h3>
+                            <h4 style={{marginLeft:0, marginRight:-888, backgroundColor:'transparent'}}>{selectedTrade.trader.street_address}</h4>
+                            <h4 style={{marginLeft:0, marginRight:-888, backgroundColor:'transparent'}}>{selectedTrade.trader.city}, {selectedTrade.trader.state} {selectedTrade.trader.zip}</h4>
+                        </div>
+                        <div className='dotted' style={{marginLeft:250, marginTop:-9, height:295, marginBottom:-40}}></div>
+                        <div style={{display:'flex', flexFlow:'column', justifyContent:'space-between', backgroundColor:'transparent', marginLeft:60, textAlign:'right', width:'40%' }}>
+                            <div style={{display:'flex', flexFlow:'row', backgroundColor:'transparent'}} >
+                                <img style={{marginLeft:-15}} className='reviewImgs' src={selectedTrade.vendor_art.url} alt='art not found' onClick={()=>navigate(`/artworks/${selectedTrade.vendor_art.id}`)}/>
+                                <img style={{ marginLeft:42, marginTop:90 }} src={selectedTrade.vendor.profile_pic} alt='icon' className='icon' />
+                            </div>
+                            <h3 style={{textAlign:'right', marginRight:32, marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5, backgroundColor:'transparent' }}>{selectedTrade.vendor.first_name} {selectedTrade.vendor.last_name}</h3>
+                            <h4 style={{ textAlign:'right', marginRight:32, backgroundColor:'transparent' }}>{selectedTrade.vendor.street_address}</h4>
+                            <h4 style={{textAlign:'right', marginRight:32, backgroundColor:'transparent' }}>{selectedTrade.trader.city}, {selectedTrade.trader.state} {selectedTrade.trader.zip}</h4>
+                        </div>
+                    </div>
+                        <p style={{fontSize:14, fontWeight:300, marginTop:25}}>note from {selectedTrade.trader.first_name}</p>
+                        <div style={{padding:'auto', marginLeft:60, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:50, width:730, height:60, alignSelf:'center', justifyContent:'space-around'}}>
+                            <p style={{marginLeft:10, marginLeft:10, fontSize:16, fontWeight:700 ,alignSelf:'center', textAlign:'left', marginTop:14}}>{selectedTrade.trader_note}</p>
+                        </div>
+                </div>
            </>:
            <>
            </>}
