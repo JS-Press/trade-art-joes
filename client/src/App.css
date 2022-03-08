@@ -644,18 +644,28 @@ background-position:center;
   top:110px;
   right: 110px;
   width: 150px;
-  height: 40px;
+  height: 25px;
   font-weight: 600;
   font-style: normal;
-  letter-spacing: .25px;
+  letter-spacing: .75px;
   font-size: .9em;
-  font-weight: 600;
+  font-weight: 700;
+  padding-top: 5px;
+  text-align: center;
 }
 
 #upload:hover {
   background-color: white;
   color: darkslategray;
-  font-weight: 900;
+  letter-spacing: .15px;
+  font-weight: 800;
+}
+
+#upload.active {
+  background-color: white;
+  color: darkslategray;
+  letter-spacing: .15px;
+  font-weight: 800;
 }
 
 .details {
@@ -717,4 +727,16 @@ margin-top:-320px;
   background-size:contain;
   background-position:center;
   margin-left:-700;
+}
+
+.uploadImg {
+align-self: flex-end;
+outline-style: solid;
+outline-width: 7.5px;
+min-width:250px;
+max-width: 250px;;
+min-height:250px;
+max-height: 600px;;
+margin-right:10.6%;
+margin-top:25px;
 }

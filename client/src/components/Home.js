@@ -36,6 +36,7 @@ function shuffle(array) {
             <div className='ArtCards' style={{marginTop:110}}>
             { artworks? <>
             {art_cards}
+            <div style={{ marginLeft:65, width:50, height:10, borderStyle:'normal', borderColor:'white', borderWeight:10, color:'transparent' }}><p> o o</p></div>
             </>
             :<>
             <p className='loading' >loading art...</p>

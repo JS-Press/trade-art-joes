@@ -46,8 +46,9 @@ const Myart = ({user}) => {
     return (
         <div>
             {artistWorks? <>
-            <div className='ArtCards' style={{marginTop:150}}>
+            <div className='ArtCards' style={{marginTop:150 }}>
             {artCards}
+            <div style={{ marginLeft:65, width:50, height:10, borderStyle:'normal', borderColor:'white', borderWeight:10, color:'transparent' }}><p> o</p></div>
             </div>
             <div style={{ marginLeft:100, marginTop:180, display: 'flex', flexDirection: 'row', height:400, position:'fixed' }} >
                 <img src={artist.profile_pic} alt='icon' className='icon' />

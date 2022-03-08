@@ -31,7 +31,7 @@ function Navbar({ handleLogout, loggedIn, user }){
         <Link className='navLink' id='logout' to="/" onClick={handleLogout} >logout</Link>
         <p style={{ fontSize:16, fontWeight:200, marginTop:8, marginLeft:8, borderRadius:50 }} >hi {user.first_name}!</p>
         </div>
-        <button id='upload' onClick={()=> navigate('/ArtUpload')} >upload artwork</button>
+        <NavLink id='upload' to='/ArtUpload' >upload artwork</NavLink>
         </>:
         <>
         </>}
