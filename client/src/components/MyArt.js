@@ -68,7 +68,7 @@ const Myart = ({user}) => {
             <div className='popUp' style={{marginTop:-335}}>
                 <br></br>
                 <p style={{fontSize:28}}>Are you sure you want to delete your artwork?</p>
-                <p style={{fontSize:28}}>The art's incomplete trade offers will also be deleted</p>
+                <p style={{fontSize:28}}>This art's incomplete trade offers will also be deleted!</p>
                 <p style={{fontSize:28}}>This action can't be undone :(</p>
                 <div style={{marginTop:-30, display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent'}}>
                 <button className='button' onClick={()=>setConfirmShown(false)}>no</button>

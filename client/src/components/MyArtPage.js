@@ -1,11 +1,12 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState} from 'react'
 import { useParams } from "react-router-dom"
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"
 
-const Myartpage = () => {
+const Myartpage = ({ user }) => {
 
     const navigate = useNavigate()
     let { id } = useParams();
+    const [confirmShown, setConfirmShown] = useState(false)
     const [art, setArt] = useState(null)
 
     useEffect( () => {
@@ -19,6 +20,22 @@ const Myartpage = () => {
 
     function handleArtistClick(e){
         navigate(`/users/${art.user_id}`)
+    }
+
+    function handleDeleteClick(id){
+        setConfirmShown(true)
+        }
+
+    function handleDeleteArt(){
+        fetch(`/artworks/${id}`, {
+            method: "DELETE"
+          }).then((r) => {
+            if (r.ok) {
+            console.log('successful delete!')
+            r.json().then(data => { navigate('/myArt') })
+          }else {
+            console.log('unsuccessful delete :(')
+        }})
     }
 
     return (
@@ -42,7 +59,20 @@ const Myartpage = () => {
                 <br></br>
                 <br></br>
                 <h4>{art.description}</h4>
-                <br></br>
+                {confirmShown? <>
+                <div className='popUp' style={{ top:'70%',left:'1%', height:400}}>
+                    <p style={{fontSize:28, marginTop:20}}>Are you sure you want to delete your artwork?</p>
+                    <p style={{fontSize:28}}>This art's incomplete trade offers will also be deleted!</p>
+                    <p style={{fontSize:28}}>This action can't be undone :(</p>
+                    <div style={{marginTop:-25, display:'flex', flexFlow:'row', justifyContent:'space-around', backgroundColor:'transparent'}}>
+                        <button className='button' onClick={()=>setConfirmShown(false)}>no</button>
+                        <button className='button' onClick={handleDeleteArt}>yes</button>
+                    </div>
+                </div>
+                </>:
+                <>
+                <button className='button' style={{width:200}} onClick={handleDeleteClick} >DELETE</button>
+                </>}
             </div>
             </> 
             :<>
