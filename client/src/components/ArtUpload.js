@@ -1,10 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
 const Artupload = () => {
 
+    const imgRef = useRef();
     const [formData, setFormData] = useState({title:'', tags:'', sizeA:'', sizeB:'', sizeC:'', description:'', year:'', url:'' })
     const [owner, setOwner] = useState(false)
     const [willing, setWilling] = useState(false)
+
+    const onImageError = () => imgRef.current.src="https://img1.picmix.com/output/stamp/normal/5/7/2/4/1564275_04301.gif"
 
     const onChangeForm = (event) => {
         const name = event.target.name;
@@ -34,14 +37,14 @@ const Artupload = () => {
             <div style={{display:'flex', flexFlow:'row', marginTop:35, alignSelf:'center' }}>
                 {formData.url?<>
                 <div style={{display:'flex', flexFlow:'column'}}>
-                    <img className='uploadImg' src={formData.url} />
+                    <img className='uploadImg' src={formData.url} onError={onImageError} />
                     <h3 style={{marginTop:-20}} >image URL</h3>
-                    <input style={{ marginBottom:30, width:188, fontSize:16, paddingLeft:10 }} className='inputS' name='url' value={formData.url} onChange={onChangeForm} type="text"/>
+                    <input style={{ marginBottom:30, width:188, fontSize:16, paddingLeft:10, marginRight:60 }} className='inputS' name='url' value={formData.url} onChange={onChangeForm} type="text"/>
                 </div>     
                 </>:
                 <>
                 <div style={{display:'flex', flexFlow:'column'}}>
-                    <img className='uploadImg' src={'https://img1.picmix.com/output/stamp/normal/5/7/2/4/1564275_04301.gif'} style={{ width:250,height:250, marginLeft:8 }}/>
+                    <img className='uploadImg' src={'https://img1.picmix.com/output/stamp/normal/5/7/2/4/1564275_04301.gif'} onError={onImageError} style={{ width:250,height:250, marginLeft:8 }}/>
                     <h3 style={{marginTop:-20}}>image URL</h3>
                     <input style={{ marginBottom:30, width:188, fontSize:16, paddingLeft:10 }} className='inputS' name='url' value={formData.url} onChange={onChangeForm} type="text"/>
                 </div>     
