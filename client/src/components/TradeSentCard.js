@@ -1,9 +1,9 @@
 import React from 'react';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Tradesentcard = ({ trade, handleDeleteClick }) => {
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
     const str = trade.offered_date
     const dateObj = new Date(str);
@@ -15,6 +15,8 @@ const Tradesentcard = ({ trade, handleDeleteClick }) => {
 
     function handleTradeClick(){
     console.log(trade.id)
+    navigate(`/trades/sent/${trade.id}`)
+
     }
 
 
