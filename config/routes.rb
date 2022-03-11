@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/artworks', to: 'artworks#index'
   get '/artworks/:id', to: 'artworks#show'
   delete '/artworks/:id', to: 'artworks#destroy'
+  post '/artworks', to: 'artworks#create'
 
   get '/users/:id', to: 'users#show'
   get '/users', to: 'users#index'
@@ -22,10 +23,6 @@ Rails.application.routes.draw do
   delete '/trades/:id', to: 'trades#destroy'
 
 
-  get 'artworks/create'
-  get 'artworks/destroy'
-  get 'trades/create'
-  get 'trades/destroy'
-  get 'users/create'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
