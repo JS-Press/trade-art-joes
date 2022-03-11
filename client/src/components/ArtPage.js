@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
 
-const ArtPage = ({setTradeArtwork, loggedIn}) => {
+const ArtPage = ({setTradeArtwork, loggedIn, user}) => {
 
     const navigate = useNavigate()
     let { id } = useParams();
@@ -50,7 +50,10 @@ const ArtPage = ({setTradeArtwork, loggedIn}) => {
                 <h4>{art.description}</h4>
                 <br></br>
             { loggedIn && art.available? <>
+            { user.id === art.user_id? <></>:
+            <>
                 <button className='TradeButton' onClick={handleOfferClick} >Offer a Trade</button>
+            </>}
             </>
             :<>
             </>

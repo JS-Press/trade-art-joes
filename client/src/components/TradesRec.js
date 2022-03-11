@@ -42,7 +42,8 @@ const Tradesrec = ({user}) => {
             }),
           }).then((r) => {
             if (r.ok) {r.json().then((data) => {
-                setTrades(data)
+                const new_trades = trades.filter(t=> t.id !== respondingTrade.id)
+                setTrades(new_trades)
                 setConfirmShown(false)
                 setRespondingTrade({})
                 console.log('trade confirmation success')
@@ -62,9 +63,11 @@ const Tradesrec = ({user}) => {
           }).then((r) => {
             if (r.ok) {
             console.log('successful delete!')
-            // setRespondingTrade(null)
             setConfirmShown(false)
-            r.json().then(data => { setTrades(data) })
+            r.json().then(data => { 
+                const new_trades = trades.filter(t=> t.id !== respondingTrade.id)
+                setTrades(new_trades)
+            })
           }else {
             console.log('unsuccessful delete :(')
         }})

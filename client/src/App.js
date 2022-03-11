@@ -19,7 +19,7 @@ import ArtUpload from './components/ArtUpload'
 
 function App() {
 
-  const [user, setUser] = useState({})
+  const [user, setUser] = useState({id:''})
   const [artworks, setArtworks] = useState([])
   const [loggedIn, setLoggedIn] = useState(false)
   const [selectedArtwork, setSelectedArtwork] = useState({})
@@ -68,7 +68,7 @@ function handleLogout(){
       <Route path='/login' element={<Login handleLogin={handleLogin} />} />
       <Route path='/signup' element={<Signup handleLogin={handleLogin} />} />
       <Route path='/myArt' element={<MyArt user={user}/>} />
-      <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn}/>} />
+      <Route path='/artworks/:id' element={<ArtPage setTradeArtwork={setSelectedArtwork} loggedIn={loggedIn} user={user} />} />
       <Route path='/users/:id' element={<ArtistPage artworks={artworks}/>} />
       <Route path='/tradeMake' element={<TradeMake selectedArtwork={selectedArtwork} user={user} artworks={artworks} />} />
       <Route path='/tradesSent' element={<TradesSent user={user} />} />

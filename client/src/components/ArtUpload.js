@@ -120,7 +120,7 @@ const Artupload = ({user}) => {
                             <input style={{width:315, fontSize:16 }} className='inputS' name='description' value={formData.description} onChange={onChangeForm} type="text"/>
                         </div>
                         <div style={{display:'flex', flexFlow:'column', alignSelf:'flex-start', marginRight:20 }}>
-                            <h3>tags</h3>
+                            <h3>tags <em style={{fontSize:14, fontWeight:200}}>separated by commas</em></h3>
                             <input style={{width:320, fontSize:16 }} className='inputS' name='tags' value={formData.tags} onChange={onChangeForm} type="text"/>
                         </div>
                     </div>
