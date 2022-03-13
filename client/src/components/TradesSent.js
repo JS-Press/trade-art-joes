@@ -44,7 +44,6 @@ function handleDeleteOffer(){
 
     return (
     <div>
-        {/* <h2 style={{ position:'fixed', top:0, textDecoration: 'underline', textUnderlineOffset: 6, textDecorationThickness: 3, fontSize:16, fontWeight: 800, marginTop:120, marginLeft:100, marginBottom:-150 }}>{user.first_name}'s sent trades</h2> */}
         <div className='tradeCards' style={{marginLeft:165, marginTop:280 }}>
             {tradeCards}
         </div>
@@ -54,8 +53,6 @@ function handleDeleteOffer(){
                 <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
         </div>
         {confirmShown && deletingTrade? <>
-        {/* <div className='popUp' style={{borderWidth:4, width:1036, height:450, left:-10, top:507, borderRadius:88 }}>
-        </div> */}
         <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
             <button className='details' style={{marginLeft:50, marginTop:-50, fontSize:16}} onClick={()=>setConfirmShown(false)} >GO BACK</button>
             <br></br>

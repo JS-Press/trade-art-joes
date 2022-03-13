@@ -31,7 +31,6 @@ const Myartpage = ({ user }) => {
             method: "DELETE"
           }).then((r) => {
             if (r.ok) {
-            console.log('successful delete!')
             r.json().then(data => { navigate('/myArt') })
           }else {
             console.log('unsuccessful delete :(')

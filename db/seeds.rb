@@ -5,23 +5,23 @@ names = ["Vincent", "Pablo", "Paul", "Albrecht", "Andy", "Edgar", "Diego", "Edva
 passwords = ["cat", "bat", "hat", "mat", "rat", "flat", "gnat", "wat", "tat", "vat", "pat", "sat", "dat"]
 
 ## users
-User.create(username:'j', first_name:'Jarad', last_name:'Solomon', password_digest: 'j', email:'jaradsolomon@gmail.com', 
+User.create(username:'j', first_name:'Jarad', last_name:'Solomon', password: 'j', email:'jaradsolomon@gmail.com', 
     bio:'Interdisciplinary design media artist based in Logan Square Chicago.', street_address:'2239 N Sawyer Ave', city:'Chicago', state:'IL', zip:'60647', website:'www.jaradsolomon.com', profile_pic: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdxrrtycZ8D0kYtXknN1I95jhhC8iHppv9w&usqp=CAU' )
-User.create(username:'HalfFull', first_name:'Jeanette', last_name:'Tokarz', password_digest: passwords.sample, email:'tokarzjeanette@gmail.com', 
+User.create(username:'HalfFull', first_name:'Jeanette', last_name:'Tokarz', password: passwords.sample, email:'tokarzjeanette@gmail.com', 
     bio:'Self-taught folk-artist focused in ceramics and linocut prints.', street_address:'1629 N Sawyer Ave', city:'Chicago', state:'IL', zip:'60647', website:'www.etsy.com/shop/JeanetteTokarz', profile_pic: 'https://media-exp1.licdn.com/dms/image/C4E03AQH20xYulSOLFQ/profile-displayphoto-shrink_200_200/0/1608656775759?e=1649289600&v=beta&t=stqnpgUtsEoKQ6wVOG4DWW2yWATFbq0fcrlcqMO5_hI' )
-User.create(username:'DannySpaghetti', first_name:'Danny', last_name:'Alegretti', password_digest: passwords.sample, email:'allegrettiphoto@gmail.com', 
+User.create(username:'DannySpaghetti', first_name:'Danny', last_name:'Alegretti', password: passwords.sample, email:'allegrettiphoto@gmail.com', 
     bio:'Danny Allegretti (pronounced like spaghetti) is a Chicago-based artist and designer.', street_address:'530 W Cordova Rd', city:'Sante Fe', state:'NM', zip:'87505', website:'www.dannyallegretti.com', profile_pic: 'https://media-exp1.licdn.com/dms/image/D5603AQE8l1_9NhxlWw/profile-displayphoto-shrink_200_200/0/1632497059138?e=1648684800&v=beta&t=wCpSRpQmpPt2FF4GxhzInODQZgyaisXk0uUDn_TcknA' )
-User.create(username:'LevDesign', first_name:'Daniel', last_name:'Coleman', password_digest: passwords.sample, email:'D.levcoleman@gmail.com', 
+User.create(username:'LevDesign', first_name:'Daniel', last_name:'Coleman', password: passwords.sample, email:'D.levcoleman@gmail.com', 
     bio:"Hi, I'm Daniel, a multidisciplinary designer from San Francisco.", street_address:'1600 Vine St', city:'Los Angeles', state:'CA', zip:'90028', website:'www.designlev.com', profile_pic: 'https://miro.medium.com/max/3150/1*8gn6y5FYI8p5941YukRhWQ@2x.jpeg' )
-User.create(username:'Jamesthe8th', first_name:'James', last_name:'Dawson', password_digest: passwords.sample, email:'jamesthe8th@gmail.com', 
+User.create(username:'Jamesthe8th', first_name:'James', last_name:'Dawson', password: passwords.sample, email:'jamesthe8th@gmail.com', 
     bio:"Singer songwriter, and artist from the bay area.", street_address:'3909 Hillsboro Pike', city:'Nashville', state:'TN', zip:'37215', website:'www.Jamesthe8th.com', profile_pic: 'https://miro.medium.com/max/1000/1*NwNh770WXL1e_ANWgRpjjw.jpeg' )
-User.create(username:'KyleArts', first_name:'Kyle', last_name:'Riley', password_digest: passwords.sample, email:'kyle@gmail.com', 
+User.create(username:'KyleArts', first_name:'Kyle', last_name:'Riley', password: passwords.sample, email:'kyle@gmail.com', 
     bio:"Kyle Riley is a self-taught artist in Chicago, Illinois. He creates self-described folk art-inspired wooden cut out sculptures and larger, pattern oriented, abstract paintings. His subjects include plants, animals, and people. All are one of a kind, and meant to bring joy to the viewer.", 
     street_address:'15391 Bangy Rd', city:'Lake Oswego', state:'OR', zip:'97035', website:'https://www.instagram.com/kylerileysartsandcrafts/?hl=en', profile_pic: 'http://cdn.shopify.com/s/files/1/0445/4282/0511/products/O0837KYL_1_1200x1200.jpg?v=1612478185' )
-User.create(username:'VicArt', first_name:'Vic', last_name:'Barquin', password_digest: passwords.sample, email:'vic@gmail.com', 
+User.create(username:'VicArt', first_name:'Vic', last_name:'Barquin', password: passwords.sample, email:'vic@gmail.com', 
     bio:"Vic Barquin is an artist, printmaker, and arts administrator from Cranbury, New Jersey. She received a BFA in Printmaking with honors from Massachusetts College of Art and Design in 2016. At graduation she was awarded the Genevieve McMillan-Reba Stewart Traveling Fellowship which funded her residency at the Can Serrat International Art Centre in El Bruc, Catalonia. She then moved to Chicago, Illinois where she facilitated events and exhibitions as part of her studio practice.", 
     street_address:'8928 Holly Ave NE', city:'Albuquerque', state:'NM', zip:'87122', website:'https://www.victoriamariebarquin.com/', profile_pic: 'https://canserrat.org/wp-content/uploads/2017/07/VictoriaMarieBarquin-1-365x365.jpg' )
-User.create(username:'PicklemanArt', first_name:'Jason', last_name:'Pickleman', password_digest: passwords.sample, email:'jasonP@gmail.com', 
+User.create(username:'PicklemanArt', first_name:'Jason', last_name:'Pickleman', password: passwords.sample, email:'jasonP@gmail.com', 
     bio:"Bridging the gap between fine and commercial art, Jason Pickleman has created a body of work that is both conceptual and popular, applying media as varied as neon, offset printing, silkscreen, collage, photography and commercially available ready-mades. Pickleman's studio, JNL graphic design was begun in 1992 and specializes in the creation of graphic ephemera of unique cultural significance.", 
     street_address:'9205 S Dixie Hwy', city:'Miami', state:'FL', zip:'33156', website:'https://pickleman.art/', profile_pic: 'https://www.chicagotribune.com/resizer/Ny0SnUb64P5VEGuwzeXtnWFEsCk=/415x563/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/PXPBTCZ6P5ELHGTPXQVPHDL5FE.jpg' )
 

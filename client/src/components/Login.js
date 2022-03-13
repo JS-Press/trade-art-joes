@@ -21,7 +21,7 @@ const Login = ( { handleLogin } ) => {
       fetch("/login", {
         method: "POST",
         headers: {"Content-Type": "application/json",},
-        body: JSON.stringify({ username: username, password_digest: password }),
+        body: JSON.stringify({ username: username, password: password }),
       }).then((r) => {
         if (r.ok) {
           r.json().then((user) => handleLogin(user));

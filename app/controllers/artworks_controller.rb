@@ -2,7 +2,6 @@ class ArtworksController < ApplicationController
   rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
 
   def show
-    # byebug
     art = Artwork.find( params[:id] )
     if art 
       render json: art, include: :user, status: :ok

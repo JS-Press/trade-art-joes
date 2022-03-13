@@ -10,8 +10,6 @@ const Tradesrec = ({user}) => {
     const [noteShown, setNoteShown] = useState(false)
     const [respondingTrade, setRespondingTrade] = useState(null)
 
-    console.log(noteShown)
-
     useEffect( () => {
         fetch(`/tradesRec/${user.id}`).then((r) => {
             if (r.ok) {
@@ -47,7 +45,6 @@ const Tradesrec = ({user}) => {
                 setConfirmShown(false)
                 setRespondingTrade({})
                 console.log('trade confirmation success')
-                // navigate('/tradesCompleted')
                 })
             } else {
                 console.log('unsuccessful confirm attempt :(')
@@ -78,7 +75,6 @@ const Tradesrec = ({user}) => {
 
     return (
         <div>
-            {/* <h2 style={{ position:'fixed', top:0, textDecoration: 'underline', textUnderlineOffset: 6, textDecorationThickness: 3, fontSize:16, fontWeight: 800, marginTop:120, marginLeft:100, marginBottom:-150 }}>{user.first_name}'s received trades</h2> */}
             <div className='tradeCards' style={{marginLeft:120, marginTop:280 }}> 
                 {tradeCards}
             </div>
