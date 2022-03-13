@@ -17,6 +17,8 @@ import MyArt from './components/MyArt'
 import MyArtPage from './components/MyArtPage'
 import ArtUpload from './components/ArtUpload'
 import Tradedetailsent from './components/TradeDetailSent'
+import TradedetailRec from './components/TradeDetailRec'
+
 
 function App() {
 
@@ -78,6 +80,7 @@ function handleLogout(){
       <Route path='/myArtworks/:id' element={<MyArtPage user={user} />} />
       <Route path='/ArtUpload' element={<ArtUpload user={user} />} />
       <Route path='/trades/sent/:id' element={<Tradedetailsent />} />
+      <Route path='/trades/received/:id' element={<TradedetailRec />} />
     </Routes>
     </div>
     </Router>
