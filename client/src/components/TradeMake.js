@@ -60,6 +60,7 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
    
     return (
         <div>
+            <button className='details' style={{position:'fixed', left:92, top:125, fontSize:16, marginBottom:0 }} onClick={()=>navigate(`/artworks/${selectedArtwork.id}`)} >GO BACK</button>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <div style={{ marginLeft:100, marginRight: 10, marginTop:200, display: 'flex', flexDirection: 'column', height:400 }} >
                     <img src={vendor.profile_pic} alt='icon' className='icon' />

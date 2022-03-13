@@ -39,6 +39,7 @@ const Myartpage = ({ user }) => {
 
     return (
         <div className='ArtPage' >
+            <button className='details' style={{position:'fixed', left:92, top:125, fontSize:16, marginBottom:0 }} onClick={()=>navigate('/myart')} >GO BACK</button>
             { art? <> 
             <img style={{marginTop:190}} className='ArtPageImg' src={art.url} />
             <div style={{marginTop:190}} className='ArtPageDeets'>

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Tradereccard = ({trade, handleRespond}) => {
 
+    const navigate = useNavigate()
     const str = trade.offered_date
     const dateObj = new Date(str);
     const month = dateObj.getMonth() + 1;
@@ -12,12 +13,12 @@ const Tradereccard = ({trade, handleRespond}) => {
 
 
     function handleTradeClick(){
-        console.log(trade)
+        navigate(`/trades/received/${trade.id}`)
     }
 
 
     return (
-        <div className='tradeCard' style={{marginRight:48}} onClick={()=>handleRespond(trade.id)} >
+        <div className='tradeCard' style={{marginRight:48}} >
         <img className='tradeCardImg' style={{alignSelf:'center', marginLeft:-85,}} src={trade.vendor_art.url} alt='trade art 1' onClick={handleTradeClick} />
         <img className='tradeCardImg2' style={{alignSelf:'center', marginLeft:-85,}} src={trade.trader_art.url} alt='trade art 2' onClick={handleTradeClick} />
         <div className='TradeArtDeets' style={{marginTop:100}}></div>

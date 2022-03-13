@@ -61,8 +61,8 @@ const ArtPage = ({setTradeArtwork, loggedIn, user}) => {
             { art.available? <>
             </>:
             <>
-            <div style={{paddingLeft:8, paddingRight:4, paddingTop:5, paddingBottom:3, marginLeft:0, marginTop:52, marginBottom:60, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:50, borderWidth:.1, width:280, height:69, justifyContent:'space-around'}}>
-                <h4 style={{backgroundColor:'transparent'}}>artwork has been traded :)</h4>
+            <div style={{ backgroundColor:'transparent', textAlign:'center', paddingLeft:10, paddingRight:0, paddingTop:10, paddingBottom:-50, marginLeft:0, marginTop:12, marginBottom:60, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:"100%", borderWidth:.1, width:50, height:50, justifyContent:'space-around'}}>
+                <h4 style={{backgroundColor:'transparent', marginTop:10, fontSize:14, fontWeight:200 }}>traded</h4>
             </div>
             </>
             }
