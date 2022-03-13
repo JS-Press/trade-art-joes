@@ -51,7 +51,7 @@ const Tradedetailsent = () => {
                             <h3 style={{ marginLeft:7, marginBottom:-1, fontSize:26, fontWeight:800, letterSpacing:.5 }}>{trade.vendor.first_name} {trade.vendor.last_name}</h3>
                             {/* <h4 style={{marginLeft:0,  marginRight:0, backgroundColor:'transparent'}}>{trade.vendor.street_address}</h4> */}
                             <h4 style={{marginLeft:5, marginRight:0, backgroundColor:'transparent'}}>{trade.vendor.city}, {trade.vendor.state} {trade.vendor.zip}</h4>
-                            <h4 style={{marginTop:100, fontWeight:200, marginLeft:9, marginBottom:-30 }} >note to {trade.vendor.first_name}</h4>
+                            <h4 style={{marginTop:120, fontWeight:200, marginLeft:9, marginBottom:-30 }} >note to {trade.vendor.first_name}</h4>
                             <div style={{paddingLeft:15, paddingRight:15, paddingTop:5, paddingBottom:5, marginLeft:0, marginTop:40, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:25, borderWidth:.1, width:170, height:120 }}>
                                 <p style={{ marginTop:12, marginLeft:5, marginRight:5, fontSize:14, fontWeight:700 ,alignSelf:'center', textAlign:'left' }}>{trade.trader_note}</p>
                             </div>
@@ -78,7 +78,12 @@ const Tradedetailsent = () => {
                             <h3 style={{ textAlign:'left', marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5, backgroundColor:'transparent' }}>{trade.trader.first_name} {trade.trader.last_name}</h3>
                             {/* <h4 style={{textAlign:'left', backgroundColor:'transparent', marginLeft:0 }}>{trade.trader.street_address}</h4> */}
                             <h4 style={{textAlign:'left', backgroundColor:'transparent', marginLeft:0 }}>{trade.trader.city}, {trade.trader.state} {trade.trader.zip}</h4>
-                        
+                            <div style={{alignContent:'center', marginTop:80 }}>
+                                <p style={{marginLeft:-45, marginBottom:-10, fontWeight:300, fontSize:16 }} >offer sent to {trade.vendor.first_name} {trade.vendor.last_name}</p>
+                                <p style={{marginLeft:-45, marginBottom:-0, fontWeight:200, fontWeight:300, fontSize:16 }} >{trade.offered_date}</p>
+                                <button className='button' style={{width:220, marginTop:16}}>cancel offer</button>
+                                <p style={{marginLeft:-45, marginBottom:-0, fontWeight:500, fontSize:16 }} >waiting on a confirmation from {trade.vendor.first_name}</p>
+                            </div>
                         
                         </div>
                       </div>

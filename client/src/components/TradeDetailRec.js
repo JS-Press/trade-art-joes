@@ -51,7 +51,7 @@ const Tradedetailrec = () => {
                             <h3 style={{ marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5 }}>{trade.vendor.first_name} {trade.vendor.last_name}</h3>
                             <h4 style={{marginLeft:0,  marginRight:0, backgroundColor:'transparent'}}>{trade.vendor.street_address}</h4>
                             <h4 style={{marginLeft:0, marginRight:0, backgroundColor:'transparent'}}>{trade.vendor.city}, {trade.vendor.state} {trade.vendor.zip}</h4>
-                            <h4 style={{marginTop:100, fontWeight:200, marginLeft:0, marginBottom:-30 }} >note from {trade.trader.first_name}</h4>
+                            <h4 style={{marginTop:120, fontWeight:200, marginLeft:0, marginBottom:-30 }} >note from {trade.trader.first_name}</h4>
                             <div style={{paddingLeft:15, paddingRight:15, paddingTop:5, paddingBottom:5, marginLeft:0, marginTop:40, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:25, borderWidth:.1, width:170, height:120 }}>
                                 <p style={{ marginTop:12, marginLeft:5, marginRight:5, fontSize:14, fontWeight:700 ,alignSelf:'center', textAlign:'left' }}>{trade.trader_note}</p>
                             </div>
