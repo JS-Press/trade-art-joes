@@ -78,10 +78,10 @@ const Tradesrec = ({user}) => {
             <div className='tradeCards' style={{marginLeft:120, marginTop:280 }}> 
                 {tradeCards}
             </div>
-            <div style={{position:'fixed', display:'flex', flexFlow:'row', left:100, top:720}}>
-                <img src={user.profile_pic} alt='icon' className='icon' />
-                <p style={{ fontStyle:'normal', position:'fixed', left:200, top:720, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>RECEIVED</p>
-                <p style={{ fontStyle:'normal', position:'fixed', left:200, top:750, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
+            <div style={{position:'fixed', display:'flex', flexFlow:'row', left:110, top:125, backgroundColor:'transparent' }}>
+                <img src={user.profile_pic} alt='icon' className='T_icon' />
+                <p style={{ fontStyle:'normal', position:'fixed', left:170, top:100, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>RECEIVED</p>
+                <p style={{ fontStyle:'normal', position:'fixed', left:170, top:130, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
             </div>
             {confirmShown?<>
                 <div className='popUp' style={{marginTop:-580, height:480, width:850}}>

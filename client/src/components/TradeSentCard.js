@@ -27,6 +27,7 @@ const Tradesentcard = ({ trade, handleDeleteClick }) => {
         <h2 style={{ marginTop:110, marginBottom:-120, alignSelf:'center', marginLeft:-165 }}>To: {trade.vendor.first_name} {trade.vendor.last_name}</h2>
         <h3 style={{fontStyle:'italic', alignSelf:'center', fontSize:16, fontWeight: 300, letterSpacing:1.5, marginTop:130, marginBottom:15, marginLeft:-160 }}>SENT {newdate}</h3>
         <button className='respond' style={{alignSelf:'center', marginLeft:-160 }} onClick={()=>handleDeleteClick(trade)}>cancel offer</button>
+        <button className='detailButton' style={{alignSelf:'center', marginLeft:-158, marginTop:-7}} onClick={()=>navigate(`/trades/sent/${trade.id}`)} >trade details</button>
         <br></br>
         <br></br>
         </div>

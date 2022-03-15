@@ -342,6 +342,19 @@ margin-left: -10px;
 background-color: white;
 }
 
+.T_icon {
+  width:55px;
+  height:55px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-size:contain;
+  background-position:center;
+  margin-right: 25px;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  background-color: white;
+  }
+
 .loading {
 font-size: 2em;
 margin-top: 100px;
@@ -714,6 +727,26 @@ margin-top:-320px;
 .button:hover {
   background-color: darkslategray;
   color: white;
+}
+
+.Tbutton {
+  margin-top:75px;
+  font-size:30px;
+  background-color: darkslategray;
+  font-weight: 800;
+  color:white;
+  border-style:solid;
+  border-color:white;
+  border-radius:50em;
+  width: 25%;
+  height: 70px;
+  border-width: 5px;
+  /* font-size:24px; */
+}
+
+.Tbutton:hover {
+  background-color: white;
+  color: darkslategray;
 }
 
 .reviewImgs {
