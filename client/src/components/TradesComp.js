@@ -39,7 +39,7 @@ function handleSelectTrade(t){
                 <p style={{ fontStyle:'normal', position:'fixed', left:170, top:130, textTransform:'uppercase', fontWeight:700, letterSpacing:1.5 }}>TRADES</p>
             </div>
           {shown?<>
-            <div className='popUp' style={{marginTop:-580, height:480, width:850}}>
+            <div className='popUp' style={{marginTop:-610, height:480, width:850}}>
                     <button className='details' style={{marginLeft:50, marginTop:-50, fontSize:16}} onClick={()=>setShown(false)} >GO BACK</button>
                     <p style={{fontStyle:'normal', fontSize:28, marginTop:-55, fontWeight:700, letterSpacing:.4 }}>offer sent by {selectedTrade.trader.first_name} to {selectedTrade.vendor.first_name}</p>
                     <p style={{fontSize:16, fontWeight:300, marginTop:-20, marginBottom:22 }}>COMPLETED: {selectedTrade.completed_date}</p>

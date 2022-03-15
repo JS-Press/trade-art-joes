@@ -71,7 +71,7 @@ const Myartpage = ({ user }) => {
                 </div>
                 </>:
                 <>
-                <button className='button' style={{width:200}} onClick={handleDeleteClick} >DELETE</button>
+                <button className='button' style={{ width:110, height:40, fontSize:20 }} onClick={handleDeleteClick} >DELETE</button>
                 </>}
             </div>
             </> 
