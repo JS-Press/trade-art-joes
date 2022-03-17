@@ -572,38 +572,37 @@ margin-bottom:5px;
   margin-left: -10px;
   }
 
-  .traderImg {
-    outline-style: solid;
-    outline-width: 7.5px;
-    object-fit: cover;
-    width:300px;
-    background-color: transparent;
-    height:300px;
-    background-size:contain;
-    background-position:center;
-    margin-top: 210px;
-    margin-left: -10px;
-    }
+.traderImg {
+  outline-style: solid;
+  outline-width: 7.5px;
+  object-fit: cover;
+  width:300px;
+  background-color: transparent;
+  height:300px;
+  background-size:contain;
+  background-position:center;
+  margin-top: 210px;
+  margin-left: -10px;
+  }
   
-  .dotted {
+.dotted {
   border: none;
   border-left: 5px dotted white;
   background-color: transparent;
   border-color: white;
-  /* margin-left: 25px; */
   display: flex;
   height: 570px;
   margin-top: 200px;
-  }
+}
 
 .tradeCardImgs {
-outline-style: solid;
-outline-width: 7.5px;
-object-fit: cover;
-width:155px;
-height:155px;
-background-size:contain;
-background-position:center;
+  outline-style: solid;
+  outline-width: 7.5px;
+  object-fit: cover;
+  width:155px;
+  height:155px;
+  background-size:contain;
+  background-position:center;
 }
 
 .tradeCardImgs:hover {
@@ -697,17 +696,17 @@ background-position:center;
 }
 
 .popUp {
-position:fixed;
-width:60%;
-height:50%;
-background-color: darkslategray;
-border-style: double;
-border-width: 1.2em;
-border-radius:5em;
-padding-top:50px;
-margin-left: 20%;
-margin-right:20%;
-margin-top:-320px;
+  position:fixed;
+  width:60%;
+  height:50%;
+  background-color: darkslategray;
+  border-style: double;
+  border-width: 1.2em;
+  border-radius:5em;
+  padding-top:50px;
+  margin-left: 20%;
+  margin-right:20%;
+  margin-top:-320px;
 }
 
 .button {
@@ -741,7 +740,6 @@ margin-top:-320px;
   width: 25%;
   height: 70px;
   border-width: 5px;
-  /* font-size:24px; */
 }
 
 .Tbutton:hover {
@@ -768,7 +766,6 @@ outline-width: 7.5px;
 max-width: 500px;
 max-height: 100%;
 margin-right:70px;
-/* margin-left:5%; */
 margin-top:25px;
 margin-bottom:40px;
 object-fit: cover;

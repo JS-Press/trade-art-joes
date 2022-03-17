@@ -1,10 +1,6 @@
 import React from 'react';
-import { useNavigate } from "react-router-dom";
 
 const TradeCompCard = ({ trade, handleSelectTrade }) => {
-
-    // console.log("TC for " + trade.trader + ' and ' + trade.vendor)
-    // console.log(trade)
 
     const str = trade.completed_date
     const dateObj = new Date(str);

@@ -1,7 +1,6 @@
 class SessionsController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_not_found_response
-    # rescue_from BCrypt::Errors::InvalidHash, with: :render_not_found_response
-  
+    
     def create
       user = User.find_by(username: params[:username])
       if user&.authenticate(params[:password])

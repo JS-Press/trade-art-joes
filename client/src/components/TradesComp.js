@@ -18,19 +18,17 @@ const Tradescomp = ({ user }) => {
             })
             }, [])
 
-function handleSelectTrade(t){
-    setSelectedTrade(t)
-    setShown(true)
-}
+    function handleSelectTrade(t){
+        setSelectedTrade(t)
+        setShown(true)
+    }
     
-
     const ordered = trades.sort((a,b) =>  new Date(b.completed_date) - new Date(a.completed_date))
     const tradeCards = ordered.map(t => <TradeCompCard key={t.id} trade={t} handleSelectTrade={handleSelectTrade} />)
         
     return (
         <div>
-            {/* <h2 style={{ position:'fixed', top:0, textDecoration: 'underline', textUnderlineOffset: 6, textDecorationThickness: 3, fontSize:16, fontWeight: 800, marginTop:120, marginLeft:100, marginBottom:-150 }}>{user.first_name}'s completed trades</h2> */}
-            <div className='tradeCards' style={{marginLeft:120, marginTop:280}}>
+           <div className='tradeCards' style={{marginLeft:120, marginTop:280}}>
                {tradeCards}
            </div>
             <div style={{position:'fixed', display:'flex', flexFlow:'row', left:110, top:125, backgroundColor:'transparent' }}>

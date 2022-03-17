@@ -104,6 +104,14 @@ end
 
   private 
 
+  def find_trade
+    trade = Trade.find(params[:id]) 
+  end
+
+  def find_art 
+    Artwork.find(params[:id]) 
+  end
+
   def trade_params 
     params.permit( :trader_id, :trader_art_id, :vendor_id, :vendor_art_id, :trader_note, :completed, :completed_date )
   end

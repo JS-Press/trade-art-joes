@@ -36,7 +36,7 @@ const Artupload = ({user}) => {
         } else {size= ''}
 
         if(owner===true){
-        if(willing===true) {
+            if(willing===true) {
             fetch("/artworks", {
                 method: "POST",
                 headers: {"Content-Type": "application/json",},

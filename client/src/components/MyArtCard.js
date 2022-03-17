@@ -1,19 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 
-const Myartcard = ({ title, artist, year, size, url, tags, user, id, handleDeleteClick }) => {
+const Myartcard = ({ title, year, size, url, tags, id, handleDeleteClick }) => {
 
     const navigate = useNavigate()
     
-
     function handleDeetClick(e){
     navigate(`/myArtworks/${id}`)
     }
-
     
     return (
         <div className='ArtistArtCard' >
-            <img className='CardImgs' src={url} value={id} alt='art image not found'onClick={handleDeetClick} />
+            <img className='CardImgs' src={url} value={id} alt='art not found' onClick={handleDeetClick} />
             <div className='ArtDeets'>
                 <h2 style={{fontSize:20}}>{title}</h2>
                 <h4 style={{fontSize:14}}>{tags}</h4>

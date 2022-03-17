@@ -38,15 +38,12 @@ const TradeMake = ({selectedArtwork, user, artworks}) => {
               vendor_id: vendor.id,
               vendor_art_id: selectedArtwork.id,
               completed: false,
-            //   offered_date: new Date(),
             }),
           }).then((r) => {
             if (r.ok) {
               r.json().then((t) => {
                 navigate('/tradesSent')
-                // setNote('')
-                // setOfferArt({url:transUrl})
-                // setVendor({})
+
                 });
             } else {
               r.json().then((err) => console.log(err));

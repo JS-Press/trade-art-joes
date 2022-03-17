@@ -17,12 +17,6 @@ const Tradedetailsent = () => {
                 })}
             })
         }, [])
-        
-    console.log(trade)
-
-    function handleArtistClick(e){
-        // navigate(`/users/${art.user_id}`)
-    }
 
     function handleCancel(id){
         setConfirmShown(true)
@@ -50,7 +44,6 @@ const Tradedetailsent = () => {
                         <div style={{ display:'flex', flexFlow:'column', backgroundColor:'transparent', width:'60%', marginRight:20 }} >
                             <img style={{ marginLeft:7, marginTop:-10 }} src={trade.vendor.profile_pic} alt='icon' className='icon' />
                             <h3 style={{ marginLeft:7, marginBottom:-1, fontSize:26, fontWeight:800, letterSpacing:.5 }}>{trade.vendor.first_name} {trade.vendor.last_name}</h3>
-                            {/* <h4 style={{marginLeft:0,  marginRight:0, backgroundColor:'transparent'}}>{trade.vendor.street_address}</h4> */}
                             <h4 style={{marginLeft:5, marginRight:0, backgroundColor:'transparent'}}>{trade.vendor.city}, {trade.vendor.state} {trade.vendor.zip}</h4>
                             <h4 style={{marginTop:120, fontWeight:200, marginLeft:9, marginBottom:-30 }} >note to {trade.vendor.first_name}</h4>
                             <div style={{paddingLeft:15, paddingRight:15, paddingTop:5, paddingBottom:5, marginLeft:0, marginTop:40, display:'flex', borderStyle:'solid', borderColor:'white', borderRadius:25, borderWidth:.1, width:170, height:120 }}>
@@ -77,7 +70,6 @@ const Tradedetailsent = () => {
                         <div style={{display:'flex', flexFlow:'column', backgroundColor:'transparent', justifyContent:'flex-start', width:'60%'}} >
                             <img style={{ }} src={trade.trader.profile_pic} alt='icon' className='icon' />
                             <h3 style={{ textAlign:'left', marginBottom:-15, fontSize:26, fontWeight:800, letterSpacing:.5, backgroundColor:'transparent' }}>{trade.trader.first_name} {trade.trader.last_name}</h3>
-                            {/* <h4 style={{textAlign:'left', backgroundColor:'transparent', marginLeft:0 }}>{trade.trader.street_address}</h4> */}
                             <h4 style={{textAlign:'left', backgroundColor:'transparent', marginLeft:0 }}>{trade.trader.city}, {trade.trader.state} {trade.trader.zip}</h4>
                             <div style={{alignContent:'flex-start', marginTop:80 }}>
                                 <p style={{marginLeft:0, marginBottom:-10, fontWeight:300, fontSize:16 }} >offer sent to {trade.vendor.first_name} {trade.vendor.last_name}</p>

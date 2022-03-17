@@ -7,40 +7,39 @@ const Tradessent = ({user}) => {
     const [confirmShown, setConfirmShown] = useState(false)
     const [deletingTrade, setDeletingTrade] = useState({})
     
-useEffect( () => {
-    fetch(`/tradesSent/${user.id}`).then((r) => {
-        if (r.ok) {
-            r.json().then(data => {
-            setTrades(data)
-            })}
-        })
-        }, [])
-
-function handleDeleteClick(t){
-    setConfirmShown(true)
-    setDeletingTrade(t)
-    }
-
-function handleDeleteOffer(){
-    fetch(`/trades/${deletingTrade.id}`, {
-        method: "DELETE"
-        }).then((r) => {
-        if (r.ok) {
-            r.json().then(data => { 
-                console.log('successful delete!')
-                setConfirmShown(false)
-                setDeletingTrade({})
-                const newTrades = trades.filter( t => t.id !== deletingTrade.id )
-                setTrades(newTrades) 
+    useEffect( () => {
+        fetch(`/tradesSent/${user.id}`).then((r) => {
+            if (r.ok) {
+                r.json().then(data => {
+                setTrades(data)
+                })}
             })
-        }else {
-        console.log('unsuccessful delete :(')
-    }})
-}
+            }, [])
+
+    function handleDeleteClick(t){
+        setConfirmShown(true)
+        setDeletingTrade(t)
+        }
+
+    function handleDeleteOffer(){
+        fetch(`/trades/${deletingTrade.id}`, {
+            method: "DELETE"
+            }).then((r) => {
+            if (r.ok) {
+                r.json().then(data => { 
+                    console.log('successful delete!')
+                    setConfirmShown(false)
+                    setDeletingTrade({})
+                    const newTrades = trades.filter( t => t.id !== deletingTrade.id )
+                    setTrades(newTrades) 
+                })
+            }else {
+            console.log('unsuccessful delete :(')
+        }})
+    }
 
     const ordered = trades.sort((a,b) =>  new Date(b.offered_date) - new Date(a.offered_date))
     const tradeCards = ordered.map(t => <TradeSentCard key={t.id} trade={t} handleDeleteClick={handleDeleteClick} />)
-
 
     return (
     <div>

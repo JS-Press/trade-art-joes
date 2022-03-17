@@ -1,11 +1,9 @@
 import React, { useEffect, useState} from 'react';
 import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import ArtistArtCard from './ArtistArtCard';
 
 const Artistpage = ({artworks}) => {
 
-    const navigate = useNavigate()
     let { id } = useParams();
     const [artist, setArtist] = useState({id:0})
     const [art, setArt] = useState(artworks)

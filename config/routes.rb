@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
-  post '/login', to: 'sessions#create'
   get '/me', to: 'sessions#show'
+  post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
   get '/artworks', to: 'artworks#index'
   get '/artworks/:id', to: 'artworks#show'
-  delete '/artworks/:id', to: 'artworks#destroy'
   post '/artworks', to: 'artworks#create'
+  delete '/artworks/:id', to: 'artworks#destroy'
 
   get '/users/:id', to: 'users#show'
   get '/users', to: 'users#index'
@@ -23,6 +23,4 @@ Rails.application.routes.draw do
   delete '/trades/:id', to: 'trades#destroy'
 
 
-
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
